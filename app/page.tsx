@@ -16,27 +16,24 @@ import image2 from './images/image2.png'
 import image3 from './images/image3.webp'
 import pharma from './images/pharma.jpeg'
 import recep from './images/recep.jpeg'
-
-
-
-
-
+import lab from './images/lab.jpeg'
+import mom from './images/mom.jpeg'
+import theatre from './images/theatre.webp'
+import ray from './images/ray.webp'
+import opd from './images/opd.jpeg'
+import dental from './images/dental.webp'
 import './globals.css'
 
 export default function Home() {
   const Images = [image, image2, image1,image3];
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const slideNext = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Images.length);
     };
-
     const interval = setInterval(slideNext, 3000);
-
     return () => clearInterval(interval);
   }, [Images.length]);
-
   const settings = {
     dots: true,
     infinite: true,
@@ -46,14 +43,10 @@ export default function Home() {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-  
   return (
    <div>
-    
     <div className="head" 
          >
-          
-    
       <header className="header-container">
         <div className="header-content">
         <Image className="icon"
@@ -104,8 +97,6 @@ export default function Home() {
     </div>
     <div className="navigation">
     <nav className="header"
-         
-    
     >
             <ul className="services">
                 <li className="clicks"><a className="link" href="">Home</a></li>
@@ -158,39 +149,111 @@ export default function Home() {
               
               width={1920}
               height={400}  
-              
             />
           </div>
         ))}
       </Slider>
       <h1>Welcome To Liwonde Private Hospital</h1>
       <h3>A Great Place To Recievce Care</h3>
-      <section className="section">
-          <div className="box-container">
-            <div className="flexbox">
-              <div>  <Image className="reception"
-               src={recep}
-               alt="recept"
-              width={330}
-              height={140}
-              style={{borderRadius:'10px', marginBottom:'2px'}}
-              />
+      <div>
+       <section className="section">
+      <div className="box-container">
+              <div className="top-row">
+              <div className="flexbox">
+              <Image
+                  className="reception"
+                  src={recep}
+                  alt="recept"
+                  width={330}
+                  height={150}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>Reception</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+              </div>
+                <div className="flexbox">
+                <Image
+                  className="reception"
+                  src={pharma}
+                  alt="recept"
+                  width={330}
+                  height={150}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>Pharmacy</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
                 </div>
-
-                <div className="flexbox">Box2</div>
-            <div className="flexbox">Box3</div>
-            <div className="flexbox">Box4</div>
-                
-            </div>
-            
-           
-          
-            <div className="flexbox">Box5</div>
-            <div className="flexbox">Box6</div>
-            <div className="flexbox">Box7</div>
-            <div className="flexbox">Box8</div>
-          </div>
+                <div className="flexbox">
+                <Image
+                  className="reception"
+                  src={mom}
+                  alt="recept"
+                  width={330}
+                  height={140}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>Martenity</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+                </div>
+                <div className="flexbox">
+                  <Image
+                  className="reception"
+                  src={opd}
+                  alt="recept"
+                  width={330}
+                  height={140}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>OPD</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+                </div>
+              </div>
+              <div className="bottom-row">
+                <div className="flexbox"> <Image
+                  className="reception"
+                  src={theatre}
+                  alt="recept"
+                  width={330}
+                  height={140}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>Theatre</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <div className="flexbox"> <Image
+                  className="reception"
+                  src={lab}
+                  alt="recept"
+                  width={330}
+                  height={140}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>Labaratory</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <div className="flexbox"> <Image
+                  className="reception"
+                  src={ray}
+                  alt="recept"
+                  width={330}
+                  height={140}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>X-Ray</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <div className="flexbox"> <Image
+                  className="reception"
+                  src={dental}
+                  alt="recept"
+                  width={330}
+                  height={140}
+                  style={{padding:'10px', borderRadius:'10px' }}
+                />
+                <h5>Dental</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+              </div>
+</div>
       </section>
+      </div>
+      
     </div>
     <div className="">
       mission and vision
