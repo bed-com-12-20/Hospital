@@ -1,18 +1,59 @@
+'use client'
+import React, {useState, useEffect} from "react";
+
+import Slider from 'react-slick'
 import Image from "next/image";
 import './globals.css'
 import"slick-carousel/slick/slick.css";
+import"slick-carousel/slick/slick-theme.css";
 import icon from'./images/icon.png'
 import location from './images/location.png'
 import phone from './images/phone.png'
 import time from './images/time.png'
+import image from './images/image.jpeg'
+import image1 from './images/image1.jpeg'
+import image2 from './images/image2.png'
+import image3 from './images/image3.webp'
+import pharma from './images/pharma.jpeg'
+import recep from './images/recep.jpeg'
+
+
+
+
 
 import './globals.css'
 
 export default function Home() {
+  const Images = [image, image2, image1,image3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const slideNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % Images.length);
+    };
+
+    const interval = setInterval(slideNext, 3000);
+
+    return () => clearInterval(interval);
+  }, [Images.length]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 7000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+  
   return (
    <div>
     
-    <div className="head">
+    <div className="head" 
+         >
+          
+    
       <header className="header-container">
         <div className="header-content">
         <Image className="icon"
@@ -62,7 +103,10 @@ export default function Home() {
     </div>   
     </div>
     <div className="navigation">
-    <nav className="header">
+    <nav className="header"
+         
+    
+    >
             <ul className="services">
                 <li className="clicks"><a className="link" href="">Home</a></li>
                 <li className="clicks"><a  className="link"href="">Services</a>
@@ -104,10 +148,52 @@ export default function Home() {
         </nav>      
     </div>
     <div className="slider">
-      sliding images
+    <Slider {...settings}>
+      
+        {Images.map((image, index) => (
+          <div key={index} >
+            <Image
+              src={image}
+              alt={`Slider Image ${index + 1}`}
+              
+              width={1920}
+              height={400}  
+              
+            />
+          </div>
+        ))}
+      </Slider>
+      <h1>Welcome To Liwonde Private Hospital</h1>
+      <h3>A Great Place To Recievce Care</h3>
+      <section className="section">
+          <div className="box-container">
+            <div className="flexbox">
+              <div>  <Image className="reception"
+               src={recep}
+               alt="recept"
+              width={330}
+              height={140}
+              style={{borderRadius:'10px', marginBottom:'2px'}}
+              />
+                </div>
+
+                <div className="flexbox">Box2</div>
+            <div className="flexbox">Box3</div>
+            <div className="flexbox">Box4</div>
+                
+            </div>
+            
+           
+          
+            <div className="flexbox">Box5</div>
+            <div className="flexbox">Box6</div>
+            <div className="flexbox">Box7</div>
+            <div className="flexbox">Box8</div>
+          </div>
+      </section>
     </div>
-    <div className="box-container">
-      service sector
+    <div className="">
+      mission and vision
     </div>
    </div>  
   );

@@ -1,12 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
 .head {
   display: flex;
   padding: 5px;
   justify-content: space-between;
   align-items: center;
-  background-image: url('./images/dna1.jpeg');
+  background-image: linear-gradient( to bottom left,
+    rgba(243, 249, 245, 0.9),
+  rgba(192, 207, 191, 0.827),
+  rgba(181, 207, 14, 0.517)),
+  url('./images/dna1.jpeg');
+
+
   background-size: cover;
   color: white;
   animation: moveBackground 50s infinite linear;
+  z-index: 1;
 }
 
 @keyframes moveBackground {
@@ -88,6 +107,7 @@
   display: none;
   color: green;
   border-bottom: 1px rgb(8, 8, 8);
+  z-index: 2;
 }
 .clicks:hover .dropdown-menu{
   display: block;
@@ -136,3 +156,79 @@
   cursor: pointer;
   color: blue;
 }
+.slide-container {
+  position: relative;
+}
+
+.slide-header {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+  color: white;
+  font-size: 24px;
+  z-index: 2; /* Ensure the header is on top of the image */
+}
+h1{
+  text-align: center;
+  font-weight: 100px;
+  color: green;
+  
+}
+h3{
+  text-align: center;
+  color: darkgreen;
+  font-size: 25px;
+  padding: 0px;
+}
+.section{
+  background-color: lightgreen;
+  /* margin: 0 auto 0 auto; */
+  
+
+}
+
+.box-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-right: black;
+}
+.flexbox{
+  width: 250px;
+  height: 260px;
+  line-height: 200px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center; 
+   display: flex; 
+ } 
+
+/* .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0px;
+  row-gap: 0px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  
+}
+
+.flexbox {
+  border: 1px solid blue;
+  width: 343px;
+  height: 260px;
+  padding: 0;
+  grid-gap: 0px;
+  row-gap: 0px;
+} */
+
+
+
+
+
+
