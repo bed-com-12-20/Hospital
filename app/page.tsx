@@ -22,7 +22,9 @@ import theatre from './images/theatre.webp'
 import ray from './images/ray.webp'
 import opd from './images/opd.jpeg'
 import dental from './images/dental.webp'
+import talk from './images/talk.webp'
 import './globals.css'
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const Images = [image, image2, image1,image3];
@@ -154,7 +156,20 @@ export default function Home() {
         ))}
       </Slider>
       <h1>Welcome To Liwonde Private Hospital</h1>
-      <h3>A Great Place To Recievce Care</h3>
+      <div className="anime">
+        <TypeAnimation 
+          sequence={[
+            'A Great Place to Recieve Care',
+            1000,
+            'We Treat, God Heals',
+            1000,
+            'High quality Services offered'
+          ]}
+          speed={50}
+          style={{fontSize: '2em'}}
+          repeat={Infinity}
+        />
+      </div>
       <div>
        <section className="section">
       <div className="box-container">
@@ -169,7 +184,13 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>Reception</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+                <p>Reception is the entry  point of all 
+                    the services. The reception is managed by 
+                    team of well trained receptionis who manages 
+                    our clients. The reception links clients to
+                     doctor, phamarcist and any other staff
+
+                </p>
               </div>
                 <div className="flexbox">
                 <Image
@@ -181,7 +202,12 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>Pharmacy</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+                <p>pharmacy  is responsibe for
+                    storing medicine, selling medicine
+                    provide pharmacetical support to 
+                    clients. it is managed by well trained
+                    pharmacist
+               </p>
                 </div>
                 <div className="flexbox">
                 <Image
@@ -193,7 +219,11 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>Martenity</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+                <p>Receive well managed services at the 
+                    Liwonde private hospital. Hospital 
+                    has morden martenity
+                    romm with well trained team of mid wives 
+                </p>
                 </div>
                 <div className="flexbox">
                   <Image
@@ -205,9 +235,14 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>OPD</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p>
+                <p>This is doctors office each and every
+                    client is warmly welcome to this office
+                    and every client is helped accordingly.
+                    get any medical help from this office
+                 </p>
                 </div>
               </div>
+
               <div className="bottom-row">
                 <div className="flexbox"> <Image
                   className="reception"
@@ -218,7 +253,12 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>Theatre</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <p>The operating theatre has a team
+                    of well trained surgeons, doctors and 
+                    nurses who apply medical expertise to
+                    help petients
+                    </p>
+                  </div>
                 <div className="flexbox"> <Image
                   className="reception"
                   src={lab}
@@ -228,7 +268,12 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>Labaratory</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <p>Liwonde private hospital provide the
+                    following services, full blood count(
+                    FBC) body fluid diogonisi malaria 
+                    diogonosis
+                   </p>
+                 </div>
                 <div className="flexbox"> <Image
                   className="reception"
                   src={ray}
@@ -238,7 +283,10 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>X-Ray</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <p>Liwonde Private Hospital offers an essential X-ray medical service,
+                   employing advanced technology to capture detailed images of internal 
+                   structures for accurate diagnosis and monitoring 
+                   of various medical conditions.</p></div>
                 <div className="flexbox"> <Image
                   className="reception"
                   src={dental}
@@ -248,16 +296,78 @@ export default function Home() {
                   style={{padding:'10px', borderRadius:'10px' }}
                 />
                 <h5>Dental</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis illo sunt minima blanditiis, ad odio esse similique deleniti quod quia praesentium mollitia ratione suscipit, tempora ullam ut repellat? Esse, voluptas.</p></div>
+                <p>Liwonde private hosipital has high
+                   skilled specialist in dental surgery
+                   </p>
+                   </div>
               </div>
 </div>
       </section>
       </div>
       
     </div>
-    <div className="">
-      mission and vision
+    <div className="mission">
+    <div className="mission-list">
+    <h1 className="part">A passion for putting patients first</h1>
+    <h3 className="vision">VISION</h3>
+      <p className="vis">To be a centre of excellence in the provision of high quality
+         heath services in Malawi
+      </p>
+      <h3 className="vision1">MISSION STATEMENT</h3>
+      <p className="vis">We are fully committed to deliver effective, preventive,
+         promotive, currative and rehabilitative health services to
+         all citizens
+      </p>
+      <h3 className="vision1">CORE VALUES</h3>
+      <ul>
+        <li  className="vis1">Commitment</li>
+        <li className="vis1">Respect</li>
+        <li className="vis1">Hardwork</li>
+        <li className="vis1">Integrity</li>
+      </ul> 
+  </div>
+  <div className="mission-picture">
+     <Image
+      src={talk}
+      alt="talking"
+      width={600}
+      height={445}
+     
+     />
+  </div>
+      
+      
     </div>
+    <div className="quick">
+      <h4 className="quick1">Quick Services</h4>
+      <h6 className="quick1">Get fast and reliable quick services
+        from Liwonde private hospital
+      </h6>
+      <section className="section">
+        <div className="box-container">
+          <div className="flexbox">box1</div>
+          <div className="flexbox">box2</div>
+          <div className="flexbox">box3</div>
+        </div>
+
+      </section>
+    </div>
+    <div className="team">
+    <h4 className="quick1">Trust Our Team Of Medical Specialists</h4>
+    <div className="box-container">
+          <div className="flexbox">box1</div>
+          <div className="flexbox">box2</div>
+          <div className="flexbox">box3</div>
+        </div>
+    </div>
+    <div className="img">
+     mtima
+     
+    </div>
+    <div className="footer">
+      phazi
+    </div>
+
    </div>  
   );
 }

@@ -3,13 +3,10 @@
   padding: 0;
   margin: 0;
 }
-
 body {
   margin: 0;
   padding: 0;
 }
-
-
 .head {
   display: flex;
   padding: 5px;
@@ -20,14 +17,11 @@ body {
   rgba(192, 207, 191, 0.827),
   rgba(181, 207, 14, 0.517)),
   url('./images/dna1.jpeg');
-
-
   background-size: cover;
   color: white;
   animation: moveBackground 50s infinite linear;
   z-index: 1;
 }
-
 @keyframes moveBackground {
   0% {
     background-position: 0% 0%;
@@ -36,20 +30,14 @@ body {
     background-position: 100% 100%;
   }
 }
-
-
 .header-container {
   display: flex;
   align-items: center;
 }
-
 .head1 {
   color: darkgreen;
   margin-left: 10px; /* Adjust the margin as needed for spacing between h1 and the header content */
-   
-  
 }
-
 .phone {
   margin-left: auto; /* This will push the phone image to the right */
 }
@@ -84,10 +72,7 @@ body {
 }
 .clicks{
   position: relative;
- 
-  
   padding: 10px 10px;
-  
 }
 .link{
   font-size: 20px;
@@ -176,38 +161,17 @@ h1{
 }
 h3{
   text-align: center;
-  color: darkgreen;
+  color:#032902;
   font-size: 25px;
   padding: 0px;
 }
 .section{
-  background-color: lightgreen;
+  background-color: #E6FDDF;
   /* margin: 0 auto 0 auto; */
   padding: 25px;
   text-align: center;
 
 }
-
-/* .box-container{
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-right: black;
-}
-.flexbox{
-  width: 250px;
-  height: 260px;
-  line-height: 200px;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  flex-direction: column;
-  align-items: center; /* Center items horizontally */
-  /* text-align: center; 
-   display: flex; 
- }  */ 
-
 .box-container {
   display: flex;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -218,7 +182,6 @@ h3{
   padding: 0;
   flex-wrap: wrap;
 }
-
 .top-row,
 .bottom-row {
   display: grid;
@@ -227,7 +190,6 @@ h3{
   row-gap: 0px;
   justify-content: center;
 }
-
 .flexbox {
   border: 1px solid gray;
   width: 343px;
@@ -240,6 +202,210 @@ h3{
 .reception{
   border-radius: 10px;
 }
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+  /* Adjustments for tablets go here */
+
+  .head1 {
+    font-size: 24px;
+  }
+
+  .numbers {
+    font-size: 16px;
+  }
+
+  .num {
+    font-size: 14px;
+  }
+
+  .head {
+    padding: 10px; /* Adjust padding for the header */
+  }
+
+  .header {
+    padding: 0 10%; /* Adjust padding for the navigation header */
+  }
+
+  .link {
+    font-size: 18px; /* Adjust font size for navigation links */
+  }
+
+  .dropdown-menu {
+    border-bottom: 1px solid white; /* Adjust border color for the dropdown menu */
+  }
+
+  .clicks:hover .list .ref {
+    width: auto; /* Allow the width to adjust based on content */
+  }
+
+  .button {
+    font-size: 18px; /* Adjust font size for the button */
+  }
+
+  .slide-header {
+    top: 10px; /* Adjust top position for slide header */
+    left: 10px; /* Adjust left position for slide header */
+    font-size: 20px; /* Adjust font size for slide header */
+  }
+
+  h1 {
+    font-size: 28px; /* Adjust font size for h1 */
+  }
+
+  h3 {
+    font-size: 22px; /* Adjust font size for h3 */
+  }
+
+  .section {
+    padding: 15px; /* Adjust padding for the section */
+  }
+
+  .flexbox {
+    width: 100%; /* Adjust width for flexbox items */
+    max-width: 300px; /* Set a max-width to control width on larger screens */
+  }
+
+  .reception {
+    width: 100%;
+    height: auto;
+  }
+  p{
+    font-size: 9px;
+  }
+
+  /* Add more adjustments as needed for tablets */
+}
+/* Media query for smartphones */
+@media only screen and (max-width: 480px) {
+  /* Adjustments for smartphones go here */
+
+  .head1 {
+    font-size: 20px;
+  }
+
+  .numbers {
+    font-size: 14px;
+  }
+
+  .num {
+    font-size: 12px;
+  }
+  .head {
+    padding: 5px; /* Adjust padding for the header */
+  }
+  .header {
+    padding: 0 5%; /* Adjust padding for the navigation header */
+  }
+  .link {
+    font-size: 16px; /* Adjust font size for navigation links */
+  }
+  .dropdown-menu {
+    border-bottom: 1px solid white; /* Adjust border color for the dropdown menu */
+  }
+  .clicks:hover .list .ref {
+    width: auto; /* Allow the width to adjust based on content */
+  }
+  .button {
+    font-size: 16px; /* Adjust font size for the button */
+  }
+  .slide-header {
+    top: 10px; /* Adjust top position for slide header */
+    left: 10px; /* Adjust left position for slide header */
+    font-size: 18px; /* Adjust font size for slide header */
+  }
+  h1 {
+    font-size: 24px; /* Adjust font size for h1 */
+  }
+  h3 {
+    font-size: 18px; /* Adjust font size for h3 */
+  }
+  .section {
+    padding: 10px; /* Adjust padding for the section */
+  }
+  .flexbox {
+    width: 100%; /* Adjust width for flexbox items */
+    max-width: 300px; /* Set a max-width to control width on larger screens */
+  }
+  .reception {
+    width: 100%;
+    height: auto;
+  }
+  p{
+    font-size: 9px;
+  }
+}
+h5{
+ font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+p{
+  color: #000;
+  font-family: "Work Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.mission {
+  display: flex;
+}
+
+.mission-list {
+  flex: 1;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.mission-picture {
+  flex: 1;
+  padding: 20px; 
+}
+.msi{
+  text-align: left;
+}
+.vision{
+  text-decoration: underline;
+  padding: 5px;
+  text-align: center;
+  
+}
+.part{
+  text-align: center
+  
+}
+.vis{
+  display: flex;
+  font-size: 20px;
+  
+}
+.vision1{
+  text-decoration: underline;
+  padding: 5px;
+  text-align: center;
+}
+.vis1{
+ display: flex;
+  font-size: 20px; 
+  text-align: center;
+  list-style: disc;
+}
+.quick1{
+  text-align: center;
+  padding: 10px;
+}
+
+.type {
+  display: flex;
+  align-self: center;
+}
+.anime{
+  text-align: center;
+  padding: 10px;
+}
+
 
 
 
