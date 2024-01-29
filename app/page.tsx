@@ -1,6 +1,5 @@
 'use client'
 import React, {useState, useEffect} from "react";
-
 import Slider from 'react-slick'
 import Image from "next/image";
 import './globals.css'
@@ -29,7 +28,6 @@ import appo from './images/appo.jpeg'
 import ambulance from './images/ambulance.webp'
 import team from './images/team.jpeg'
 import heart from './images/heart.png'
-
 
 export default function Home() {
   const Images = [image, image2, image1,image3];
@@ -146,7 +144,7 @@ export default function Home() {
         </nav>      
     </div>
     <div className="slider">
-    <Slider {...settings}>
+    <Slider {...settings} className="slide">
       
         {Images.map((image, index) => (
           <div key={index} >
@@ -194,7 +192,6 @@ export default function Home() {
                     team of well trained receptionis who manages 
                     our clients. The reception links clients to
                      doctor, phamarcist and any other staff
-
                 </p>
               </div>
                 <div className="flexbox">
@@ -247,7 +244,6 @@ export default function Home() {
                  </p>
                 </div>
               </div>
-
               <div className="bottom-row">
                 <div className="flexbox"> <Image
                   className="reception"
@@ -309,7 +305,6 @@ export default function Home() {
 </div>
       </section>
       </div>
-      
     </div>
     <div className="mission">
     <div className="mission-list">
@@ -338,11 +333,8 @@ export default function Home() {
       width={600}
       height={445}
       style={{borderRadius:'10px'}}
-     
      />
-  </div>
-      
-      
+  </div> 
     </div>
     <div className="quick">
       <h4 className="quick1">Quick Services</h4>
@@ -403,7 +395,6 @@ export default function Home() {
                  </a>
           </div>
         </div>
-
       </section>
     </div>
     <div className="team">
@@ -427,7 +418,6 @@ export default function Home() {
                     animation: 'slideRight 50s linear infinite',
                   }}
                 />
-     
     </div>
      <section className="section1">
      <Image className="icon1"
@@ -445,9 +435,7 @@ export default function Home() {
               <li className="sam"><a href="#" className="sam"></a>Location Of Hospital</li>
               <li className="sam"><a href="#" className="sam">About The Hospital</a></li>
             </ul>
-            
           </div> 
-        
         </h1>
         <h1 className="footer">Contact Us
           <div className="important">
@@ -456,10 +444,8 @@ export default function Home() {
               <li className="sam">Email: liwonde@gmail.com</li>
               <li className="sam">Address: Liwonde, near pu</li>
               <li className="sam"></li>
-            </ul>
-            
+            </ul> 
           </div> 
-        
         </h1>
         <h1 className="footer1">Map
           <div className="important">
@@ -473,17 +459,9 @@ export default function Home() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-           
           </div> 
-        
         </h1>
-        
-      
-
-
      </section>
-    
-
    </div>  
   );
 }
