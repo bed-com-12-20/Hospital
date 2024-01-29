@@ -135,11 +135,13 @@ body {
  cursor: pointer;
  border-color: gray;
  color: green;
+ background-color: white;
  
 }
 .button:hover{
   cursor: pointer;
-  color: blue;
+  color: white;
+  background-color: blue;
 }
 .slide-container {
   position: relative;
@@ -167,7 +169,6 @@ h3{
 }
 .section{
   background-color: #E6FDDF;
-  /* margin: 0 auto 0 auto; */
   padding: 25px;
   text-align: center;
 
@@ -329,6 +330,7 @@ h3{
   .reception {
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
   p{
     font-size: 9px;
@@ -404,9 +406,69 @@ p{
 .anime{
   text-align: center;
   padding: 10px;
+  font-weight: bold;
+  color: #032902;
+}
+.ambulance{
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+}
+.ambu{
+  padding: 10px;
+}
+.ambulance:hover{
+  background-color: blue;
+  color: white;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.section1{
+  display: flex;
+  background-color: #032902 ;
+  padding: 25px;
+  align-items: left;
+  
+}
+.footer{
+  color: white;
+  padding: 20px;
+  padding-top: 1px;
 }
 
+.important{
+  font-weight: lighter;
+  text-decoration: none;
+  padding: 10px;
+  padding-top: 1px;
 
+}
+.sam{
+  list-style: none;
+  color: #E6FDDF;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: lighter;
+  padding: 5px;
+
+}
+.sam:hover{
+  color: blue;
+}
+.footer1{
+  color: white;
+  padding-left: 250px;
+  padding-top: 1px;
+}
 
 
 
