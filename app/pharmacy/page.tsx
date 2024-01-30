@@ -113,22 +113,7 @@ export default function Pharmacy(){
         height={600}  
         />
       </div>
-      <section className="section3">
-     <Image className="icon1"
-        src={icon}
-        alt="icon"
-        width={150}
-        height={150}
-        style={{ marginRight:'10px'}}
-        />
-       <div className="pharma">
-            <h1 className="footer">Pharmacy Service</h1>
-            <p className="footer2">Liwonde Hospital Pharmacy</p>
-            </div>
-
-
-       
-     </section>
+      
 
 
         </div>
