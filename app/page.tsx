@@ -109,7 +109,7 @@ export default function Home() {
                 <div  className="dropdown-menu">
                     <ul className="list">
                         <li className="ref"><a className="drop" href="">Reception Services</a></li>
-                        <li className="ref"><a className="drop" href="">Pharmarcy Services</a></li>
+                        <li className="ref"><a className="drop" href="pharmacy">Pharmarcy Services</a></li>
                         <li className="ref"><a  className="drop" href="">Dental Services </a></li>
                         <li className="ref" ><a className="drop" href="">Ambulance Services</a></li>
                         <li className="ref" ><a className="drop" href="">OPD services</a></li>
