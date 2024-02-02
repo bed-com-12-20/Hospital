@@ -135,15 +135,61 @@ export default function Pharmacy(){
                 prescription, medical nutrition guidance and medical check ups
             </p>
             <h3 className="vision1">Vision Statement</h3>
-            
-            
+            <p className="vis">Our vision is to become number trusted affordable pharmacy committed
+                    to provision of high quality and cost effective medicine in Malawi. 
+                    We believe in intergrity, honest, accountability, respect and compasion
+                    towards our customer.
+                    Online pharmacy is open 24 hours and it is highly responsive  
+            </p>
             <h3 className="vision1">Order Medicine Online</h3>
             <p className="vis">please follow the instruction below to order medicine you will 
                     receive an email or sms confirming your and together with price.
                     you can come and collect at the reception</p>
         </div>
             </div>
-            
+            <div className="form">
+                <div className="form-wrapper">
+                    <div className="header1">
+                        <div className="logo-container">
+                        <Image className="center"
+                            src={icon}
+                            alt="talking"
+                            width={100}
+                            height={100}
+                            style={{borderRadius:'10px'}}
+                            />
+                        </div>
+                        <h1>Drug Inquiry Form</h1>
+                        <label className="name">Name:</label>
+                        <input 
+                        type="text" 
+                        id="name"
+                        placeholder="e.g Sam Zarila"
+                        />
+                        <label className="name">Phone Number:</label>
+                        <input 
+                        type="text" 
+                        id="name"
+                        placeholder="tnm or airtel"
+                        />
+                        <label className="name">Drug Name:</label>
+                        <input 
+                        type="text" 
+                        id="name"
+                        placeholder="e.g panado"
+                        />
+                        <label className="name">Drug Quantity:</label>
+                        <input 
+                        type="text" 
+                        id="name"
+                        placeholder=" e.g 1 tablet or 1 gram"
+                        />
+                        <button className="button1" type="submit">Place Order</button>
+                    </div>
+
+                </div>
+                
+            </div>
                 <h1 className="part1">We Treat, God Heals</h1>
                 <section className="section1">
      <Image className="icon1"

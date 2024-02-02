@@ -171,6 +171,10 @@ h3{
   background-color: #E6FDDF;
   padding: 25px;
   text-align: center;
+    font-family: monospace;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
 
 }
 .box-container {
@@ -255,10 +259,6 @@ h3{
 
   h3 {
     font-size: 22px; /* Adjust font size for h3 */
-  }
-
-  .section {
-    padding: 15px; /* Adjust padding for the section */
   }
 
   .flexbox {
@@ -476,6 +476,7 @@ p{
   background-color: #032902 ;
   padding: 25px;
   align-items: left;
+  margin-right: 20px;
   
 }
 .footer{
@@ -509,7 +510,43 @@ p{
   padding-top: 1px;
 }
 
+.card{
+  background-color: #E6FDDF;
+  border-radius: 6px;
+  display: inline-block;
+  height: 500px;
+  width: 375px;
+  margin-top: 30px;
+  padding: 20px;
+  margin-right: 20px
+}
+.image{
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/* h1{
+  color: white;
+  font-weight: 10px;
+  margin-top: 10px;
+} */
 
+.desc{
+  font-size: 20px;
+  margin-left: 60px;
+  margin-right: 60px;
+  color: white;
+}
+/* p{
+  color: wheat;
+  margin-top: 16px;
+} */
 
+.slide2{
+  margin-right: 20px;
+}
+.card-wrapper{
+  display: flex;
+
+}
 
 

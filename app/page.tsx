@@ -46,12 +46,18 @@ export default function Home() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3000
   };
+  const setting ={
+    dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1
+  }
   return (
    <div>
-    <div className="head" 
-         >
+    <div className="head" >
       <header className="header-container">
         <div className="header-content">
         <Image className="icon"
@@ -108,8 +114,8 @@ export default function Home() {
                 <li className="clicks"><a  className="link"href="">Services</a>
                 <div  className="dropdown-menu">
                     <ul className="list">
-                        <li className="ref"><a className="drop" href="">Reception Services</a></li>
-                        <li className="ref"><a className="drop" href="pharmacy">Pharmarcy Services</a></li>
+                        <li className="ref"><a className="drop" href="pharmacy">Reception Services</a></li>
+                        <li className="ref"><a className="drop" href="pharmacy1">Pharmarcy Services</a></li>
                         <li className="ref"><a  className="drop" href="">Dental Services </a></li>
                         <li className="ref" ><a className="drop" href="">Ambulance Services</a></li>
                         <li className="ref" ><a className="drop" href="">OPD services</a></li>
@@ -122,7 +128,7 @@ export default function Home() {
                 </li>
                 <li className="clicks"><a className="link"  href="#">Request Appointment</a></li>
                 <li className="clicks"><a className="link" href="">Doctors</a></li>
-                <li className="clicks"><a className="link" href="">Staff</a></li>
+                <li className="clicks"><a className="link" href="Staff">Staff</a></li>
                 <li className="clicks"><a className="link"  href="">Department</a>
                 <div  className="dropdown-menu">
                     <ul className="list">
@@ -172,138 +178,64 @@ export default function Home() {
           style={{fontSize: '2em'}}
           repeat={Infinity}
         />
+        <section>
+  <Slider {...setting} >
+    
+      <div className="card">
+        <Image
+          src={recep}
+          alt="avata"
+          width={300}
+          height={200}
+          className="image"
+        />
+        <h1 className="name1">Reception</h1>
+        <div className="desc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
+            Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
+            similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
+            tempora consequuntur magni maiores unde.</p>
+        </div>
+      </div>
+      <div className="card">
+        <Image
+          src={pharma}
+          alt="avata"
+          width={300}
+          height={200}
+          className="image"
+        />
+        <h1 className="name1">Pharmacy</h1>
+        <div className="desc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
+            Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
+            similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
+            tempora consequuntur magni maiores unde.</p>
+        </div>
+      </div>
+      <div className="card">
+        <Image
+          src={opd}
+          alt="avata"
+          width={300}
+          height={200}
+          className="image"
+        />
+        <h1 className="name1">OPD</h1>
+        <div className="desc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
+            Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
+            similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
+            tempora consequuntur magni maiores unde.</p>
+        </div>
+      </div>
+    
+  </Slider>
+</section>
+
       </div>
       <div>
-       <section className="section">
-      <div className="box-container">
-              <div className="top-row">
-              <div className="flexbox">
-              <Image
-                  className="reception"
-                  src={recep}
-                  alt="recept"
-                  width={330}
-                  height={150}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>Reception</h5>
-                <p>Reception is the entry  point of all 
-                    the services. The reception is managed by 
-                    team of well trained receptionis who manages 
-                    our clients. The reception links clients to
-                     doctor, phamarcist and any other staff
-                </p>
-              </div>
-                <div className="flexbox">
-                <Image
-                  className="reception"
-                  src={pharma}
-                  alt="recept"
-                  width={330}
-                  height={150}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>Pharmacy</h5>
-                <p>pharmacy  is responsibe for
-                    storing medicine, selling medicine
-                    provide pharmacetical support to 
-                    clients. it is managed by well trained
-                    pharmacist
-               </p>
-                </div>
-                <div className="flexbox">
-                <Image
-                  className="reception"
-                  src={mom}
-                  alt="recept"
-                  width={330}
-                  height={140}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>Martenity</h5>
-                <p>Receive well managed services at the 
-                    Liwonde private hospital. Hospital 
-                    has morden martenity
-                    romm with well trained team of mid wives 
-                </p>
-                </div>
-                <div className="flexbox">
-                  <Image
-                  className="reception"
-                  src={opd}
-                  alt="recept"
-                  width={330}
-                  height={140}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>OPD</h5>
-                <p>This is doctors office each and every
-                    client is warmly welcome to this office
-                    and every client is helped accordingly.
-                    get any medical help from this office
-                 </p>
-                </div>
-              </div>
-              <div className="bottom-row">
-                <div className="flexbox"> <Image
-                  className="reception"
-                  src={theatre}
-                  alt="recept"
-                  width={330}
-                  height={140}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>Theatre</h5>
-                <p>The operating theatre has a team
-                    of well trained surgeons, doctors and 
-                    nurses who apply medical expertise to
-                    help petients
-                    </p>
-                  </div>
-                <div className="flexbox"> <Image
-                  className="reception"
-                  src={lab}
-                  alt="recept"
-                  width={330}
-                  height={140}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>Labaratory</h5>
-                <p>Liwonde private hospital provide the
-                    following services, full blood count(
-                    FBC) body fluid diogonisi malaria 
-                    diogonosis
-                   </p>
-                 </div>
-                <div className="flexbox"> <Image
-                  className="reception"
-                  src={ray}
-                  alt="recept"
-                  width={330}
-                  height={140}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>X-Ray</h5>
-                <p>Liwonde Private Hospital offers an essential X-ray medical service,
-                   employing advanced technology to capture detailed images of internal 
-                   structures for accurate diagnosis and monitoring 
-                   of various medical conditions.</p></div>
-                <div className="flexbox"> <Image
-                  className="reception"
-                  src={dental}
-                  alt="recept"
-                  width={330}
-                  height={140}
-                  style={{ borderRadius:'10px', paddingTop:'10px'}}
-                />
-                <h5>Dental</h5>
-                <p>Liwonde private hosipital has high
-                   skilled specialist in dental surgery
-                   </p>
-                   </div>
-              </div>
-</div>
-      </section>
+       
       </div>
     </div>
     <div className="mission">
@@ -462,6 +394,7 @@ export default function Home() {
           </div> 
         </h1>
      </section>
-   </div>  
+   </div> 
+    
   );
 }
