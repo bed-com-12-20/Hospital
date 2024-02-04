@@ -1,6 +1,4 @@
-body{
-    background-color: aquamarine;
-}
+
 body {
     background-color: aquamarine;
     margin: 0;
@@ -16,6 +14,15 @@ body {
     height: 100%;
     background-color: darkgreen;
     margin-top: 0px;
+}
+#table {
+    margin-left: 400px; /* Adjusted margin to create space beside the sidebar */
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column; /* Stacking elements vertically */
+    align-items: center;
+    text-align: center;
 }
 #pharma-head {
     color: white;
@@ -48,4 +55,75 @@ div ul a {
 
 div ul li:hover a {
     padding-left: 50px;
+}
+.table-box{
+    margin: 0px auto;
+}
+.table-row{
+    display: table;
+    width: 700px;
+    margin: 10px;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 1px 0;
+    color: darkgray;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+}
+.table-cell{
+    display: table-cell;
+    width: 30px;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid green;
+    vertical-align: middle;
+    line-height: 100%;
+}
+#label{
+    background: transparent;
+    border: none;  
+    width: 113px;
+    height: 100%;
+    padding: 0px;
+    color: white;
+    text-align: center;   
+}
+#type{
+    background: transparent;
+    border: none;
+}
+.button{
+    outline: none;
+    background-color: white;
+    margin-top: 10px;
+    border: none;
+    width: 15%;
+    height: 40px;
+    color: green;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: all 400ms linear;
+}
+.button1{
+    outline: none;
+    background-color: white;
+    margin-top: 10px;
+    border: none;
+    width: 15%;
+    height: 40px;
+    color: green;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.button1:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: all 400ms linear;
 }

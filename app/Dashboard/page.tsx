@@ -1,10 +1,14 @@
-import React from "react";
+'use client'
+
+import React, {useState} from "react";
 import './style.css'
 import icon from '../images/icon.png'
 import Image from "next/image";
 
-export default function Dashboard() {
-    return (
+
+export default function Sale(){
+    
+    return(
         <div>
             <div id="dash">
                 <header>Pharmacist</header>
@@ -16,201 +20,30 @@ export default function Dashboard() {
                 </ul>
             </div>
             <div id="table">
-                <div>
-                    <Image
+          <div>
+          <Image
                     src={icon}
                     alt="alt"
                     width={100}
                     height={100}
-                    
                     />
+          </div>
+            <div id="searchbar">
+                <input type="text"  id="searchbar" placeholder="search for drugs..."/>
+
+            </div>
+            <div className="button-container">
+                <div>
+                    <button className="button">View Table</button>
                 </div>
                 <div>
-                    <h1 id="pharma-head">Pharmacy Table</h1>
+                    <a href="Record">
+                    <button className="button2">Create Table</button>
+                    </a>
+                  
                 </div>
-                <div className="table-box">
-                <div className="table-row">
-                    <div className="table-cell">
-                        <p>DrugId</p>
-                    </div>
-                    <div className="table-cell">
-                        <p>Drug Name</p>
-                    </div> <div className="table-cell">
-                        <p>Drug Type</p>
-                    </div>
-                    <div className="table-cell">
-                        <p>Quantity</p>
-                    </div>
-                    <div className="table-cell">
-                        <p>Date Created</p>
-                    </div>
-                    <div className="table-cell">
-                        <p>Expiry Date</p>
-                    </div>
-                </div>
-                
-                 </div>
-                 <div className="table-box">
-                <div className="table-row">
-                    <div className="table-cell">
-                        <input type="text" id="label" placeholder="e.g 1"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g panado"/>
-                    </div> 
-                    <div className="table-cell">
-                       <select name="" id="type"required>
-                         <option >Injectables</option>
-                         <option >Syrup</option>
-                         <option >Tablets</option>
-                         <option >Suspensions</option>
-                         <option >Capsules</option>
-                         <option >Drops</option>
-                         <option >Ointments</option>
-
-                       </select>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g in grams "/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                </div>
-                 </div>
-                 <div className="table-box">
-                <div className="table-row">
-                    <div className="table-cell">
-                        <input type="text" id="label" placeholder="e.g 1"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g panado"/>
-                    </div> 
-                    <div className="table-cell">
-                       <select name="" id="type"required>
-                         <option >Injectables</option>
-                         <option >Syrup</option>
-                         <option >Tablets</option>
-                         <option >Suspensions</option>
-                         <option >Capsules</option>
-                         <option >Drops</option>
-                         <option >Ointments</option>
-
-                       </select>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g in grams "/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                </div>
-                 </div>
-                 <div className="table-box">
-                <div className="table-row">
-                    <div className="table-cell">
-                        <input type="text" id="label" placeholder="e.g 1"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g panado"/>
-                    </div> 
-                    <div className="table-cell">
-                       <select name="" id="type"required>
-                         <option >Injectables</option>
-                         <option >Syrup</option>
-                         <option >Tablets</option>
-                         <option >Suspensions</option>
-                         <option >Capsules</option>
-                         <option >Drops</option>
-                         <option >Ointments</option>
-
-                       </select>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g in grams "/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                </div>
-                
-                 </div>
-                 <div className="table-box">
-                <div className="table-row">
-                    <div className="table-cell">
-                        <input type="text" id="label" placeholder="e.g 1"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g panado"/>
-                    </div> 
-                    <div className="table-cell">
-                       <select name="" id="type"required>
-                         <option >Injectables</option>
-                         <option >Syrup</option>
-                         <option >Tablets</option>
-                         <option >Suspensions</option>
-                         <option >Capsules</option>
-                         <option >Drops</option>
-                         <option >Ointments</option>
-
-                       </select>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g in grams "/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                </div>
-                
-                 </div>
-                 <div className="table-box">
-                <div className="table-row">
-                    <div className="table-cell">
-                        <input type="text" id="label" placeholder="e.g 1"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g panado"/>
-                    </div> 
-                    <div className="table-cell">
-                       <select name="" id="type"required>
-                         <option >Injectables</option>
-                         <option >Syrup</option>
-                         <option >Tablets</option>
-                         <option >Suspensions</option>
-                         <option >Capsules</option>
-                         <option >Drops</option>
-                         <option >Ointments</option>
-
-                       </select>
-                    </div>
-                    <div className="table-cell">
-                    <input type="text" id="label" placeholder="e.g in grams "/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                    <div className="table-cell">
-                    <input type="date" id="label"/>
-                    </div>
-                </div>
-                
-                 </div>
-                 <button className="btn">Record</button>
+            </div>  
             </div>
-           
         </div>
     )
 }
