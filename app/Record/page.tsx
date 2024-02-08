@@ -5,7 +5,7 @@ import Image from "next/image";
 import icon from '../images/icon.png'
 
 export default function Record(){
-    const[pharmacyRecords, setPharmacyRecoreds]=useState([
+    const[pharmacyRecords, setPharmacyRecords]=useState([
         {DrugId:1, DrugName:'',DrugType:'',Quantity:'', Datecreated:'',ExpiryDate:'' }
     ]);
      const addRow=()=>{
@@ -17,8 +17,9 @@ export default function Record(){
             DateCreated:'',
             ExpiryDate:''
         };
-        setPharmacyRecoreds(prevData =>[...prevData, newRow]);
+        setPharmacyRecords(prevData =>[...prevData, newRow]);
      }
+     
     return(
         <div>
              <div id="dash">
@@ -68,7 +69,7 @@ export default function Record(){
                         <input type="number" id="label" placeholder={'e.g 1'}/>
                     </div>
                     <div className="table-cell">
-                        <input type="number" 
+                        <input type="text" 
                         id="label" 
                         placeholder='e.g panado'
                         value={row.DrugName}
@@ -99,14 +100,14 @@ export default function Record(){
                         id="label" 
                         placeholder=''
                         value={row.ExpiryDate}
-                        onChange={(e)=>handleInputChange(e, index, 'Date')}
+                        onChange={(e)=>handleInputChange(e, index, 'ExpiryDate')}
                         />
                     </div>
                  
                 </div>
               ))}
               <button onClick={addRow} className="button">Add Row</button>
-                    <button className="button1">Save</button>
+              <button className="button1">Save</button>
             </div>
                 
         </div>
@@ -114,6 +115,6 @@ export default function Record(){
     function handleInputChange(e, index, fieldName){
         const newData =[...pharmacyRecords];
         newData[index][fieldName] = e.target.value;
-        setPharmacyRecoreds(newData);
+        setPharmacyRecords(newData);
     }
 }

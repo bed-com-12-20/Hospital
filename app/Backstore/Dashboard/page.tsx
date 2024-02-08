@@ -2,7 +2,7 @@
 
 import React, {useState} from "react";
 import './style.css'
-import icon from '../images/icon.png'
+import icon from '../../images/icon.png'
 import Image from "next/image";
 import search from '../images/search.png'
 import { Search } from "react-bootstrap-icons";
