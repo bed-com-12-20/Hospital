@@ -17,7 +17,7 @@ export default function Backstore(){
             DateCreated:'',
             ExpiryDate:''
         };
-        setBackstore(prevData=>[...prevData, newRow]);
+    //    setBackstore(prevData=>[...prevData, newRow])
      }
      
     return(
