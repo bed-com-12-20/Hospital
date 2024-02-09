@@ -69,7 +69,7 @@ export default function Vitals(){
 
                  </div>
                  {Vitals.map((row, index)=>(
-                  <div className="table-row">
+                  <div className="table-row" key={index}>
                      
                      <div className="table-cell">
                             <input
