@@ -8,12 +8,12 @@ import search from '../images/search.png'
 import { Search } from "react-bootstrap-icons";
 
 
-export default function Sale(){
+export default function Finance(){
     
     return(
         <div>
             <div id="dash">
-                <header>Pharmacist</header>
+                <header>Finance</header>
                 <ul>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Records</a></li>

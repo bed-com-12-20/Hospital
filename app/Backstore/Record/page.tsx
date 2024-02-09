@@ -5,23 +5,20 @@ import Image from "next/image";
 import icon from '../../images/icon.png'
 
 export default function Backstore(){
-    const[Backstore , setBackstore]=useState([
-        {ID:1, firstName:'', LastName:'', Paymethod:'', TestOrder:'', Date:''}
+    const[Backstore, setBackstore]=useState([
+        {DrugId:1, DrugName:'',DrugType:'',Quantity:'', Datecreated:'',ExpiryDate:'' }
     ]);
-
-    const addRow=()=>{
-      const newRow={
-         ID:Backstore.length + 1,
-         firstName:'',
-         LastName:'',
-         Paymethod:'',
-         TestOrder:'',
-         Date:''
-
-      }
-      setBackstore(prevData=>[...prevData, newRow]);
-    }
-   
+     const addRow=()=>{
+        const newRow={
+            DrugID:Backstore.length +1,
+            DrugName:'',
+            DrugType:'',
+            Qauntity:'',
+            DateCreated:'',
+            ExpiryDate:''
+        };
+        setBackstore(prevData=>[...prevData, newRow]);
+     }
      
     return(
         <div>
@@ -42,77 +39,76 @@ export default function Backstore(){
                  height={100}
                  />
                  <div>
-                    <h1 id="pharma-head">Medicine Stores</h1>
+                    <h1 id="pharma-head">Drug Store</h1>
                  </div>
                  <div className="table-box">
                  <div className="table-row">
                 <div  className="table-cell">
-                   <p>ID</p>
+                   <p>DrugID</p>
                 </div>
                 <div  className="table-cell">
-                   <p>FirstName</p>
+                   <p>DrugName</p>
                 </div>
                 <div  className="table-cell">
-                   <p>LastName</p>
+                   <p>DrugType</p>
                 </div>
                 <div  className="table-cell">
-                   <p>Payment Method</p>
+                   <p>Qauntity</p>
                 </div>
                 <div  className="table-cell">
-                   <p>Test Orderd</p>
+                   <p>DateCreated</p>
                 </div>
                 <div  className="table-cell">
-                   <p>Date</p>
+                   <p>ExpiryDate</p>
                 </div>
               </div>
-
                  </div>
-                 {Backstore.map((row, index)=>(
-                  <div className="table-row" key={index}>
-                     <div className="table-cell">
-                            <input
-                             type="number"
-                              id="label"
-                               placeholder="e.g 1"/>
-                        </div>
-                        <div className="table-cell">
-                            <input
-                             type="text"
-                              id="label"
-                               placeholder=" e.g damascus"/>
-                        </div> 
-                        <div className="table-cell">
-                            <input
-                             type="textr"
-                              id="label"
-                               placeholder="multiplug"/>
-                        </div>
-                        <div className="table-cell">
-                            <select name="" id="type" required>
-                             <option value="">Cash</option>
-                             <option value="">Airtel Money</option>
-                             <option value="">Mpamba</option>
-                             <option value="">Bank</option>
-
-                            </select>
-                        </div>
-                        <div className="table-cell">
-                            <select name="" id="type" required>
-                             <option value="">BP</option>
-                             <option value="">TB</option>
-                             <option value="">Cancer</option>
-                             <option value="">Malaria</option>
-
-                            </select>
-                        </div>
-                  </div>
-                 ))}
-              
+              {Backstore.map((row, index)=>(
+                <div className="table-row" key={index}>
+                    <div className="table-cell">
+                        <input type="number" id="label" placeholder={'e.g 1'}/>
+                    </div>
+                    <div className="table-cell">
+                        <input type="text" 
+                        id="label" 
+                        placeholder='e.g panado'
+                        
+                        />
+                    </div>
+                    <div className="table-cell">
+                    <select name="" id="type" required >
+                                    <option>Tablets</option>
+                                    <option>Injections</option>
+                                    <option>Syrup</option>
+                                    <option>Suspensions</option>
+                                    <option>Capsules</option>
+                                    <option>Drops</option>
+                                    <option>Oitments</option>
+                        </select>
+                    </div>
+                    <div className="table-cell">
+                        <input type="date" 
+                        id="label" 
+                        placeholder=''
+                        
+                        />
+                    </div>
+                    <div className="table-cell">
+                        <input type="date" 
+                        id="label" 
+                        placeholder=''
+                        
+                        />
+                    </div>
+                 
+                </div>
+              ))}
               <button onClick={addRow} className="button">Add Row</button>
               <button className="button1">Save</button>
             </div>
                 
         </div>
     );
-  
+   
+    
 }

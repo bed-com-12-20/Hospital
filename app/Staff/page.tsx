@@ -164,7 +164,7 @@ import { TypeAnimation } from "react-type-animation"
          height={128}
         className="image"
         />
-        <h1 className="name1">Gambit</h1>
+        <h1 className="name1">Naphy</h1>
         <p className="title">Dentist</p>
         <div className="desc">
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
