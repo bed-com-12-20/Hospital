@@ -59,7 +59,7 @@ export default function Reception(){
 
                  </div>
                  {Reception.map((row, index)=>(
-                  <div className="table-row">
+                  <div className="table-row" key={index}>
                      
                      <div className="table-cell">
                             <input
