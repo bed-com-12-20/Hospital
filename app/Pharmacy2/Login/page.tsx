@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css'
-import icon from '../images/icon.png'
+import icon from '../../images/icon.png'
 import Image from "next/image";
 
 export default function Login(){

@@ -67,7 +67,7 @@ import { TypeAnimation } from "react-type-animation"
              tempora 
              consequuntur magni maiores unde.</p>
         </div>
-        <a href="Login">
+        <a href="Pharmacy2/Login">
         <button className="btn">Login</button>
         </a>
       </div>
