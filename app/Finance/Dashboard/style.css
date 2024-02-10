@@ -26,14 +26,14 @@ body {
 }
 
 #table {
-    margin-left: 600px; /* Adjusted margin to create space beside the sidebar */
+    margin-left: 700px; /* Adjusted margin to create space beside the sidebar */
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column; /* Stacking elements vertically */
     align-items: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 #pharma-head {
@@ -68,42 +68,7 @@ div ul a {
 div ul li:hover a {
     padding-left: 50px;
 }
-.table-box{
-    margin: 0px auto;
-}
-.table-row{
-    display: table;
-    width: 700px;
-    margin: 10px;
-    font-family: sans-serif;
-    background: transparent;
-    padding: 1px 0;
-    color: darkgray;
-    font-size: 13px;
-    box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
-}
-.table-cell{
-    display: table-cell;
-    width: 30px;
-    text-align: center;
-    padding: 4px 0;
-    border-right: 1px solid green;
-    vertical-align: middle;
-    line-height: 100%;
-}
-#label{
-    background: transparent;
-    border: none;  
-    width: 113px;
-    height: 100%;
-    padding: 0px;
-    color: white;
-    text-align: center;   
-}
-#type{
-  background: transparent;
-  border: none;  
-}
+
 
 #searchbar{
     height: 50px;
@@ -131,7 +96,7 @@ div ul li:hover a {
     color: white;
     font-size: 16px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 90px;
     margin-top: 60px;
 }
 

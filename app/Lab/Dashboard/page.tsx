@@ -13,7 +13,7 @@ export default function Sale(){
     return(
         <div>
             <div id="dash">
-                <header>Pharmacist</header>
+                <header>Lab</header>
                 <ul>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Records</a></li>

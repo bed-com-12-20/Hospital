@@ -21,8 +21,14 @@ export default function Finance(){
       }
       setFinace(prevData=>[...prevData, newRow]);
     }
-   
-     
+    const deleteRow=(index)=>{
+         setFinace(prevData=>prevData.filter((row, i)=>i !==index));
+    }
+    const updateRow=(index, newData)=>{
+          const updatedData = [...Finance];
+          updatedData[index] = {...newData};
+          setFinace(updatedData);
+    } 
     return(
         <div>
              <div id="dash">
@@ -61,6 +67,12 @@ export default function Finance(){
                 <div  className="table-cell">
                    <p>Date</p>
                 </div>
+                <div className="table-cell">
+                              <p>Action</p>
+                           </div>
+                           <div className="table-cell">
+                     <p>Action</p>
+                           </div>
               </div>
 
                  </div>
@@ -69,20 +81,29 @@ export default function Finance(){
                      <div className="table-cell">
                             <input
                              type="number"
-                              id="label"
-                               placeholder="e.g 1"/>
+                             id="label"
+                           placeholder="e.g 1"
+                           value={row.ID}
+                           onChange={(event)=>updateRow(index,{...row, ID: event.target.value})}   
+                              />
                         </div>
                         <div className="table-cell">
                             <input
                              type="text"
                               id="label"
-                               placeholder=" e.g damascus"/>
+                              placeholder=" e.g damascus"
+                              value={row.firstName}
+                              onChange={(event)=>updateRow(index,{...row, firstName: event.target.value})}
+                              />
                         </div> 
                         <div className="table-cell">
                             <input
                              type="textr"
                               id="label"
-                               placeholder="multiplug"/>
+                              placeholder="multiplug"
+                              value={row.LastName}
+                              onChange={(event)=>updateRow(index,{...row, LastName: event.target.value})}
+                              />
                         </div>
                         <div className="table-cell">
                             <select name="" id="type" required>
@@ -93,6 +114,23 @@ export default function Finance(){
 
                             </select>
                         </div>
+                        <div className="table-cell">
+                            <input
+                             type="date"
+                              id="label"
+                              placeholder="multiplug"
+                              value={row.Date}
+                              onChange={(event)=>updateRow(index,{...row, LastName: event.target.value})}
+                              />
+                        </div>
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                         
                   </div>
                  ))}

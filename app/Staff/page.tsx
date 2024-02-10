@@ -17,13 +17,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Sam Zarila</h1>
         <p className="title">Finance Manager</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+        
         <a href="Finance/Login">
         <button className="btn">Login</button>
         </a>
@@ -40,11 +34,7 @@ import { TypeAnimation } from "react-type-animation"
         <h1 className="name1">Rich ML</h1>
         <p className="title">OPD</p>
         <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
+             
         </div>
         <a href="OPD/Login">
         <button className="btn">Login</button>
@@ -60,13 +50,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Crossby</h1>
         <p className="title">Phamarcist</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+       
         <a href="Pharmacy2/Login">
         <button className="btn">Login</button>
         </a>
@@ -81,13 +65,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Gambit</h1>
         <p className="title">Martenity</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+        
         <a href="Martenity/Login">
         <button className="btn">Login</button>
         </a>
@@ -102,13 +80,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Gambit</h1>
         <p className="title">Receptionist</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+        
         <a href="Reception/Login">
         <button className="btn">Login</button>
         </a>
@@ -123,13 +95,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Gambit</h1>
         <p className="title">Radiographer</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+        
         <a href="X-Ray/Login">
         <button className="btn">Login</button>
         </a>
@@ -144,13 +110,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Gambit</h1>
         <p className="title">Lab Technician</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+       
         <a href="Lab/Login">
         <button className="btn">Login</button>
         </a>
@@ -166,13 +126,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Naphy</h1>
         <p className="title">Dentist</p>
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+        
         <a href="Dental/Login">
         <button className="btn">Login</button>
         </a>
@@ -188,13 +142,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Backstore</h1>
        
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+       
         <a href="Backstore/Login">
         <button className="btn">Login</button>
         </a>
@@ -210,13 +158,7 @@ import { TypeAnimation } from "react-type-animation"
         />
         <h1 className="name1">Vitals</h1>
        
-        <div className="desc">
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-             Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-             similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-             tempora 
-             consequuntur magni maiores unde.</p>
-        </div>
+       
         <a href="Vitals/Login">
         <button className="btn">Login</button>
         </a>

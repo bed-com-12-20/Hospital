@@ -91,6 +91,12 @@ div ul li:hover a {
 #type{
     background: transparent;
     border: none;
+    width: 95px;
+    height: 25px;
+    padding: 10px;
+    color: black;
+
+    
 }
 .button{
     outline: none;
@@ -126,4 +132,34 @@ div ul li:hover a {
     color: white;
     cursor: pointer;
     transition: all 400ms linear;
+}
+.table-row .table-cell:last-child {
+    border: none;
+}
+.delete{
+    outline: none;
+    width: 50px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.delete:hover{
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+.delete1{
+    outline: none;
+    width: 50px;
+    height: 25px;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 10px;
+}
+.delete1:hover{
+    color: darkgreen;
+    background-color: white;
+    cursor: pointer;
 }
