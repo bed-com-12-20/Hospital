@@ -1,132 +1,151 @@
-'use client'
-import React,{useState} from "react"
-import './style.css'
-import Image from "next/image";
-import icon from '../../images/icon.png'
+'use client';
 
-export default function OPD(){
-    const[OPD , setOPD]=useState([
-        {ID:1, firstName:'', LastName:'', Treatment:'', Amount:'', MedicalScheme:'',Date:''}
+import React, { useState } from "react";
+import './style.css';
+import Image from "next/image";
+import icon from '../../images/icon.png';
+
+interface OPDItem {
+    ID: number;
+    firstName: string;
+    LastName: string;
+    Treatment: string;
+    Amount: string;
+    MedicalScheme: string;
+    Date: string;
+}
+
+export default function OPD() {
+    const [OPD, setOPD] = useState<OPDItem[]>([
+        { ID: 1, firstName: '', LastName: '', Treatment: '', Amount: '', MedicalScheme: '', Date: '' }
     ]);
 
-    const addRow=()=>{
-      const newRow={
-         ID:OPD.length + 1,
-         firstName:'',
-         LastName:'',
-         Treatment:'',
-         Amount:'',
-         MedicalScheme:'',
-         Date:''
-      }
-      setOPD(prevData=>[...prevData, newRow]);
+    const addRow = () => {
+        const newRow: OPDItem = {
+            ID: OPD.length + 1,
+            firstName: '',
+            LastName: '',
+            Treatment: '',
+            Amount: '',
+            MedicalScheme: '',
+            Date: ''
+        };
+        setOPD(prevData => [...prevData, newRow]);
     }
-    const deleteRow=(index:number)=>{
-        setOPD(prevData=>prevData.filter((row, i)=>i !==index));
-    }
-    const updateRow=(index:number, newData)=>{
-      const updatedData = [...OPD];
-      updatedData[index] = {...newData};
-      setOPD(updatedData);
-    } 
-     
-    return(
-        <div>
-            
-            <div id="table">
-                 <Image
-                 src={icon}
-                 alt=""
-                 width={100}
-                 height={100}
-                 />
-                 <div>
-                    <h1 id="pharma-head">Doctors Office</h1>
-                 </div>
-                 <div className="table-box">
-                 <div className="table-row">
-                <div  className="table-cell">
-                   <p>ID</p>
-                </div>
-                <div  className="table-cell">
-                   <p>FirstName</p>
-                </div>
-                <div  className="table-cell">
-                   <p>LastName</p>
-                </div>
-                <div  className="table-cell">
-                   <p>Treatment</p>
-                </div>
-                <div  className="table-cell">
-                   <p>Medical Scheme</p>
-                </div>
-                <div  className="table-cell">
-                   <p>Date</p>
-                </div>
-               
-              </div>
 
-                 </div>
-                 {OPD.map((row, index)=>(
-                  <div className="table-row" key={index}>
-                     <div className="table-cell">
+    const deleteRow = (index: number) => {
+        setOPD(prevData => prevData.filter((row, i) => i !== index));
+    }
+
+    const updateRow = (index: number, newData: Partial<OPDItem>) => {
+        const updatedData = [...OPD];
+        updatedData[index] = { ...updatedData[index], ...newData };
+        setOPD(updatedData);
+    }
+
+    return (
+        <div>
+            <div id="table">
+                <Image
+                    src={icon}
+                    alt=""
+                    width={100}
+                    height={100}
+                />
+                <div>
+                    <h1 id="pharma-head">Doctors Office</h1>
+                </div>
+                <div className="table-box">
+                    <div className="table-row">
+                        <div className="table-cell">
+                            <p>ID</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>FirstName</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>LastName</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Treatment</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Medical Scheme</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Date</p>
+                        </div>
+                    </div>
+                </div>
+                {OPD.map((row, index) => (
+                    <div className="table-row" key={index}>
+                        <div className="table-cell">
                             <input
-                             type="number"
-                              id="label"
-                               placeholder="e.g 1"/>
+                                type="number"
+                                id="label"
+                                placeholder="e.g 1"
+                                value={row.ID}
+                                onChange={(event) => updateRow(index, { ...row, ID: parseInt(event.target.value) })}
+                            />
                         </div>
                         <div className="table-cell">
                             <input
-                             type="text"
-                              id="label"
-                               placeholder=" e.g damascus"/>
-                        </div> 
-                        <div className="table-cell">
-                            <input
-                             type="textr"
-                              id="label"
-                               placeholder="multiplug"/>
+                                type="text"
+                                id="label"
+                                placeholder=" e.g damascus"
+                                value={row.firstName}
+                                onChange={(event) => updateRow(index, { ...row, firstName: event.target.value })}
+                            />
                         </div>
                         <div className="table-cell">
                             <input
-                             type="text"
-                              id="label"
-                               placeholder="Aids"/>
+                                type="text"
+                                id="label"
+                                placeholder="multiplug"
+                                value={row.LastName}
+                                onChange={(event) => updateRow(index, { ...row, LastName: event.target.value })}
+                            />
+                        </div>
+                        <div className="table-cell">
+                            <input
+                                type="text"
+                                id="label"
+                                placeholder="Aids"
+                                value={row.Treatment}
+                                onChange={(event) => updateRow(index, { ...row, Treatment: event.target.value })}
+                            />
                         </div>
                         <div className="table-cell">
                             <select name="" id="type" required>
-                             <option value=""></option>
-                             <option value="">MASM</option>
-                             <option value="">MediHealth</option>
-                             <option value="">National Bank</option>
-                             <option value="">Liberty Health</option>
-                             <option value="">MRA</option>
-                             <option value="">ECM</option>
+                                <option value=""></option>
+                                <option value="">MASM</option>
+                                <option value="">MediHealth</option>
+                                <option value="">National Bank</option>
+                                <option value="">Liberty Health</option>
+                                <option value="">MRA</option>
+                                <option value="">ECM</option>
                             </select>
                         </div>
                         <div className="table-cell">
                             <input
-                             type="date"
-                              id="label"
-                              />
+                                type="date"
+                                id="label"
+                                value={row.Date}
+                                onChange={(event) => updateRow(index, { ...row, Date: event.target.value })}
+                            />
                         </div>
                         <div className="table-cell">
-                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
-                            
-                            </div>
-                            <div className="table-cell">
-                                
-                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
-                            </div>
-                        
-                  </div>
-                 ))}
-              
-              <button onClick={addRow} className="button">Add Row</button>
-              <button className="button1">Save</button>
+                            <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                        </div>
+                        <div className="table-cell">
+                            <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                        </div>
+                    </div>
+                ))}
+                <button onClick={addRow} className="button">Add Row</button>
+                <button className="button1">Save</button>
             </div>
-                
         </div>
     );
-  
+
 }

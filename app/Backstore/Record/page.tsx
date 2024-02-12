@@ -5,6 +5,16 @@ import './style.css';
 import Image from "next/image";
 import icon from '../../images/icon.png';
 
+interface BackstoreItem {
+    DrugID: number;
+    DrugName: string;
+    DrugType: string;
+    Quantity: string;
+    DateCreated: string;
+    ExpiryDate: string;
+}
+
+
 export default function Backstore() {
     const [backstore, setBackstore] = useState([
         { DrugId: 1, DrugName: '', DrugType: '', Quantity: '', Datecreated: '', ExpiryDate: '' }
@@ -26,9 +36,9 @@ export default function Backstore() {
         setBackstore(prevData => prevData.filter((row, i) => i !== index));
     }
 
-    const updateRow = (index:number, newData) => {
+    const updateRow = (index: number, newData: Partial<BackstoreItem>) => {
         const updatedData = [...backstore];
-        updatedData[index] = { ...newData };
+        updatedData[index] = { ...updatedData[index], ...newData };
         setBackstore(updatedData);
     }
 
@@ -83,7 +93,8 @@ export default function Backstore() {
                     {backstore.map((row, index) => (
                         <div className="table-row" key={index}>
                             <div className="table-cell">
-                                <input id="type" type="number" value={row.DrugId} onChange={(event) => updateRow(index, { ...row, DrugID: event.target.value })} />
+                                <input id="type" type="number" 
+                                 />
                             </div>
                             <div className="table-cell">
                                 <input id="type" type="text" value={row.DrugName} onChange={(event) => updateRow(index, { ...row, DrugName: event.target.value })} />
