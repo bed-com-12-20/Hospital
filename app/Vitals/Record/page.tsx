@@ -20,7 +20,7 @@ export default function Vitals(){
       };
       setVitals(prevData=>[...prevData, newRow]);
      }
-     const deleteRow=(index)=>{
+     const deleteRow=(index:number)=>{
       setVitals(prevData=>prevData.filter((row, i)=>i !==index));
   }
   const updateRow=(index, newData)=>{

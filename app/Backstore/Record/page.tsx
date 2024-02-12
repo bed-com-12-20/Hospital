@@ -22,7 +22,7 @@ export default function Backstore() {
         // setBackstore(prevData => [...prevData, newRow]);
     }
 
-    const deleteRow = (index) => {
+    const deleteRow = (index: number) => {
         setBackstore(prevData => prevData.filter((row, i) => i !== index));
     }
 

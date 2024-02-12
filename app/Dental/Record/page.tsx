@@ -23,7 +23,7 @@ export default function Dental(){
       };
       setDental(prevData=>[...prevData, newRow]);
     }
-    const deleteRow=(index)=>{
+    const deleteRow=(index:number)=>{
          setDental(prevData=>prevData.filter((row, i)=>i !==index));
     }
     const updateRow=(index, newData)=>{

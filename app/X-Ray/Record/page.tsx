@@ -21,7 +21,7 @@ export default function Xray(){
       }
       setXray(prevData=>[...prevData, newRow]);
     }
-    const deleteRow=(index)=>{
+    const deleteRow=(index:number)=>{
       setXray(prevData=>prevData.filter((row, i)=>i !==index));
   }
   const updateRow=(index, newData)=>{
