@@ -24,7 +24,7 @@ export default function Finance(){
     const deleteRow=(index:number)=>{
          setFinace(prevData=>prevData.filter((row, i)=>i !==index));
     }
-    const updateRow=(index, newData)=>{
+    const updateRow=(index:number, newData)=>{
           const updatedData = [...Finance];
           updatedData[index] = {...newData};
           setFinace(updatedData);

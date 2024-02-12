@@ -21,10 +21,10 @@ export default function OPD(){
       }
       setOPD(prevData=>[...prevData, newRow]);
     }
-    const deleteRow=(index)=>{
+    const deleteRow=(index:number)=>{
         setOPD(prevData=>prevData.filter((row, i)=>i !==index));
     }
-    const updateRow=(index, newData)=>{
+    const updateRow=(index:number, newData)=>{
       const updatedData = [...OPD];
       updatedData[index] = {...newData};
       setOPD(updatedData);

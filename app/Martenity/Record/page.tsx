@@ -21,10 +21,10 @@ export default function Martenity(){
       }
       setMartenity(prevData=>[...prevData, newRow]);
     }
-    const deleteRow=(index)=>{
+    const deleteRow=(index:number)=>{
       setMartenity(prevData=>prevData.filter((row, i)=>i !==index));
  }
- const updateRow=(index, newData)=>{
+ const updateRow=(index:number, newData)=>{
        const updatedData = [...Martenity];
        updatedData[index] = {...newData};
        setMartenity(updatedData);

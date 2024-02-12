@@ -24,7 +24,7 @@ export default function Lab(){
     const deleteRow=(index:number)=>{
       setLab(prevData=>prevData.filter((row, i)=>i !==index));
  }
- const updateRow=(index, newData)=>{
+ const updateRow=(index:number, newData)=>{
        const updatedData = [...lab];
        updatedData[index] = {...newData};
        setLab(updatedData);

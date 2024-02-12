@@ -26,7 +26,7 @@ export default function Backstore() {
         setBackstore(prevData => prevData.filter((row, i) => i !== index));
     }
 
-    const updateRow = (index, newData) => {
+    const updateRow = (index:number, newData) => {
         const updatedData = [...backstore];
         updatedData[index] = { ...newData };
         setBackstore(updatedData);

@@ -26,7 +26,7 @@ export default function Dental(){
     const deleteRow=(index:number)=>{
          setDental(prevData=>prevData.filter((row, i)=>i !==index));
     }
-    const updateRow=(index, newData)=>{
+    const updateRow=(index:number, newData)=>{
           const updatedData = [...Dental];
           updatedData[index] = {...newData};
           setDental(updatedData);

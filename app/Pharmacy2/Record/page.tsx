@@ -21,10 +21,10 @@ export default function Phamarcy(){
       }
       setPhamarcy(prevData=>[...prevData, newRow]);
     }
-    const deleteRow=(index)=>{
+    const deleteRow=(index:number)=>{
       setPhamarcy(prevData=>prevData.filter((row, i)=>i !==index));
   }
-  const updateRow=(index, newData)=>{
+  const updateRow=(index:number, newData)=>{
     const updatedData = [...Phamarcy];
     updatedData[index] = {...newData};
     setPhamarcy(updatedData);
