@@ -4,14 +4,14 @@ import './style.css'
 import Image from "next/image";
 import icon from '../../images/icon.png'
 
-export default function OPD(){
-    const[OPD , setOPD]=useState([
+export default function Xray(){
+    const[Xray , setXray]=useState([
         {ID:1, firstName:'', LastName:'', Treatment:'', Amount:'', MedicalScheme:'',Date:''}
     ]);
 
     const addRow=()=>{
       const newRow={
-         ID:OPD.length + 1,
+         ID:Xray.length + 1,
          firstName:'',
          LastName:'',
          Treatment:'',
@@ -19,8 +19,16 @@ export default function OPD(){
          MedicalScheme:'',
          Date:''
       }
-      setOPD(prevData=>[...prevData, newRow]);
+      setXray(prevData=>[...prevData, newRow]);
     }
+    const deleteRow=(index)=>{
+      setXray(prevData=>prevData.filter((row, i)=>i !==index));
+  }
+  const updateRow=(index, newData)=>{
+    const updatedData = [...Xray];
+    updatedData[index] = {...newData};
+    setXray(updatedData);
+  } 
    
      
     return(
@@ -59,7 +67,7 @@ export default function OPD(){
               </div>
 
                  </div>
-                 {OPD.map((row, index)=>(
+                 {Xray.map((row, index)=>(
                   <div className="table-row" key={index}>
                      <div className="table-cell">
                             <input
@@ -99,6 +107,14 @@ export default function OPD(){
                               placeholder=""
                               />
                         </div>
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                         
                   </div>
                  ))}

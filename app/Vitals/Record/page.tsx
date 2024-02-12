@@ -19,7 +19,16 @@ export default function Vitals(){
          Date:''
       };
       setVitals(prevData=>[...prevData, newRow]);
-   }
+     }
+     const deleteRow=(index)=>{
+      setVitals(prevData=>prevData.filter((row, i)=>i !==index));
+  }
+  const updateRow=(index, newData)=>{
+    const updatedData = [...Vitals];
+    updatedData[index] = {...newData};
+    setVitals(updatedData);
+  } 
+   
      
     return(
         <div>
@@ -113,6 +122,14 @@ export default function Vitals(){
                               id="label"
                            />
                      </div>
+                         <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                                  
 
                   </div>

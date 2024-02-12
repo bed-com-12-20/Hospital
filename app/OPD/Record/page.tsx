@@ -21,7 +21,14 @@ export default function OPD(){
       }
       setOPD(prevData=>[...prevData, newRow]);
     }
-   
+    const deleteRow=(index)=>{
+        setOPD(prevData=>prevData.filter((row, i)=>i !==index));
+    }
+    const updateRow=(index, newData)=>{
+      const updatedData = [...OPD];
+      updatedData[index] = {...newData};
+      setOPD(updatedData);
+    } 
      
     return(
         <div>
@@ -56,6 +63,7 @@ export default function OPD(){
                 <div  className="table-cell">
                    <p>Date</p>
                 </div>
+               
               </div>
 
                  </div>
@@ -102,6 +110,14 @@ export default function OPD(){
                               id="label"
                               />
                         </div>
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                         
                   </div>
                  ))}

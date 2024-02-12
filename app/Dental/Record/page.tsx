@@ -23,11 +23,19 @@ export default function Dental(){
       };
       setDental(prevData=>[...prevData, newRow]);
     }
+    const deleteRow=(index)=>{
+         setDental(prevData=>prevData.filter((row, i)=>i !==index));
+    }
+    const updateRow=(index, newData)=>{
+          const updatedData = [...Dental];
+          updatedData[index] = {...newData};
+          setDental(updatedData);
+    } 
      
     return(
         <div>
             
-            <div id="table">
+            <div id="table" >
                  <Image
                  src={icon}
                  alt=""
@@ -38,7 +46,7 @@ export default function Dental(){
                     <h1 id="pharma-head">Dental</h1>
                  </div>
                  <div className="table-box">
-                 <div className="table-row">
+                 <div className="table-row" id="tab">
                 <div  className="table-cell">
                    <p>ID</p>
                 </div>
@@ -69,6 +77,12 @@ export default function Dental(){
                 <div  className="table-cell">
                    <p>Date</p>
                 </div>
+                 <div  className="table-cell">
+                   <p>Action</p>
+                </div>
+                <div  className="table-cell">
+                   <p>Action</p>
+                </div>
               </div>
 
                  </div>
@@ -78,43 +92,66 @@ export default function Dental(){
                             <input
                              type="number"
                               id="label"
-                               placeholder="e.g 1"/>
+                              placeholder="e.g 1"
+                              value={row.ID}
+                              onChange={(event)=>updateRow(index,{...row, ID: event.target.value})}   
+                              />
                         </div>
                         <div className="table-cell">
                             <input
                              type="text"
                               id="label"
-                               placeholder=" e.g damascus"/>
+                               placeholder=" e.g damascus"
+                               value={row.FirstName}
+                               onChange={(event)=>updateRow(index,{...row, FirstName: event.target.value})}   
+                               />
                         </div> 
                         <div className="table-cell">
                             <input
                              type="textr"
                               id="label"
-                               placeholder="multiplug"/>
+                               placeholder="multiplug"
+                               value={row.LastName}
+                               onChange={(event)=>updateRow(index,{...row, LastName: event.target.value})}   
+                               />
                         </div>
                         <div className="table-cell">
                             <input
                              type="number"
                               id="label"
-                               placeholder="0888009005"/>
+                              placeholder="0888009005"
+                              value={row.PhoneNumber}
+                              onChange={(event)=>updateRow(index,{...row, ID: event.target.value})}   
+
+                              />
                         </div>
                         <div className="table-cell">
                             <input
                              type="text"
                               id="label"
-                               placeholder="p.o box liwonde"/>
+                               placeholder="p.o box liwonde"
+                               value={row.Address}
+                           onChange={(event)=>updateRow(index,{...row, ID: event.target.value})}   
+                               />
                         </div>
                         <div className="table-cell">
                             <input
                              type="text"
                               id="label"
-                               placeholder="bracelets"/>
+                               placeholder="bracelets"
+                               value={row.Diogonis}
+                           onChange={(event)=>updateRow(index,{...row, ID: event.target.value})}   
+                               />
                         </div>
                         <div className="table-cell">
                             <input
                              type="text"
                               id="label"
-                               placeholder="k 1000"/>
+                               placeholder="k 1000"
+                               value={row.Amount}
+                           onChange={(event)=>updateRow(index,{...row, ID: event.target.value})}   
+                               
+                               />
                         </div>
                         <div className="table-cell">
                             <select name="" id="type" required>
@@ -139,6 +176,16 @@ export default function Dental(){
                               id="label"
                               />
                         </div>
+                        
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
+                        
                         
                   </div>
                  ))}

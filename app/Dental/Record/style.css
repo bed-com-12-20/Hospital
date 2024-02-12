@@ -5,6 +5,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: row; /* Ensure a horizontal layout */
+    
 }
 
 #dash {
@@ -126,4 +127,32 @@ div ul li:hover a {
     color: white;
     cursor: pointer;
     transition: all 400ms linear;
+}
+
+.delete{
+    outline: none;
+    width: 50px;
+    height: 25px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.delete:hover{
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+.delete1{
+    outline: none;
+    width: 50px;
+    height: 25px;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 10px;
+}
+.delete1:hover{
+    color: darkgreen;
+    background-color: white;
+    cursor: pointer;
 }

@@ -21,6 +21,14 @@ export default function Lab(){
       }
       setLab(prevData=>[...prevData, newRow]);
     }
+    const deleteRow=(index)=>{
+      setLab(prevData=>prevData.filter((row, i)=>i !==index));
+ }
+ const updateRow=(index, newData)=>{
+       const updatedData = [...lab];
+       updatedData[index] = {...newData};
+       setLab(updatedData);
+ } 
    
      
     return(
@@ -64,6 +72,12 @@ export default function Lab(){
                 <div  className="table-cell">
                    <p>Date</p>
                 </div>
+                <div  className="table-cell">
+                   <p>Action</p>
+                </div>
+                <div  className="table-cell">
+                   <p>Action</p>
+                </div>
               </div>
 
                  </div>
@@ -73,19 +87,28 @@ export default function Lab(){
                             <input
                              type="number"
                               id="label"
-                               placeholder="e.g 1"/>
+                              placeholder="e.g 1"
+                              value={row.ID}
+                              onChange={(event)=>updateRow(index,{...row, ID: event.target.value})} 
+                              />
                         </div>
                         <div className="table-cell">
                             <input
                              type="text"
                               id="label"
-                               placeholder=" e.g damascus"/>
+                               placeholder=" e.g damascus"
+                               value={row.firstName}
+                              onChange={(event)=>updateRow(index,{...row, ID: event.target.value})} 
+                               />
                         </div> 
                         <div className="table-cell">
                             <input
                              type="textr"
                               id="label"
-                               placeholder="multiplug"/>
+                              placeholder="multiplug"
+                              value={row.LastName}
+                              onChange={(event)=>updateRow(index,{...row, ID: event.target.value})} 
+                              />
                         </div>
                         <div className="table-cell">
                             <select name="" id="type" required>
@@ -105,6 +128,14 @@ export default function Lab(){
 
                             </select>
                         </div>
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                   </div>
                  ))}
               

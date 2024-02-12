@@ -20,6 +20,14 @@ export default function Reception(){
       };
       setReception(prevData=>[...prevData, newRow]);
    }
+   const deleteRow=(index)=>{
+      setReception(prevData=>prevData.filter((row, i)=>i !==index));
+  }
+  const updateRow=(index, newData)=>{
+    const updatedData = [...Reception];
+    updatedData[index] = {...newData};
+    setReception(updatedData);
+  } 
    
     return(
         <div>
@@ -100,8 +108,14 @@ export default function Reception(){
                               id="label"
                            />
                      </div>
-                                 
-
+                     <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                   </div>
                  ))}
                  

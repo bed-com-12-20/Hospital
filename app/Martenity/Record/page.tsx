@@ -4,14 +4,14 @@ import './style.css'
 import Image from "next/image";
 import icon from '../../images/icon.png'
 
-export default function OPD(){
-    const[OPD , setOPD]=useState([
+export default function Martenity(){
+    const[Martenity , setMartenity]=useState([
         {ID:1, firstName:'', LastName:'', Treatment:'', Amount:'', MedicalScheme:'',Date:''}
     ]);
 
     const addRow=()=>{
       const newRow={
-         ID:OPD.length + 1,
+         ID:Martenity.length + 1,
          firstName:'',
          LastName:'',
          Treatment:'',
@@ -19,10 +19,19 @@ export default function OPD(){
          MedicalScheme:'',
          Date:''
       }
-      setOPD(prevData=>[...prevData, newRow]);
+      setMartenity(prevData=>[...prevData, newRow]);
     }
+    const deleteRow=(index)=>{
+      setMartenity(prevData=>prevData.filter((row, i)=>i !==index));
+ }
+ const updateRow=(index, newData)=>{
+       const updatedData = [...Martenity];
+       updatedData[index] = {...newData};
+       setMartenity(updatedData);
+ } 
+   
     return(
-        <div>
+        <div >
             
             <div id="table">
                  <Image
@@ -57,7 +66,7 @@ export default function OPD(){
               </div>
 
                  </div>
-                 {OPD.map((row, index)=>(
+                 {Martenity.map((row, index)=>(
                   <div className="table-row" key={index}>
                      <div className="table-cell">
                             <input
@@ -100,6 +109,14 @@ export default function OPD(){
                               id="label"
                               />
                         </div>
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                         
                   </div>
                  ))}

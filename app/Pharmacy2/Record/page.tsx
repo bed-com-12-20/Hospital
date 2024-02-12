@@ -4,14 +4,14 @@ import './style.css'
 import Image from "next/image";
 import icon from '../../images/icon.png'
 
-export default function Finance(){
-    const[Finance , setFinace]=useState([
+export default function Phamarcy(){
+    const[Phamarcy , setPhamarcy]=useState([
         {ID:1, firstName:'', LastName:'', Paymethod:'', TestOrder:'', Date:''}
     ]);
 
     const addRow=()=>{
       const newRow={
-         ID:Finance.length + 1,
+         ID:Phamarcy.length + 1,
          firstName:'',
          LastName:'',
          Paymethod:'',
@@ -19,9 +19,16 @@ export default function Finance(){
          Date:''
 
       }
-      setFinace(prevData=>[...prevData, newRow]);
+      setPhamarcy(prevData=>[...prevData, newRow]);
     }
-   
+    const deleteRow=(index)=>{
+      setPhamarcy(prevData=>prevData.filter((row, i)=>i !==index));
+  }
+  const updateRow=(index, newData)=>{
+    const updatedData = [...Phamarcy];
+    updatedData[index] = {...newData};
+    setPhamarcy(updatedData);
+ } 
      
     return(
         <div>
@@ -54,10 +61,16 @@ export default function Finance(){
                 <div  className="table-cell">
                    <p>Date</p>
                 </div>
+                <div  className="table-cell">
+                   <p>Action</p>
+                </div>
+                <div  className="table-cell">
+                   <p>Action</p>
+                </div>
               </div>
 
                  </div>
-                 {Finance.map((row, index)=>(
+                 {Phamarcy.map((row, index)=>(
                   <div className="table-row" key={index}>
                      <div className="table-cell">
                             <input
@@ -86,6 +99,14 @@ export default function Finance(){
 
                             </select>
                         </div>
+                        <div className="table-cell">
+                                <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                            
+                            </div>
+                            <div className="table-cell">
+                                
+                                <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                            </div>
                         
                   </div>
                  ))}
