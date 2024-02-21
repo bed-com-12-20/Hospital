@@ -1,21 +1,19 @@
-'use client'
-
-import React, {useState} from "react"
+import React from "react";
 import './style.css'
-import Image from "next/image"
-import pharma from '../images/pharma.jpeg'
+import Image from "next/image";
+
 import icon from '../images/icon.png'
-import location from '../images/location.png'
 import phone from '../images/phone.png'
 import time from '../images/time.png'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import location from '../images/location.png'
+import amb from '../images/amb.jpeg'
+import speed from '../images/speed.webp'
 
 
-export default function Pharmacy(){
-    // usestates
+export default function Ambulance(){
     return(
         <div>
-            <div className="head">
+               <div className="head">
                 <header className="header-content">
                 <Image className="icon"
                     src={icon}
@@ -106,92 +104,129 @@ export default function Pharmacy(){
             </div>
         </nav>      
     </div>
-      <div>
-        <Image
-         src={pharma}
-         alt="pharma"
-         width={1680}
-        height={600}  
-        />
-      </div>
-      <div className="mission">
-      <div className="mission-picture">
-                <Image
-                src={icon}
-                alt="talking"
-                width={370}
-                height={450}
-                style={{borderRadius:'10px'}}
-                />
-            </div> 
+          <section id="sector">
+            
+            <h1 id="lance">Ambulance <br/> services</h1>
+            
+            
+           <p className="ambul">Request fast and reliable ambulance services from Liwonde private 
+               hospital. <br />The ambulance is available any time within reach</p>
+
+        <h1 id="lan">Ambulance Contact Details</h1>
+            <p className="ambula">follow simple instructions to call ambulance from liwonde
+                private hospital
+            </p>
+            <p className="ambula">follow simple instructions to call ambulance from liwonde
+                private hospital
+            </p>
+            <p className="ambula">follow simple instructions to call ambulance from liwonde
+                private hospital
+            </p>
+            
+          </section>
+          <h1 id="lane">Compassionate Care, Reliably & Efficiently Delivered</h1>
+          <p className="ambulan">Our goal at liwonde private clinic in terms of ambulance services
+             is to provide maximun, timely transport care to each and every 
+             patient. It managed by team with significant experience in the 
+             ambulance and heath care field. the aim is to provide first rate
+             services to all the patients under our care and uphold our values
+             by delivering expert medical assistance with Compassion in every case.
+             Driven by our highly trained and considarate staff, we strive to
+             exception services that lead to positive outcomes for our patients
+          </p>
+          <div className="categories">
            
-        <div className="mission-list">
-            <h1 className="part">Pharmacy Service</h1>
-
-            <h3 className="vision">Liwonde hospital Pharmacy</h3>
-            <h3 className="vision">Core Services</h3>
-            <p className="vis">recieve great medical guidance from well trained pharmacist of
-                Liwonde hospital our pharmacy services include, selling medicine
-                from the store or you can buy directly buy filling form below, medical
-                prescription, medical nutrition guidance and medical check ups
-            </p>
-            <h3 className="vision1">Vision Statement</h3>
-            <p className="vis">Our vision is to become number trusted affordable pharmacy committed
-                    to provision of high quality and cost effective medicine in Malawi. 
-                    We believe in intergrity, honest, accountability, respect and compasion
-                    towards our customer.
-                    Online pharmacy is open 24 hours and it is highly responsive  
-            </p>
-            <h3 className="vision1">Order Medicine Online</h3>
-            <p className="vis">please follow the instruction below to order medicine you will 
-                    receive an email or sms confirming your and together with price.
-                    you can come and collect at the reception</p>
-        </div>
+         
+            <div className="category">
+               <Image
+               className="ambulance1"
+               src={amb}
+               alt="ambulance"
+               width={300}
+               height={150}
+               />
+               <div className="category1">
+                <h1>Non-Emergency Medical Transport</h1>
+               </div>
+               <div className="category2">
+                Liwonde ambulance services to health care or Treatment
+                facilities, hospital transfers and patients discharge
+               </div>
             </div>
-            <div className="form">
-                <div className="form-wrapper">
-                    <div className="header1">
-                        <div className="logo-container">
-                        <Image className="center"
-                            src={icon}
-                            alt="talking"
-                            width={100}
-                            height={100}
-                            style={{borderRadius:'10px'}}
-                            />
-                        </div>
-                        <h1>Drug Inquiry Form</h1>
-                        <label className="name">Name:</label>
-                        <input 
-                        type="text" 
-                        id="name"
-                        placeholder="e.g Sam Zarila"
-                        />
-                        <label className="name">Phone Number:</label>
-                        <input 
-                        type="text" 
-                        id="name"
-                        placeholder="tnm or airtel"
-                        />
-                        <label className="name">Drug Name:</label>
-                        <input 
-                        type="text" 
-                        id="name"
-                        placeholder="e.g panado"
-                        />
-                        <label className="name">Drug Quantity:</label>
-                        <input 
-                        type="text" 
-                        id="name"
-                        placeholder=" e.g 1 tablet or 1 gram"
-                        />
-                        <button className="button1" type="submit">Place Order</button>
-                    </div>
-
-                </div>
-                
+            <div className="category3">
+               <Image
+               className="ambulance1"
+               src={speed}
+               alt="ambulance"
+               width={300}
+               height={150}
+               />
+               <div className="category1">
+                <h1>Emergency Medical Transport</h1>
+               </div>
+               <div className="category2">
+                Liwonde ambulance services is always prepared with Emergency
+                Ambulances for individuals who require very fast and emergency
+                Treatment
+               </div>
             </div>
-                <h1 className="part1">We Treat, God Heals</h1>
+            
+
+          </div>
+         
+           
+          <div className="circle">
+          <h1>Steps to follow</h1>
+          <div className="steps">
+          <div className="step"><span>1</span></div>
+                <div className="line"></div>
+                <div className="step1"><span>2</span></div>
+                <div className="line1"></div>
+                <div className="step2"><span>3</span></div>
+          </div>
+          <div className="container">
+          <div className="step-content">
+          <h1 className="content1">Contacts</h1>
+          <div  className="content">
+          Call the driver of the Ambulance using <br />
+          the following numbers <br/>
+          </div>
+          <div className="content">
+          <Image className="phone"
+                    src={phone}
+                    alt="phone"
+                    width={20}
+                    height={20}
+                    /> 0888597087 <br/>
+           <Image className="phone"
+                    src={phone}
+                    alt="phone"
+                    width={20}
+                    height={20}
+                    /> 09999408663
+          </div> 
+         </div>
+         <div className="step-content1">
+          <h1 className="content1">Location</h1>
+          <div  className="content">
+          Provide location details where 
+          the ambulance services is 
+          required. if possible estimate the distance
+          </div>
+         
+         </div>
+         <div className="step-content2">
+          <h1 className="content1">Response</h1>
+          <div  className="content">
+          Exchange feedback with the driver, know his where abouts
+          estmated time travel towards your location
+           <br/>
+          </div> 
+         </div>
+          </div>
+          </div>
+            
+            <h1 className="part1">We Treat, God Heals</h1>
                  <div className="footer">
                     <div className="container">
                         <div className="row">
@@ -258,7 +293,6 @@ export default function Pharmacy(){
                         <p id="private">@Liwonde Private Hospital 2024</p>
                     </div>
                  </div>
-
         </div>
     )
 }

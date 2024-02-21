@@ -19,6 +19,7 @@ export default function OPD() {
     const [OPD, setOPD] = useState<OPDItem[]>([
         { ID: 1, firstName: '', LastName: '', Treatment: '', Amount: '', MedicalScheme: '', Date: '' }
     ]);
+    
 
     const addRow = () => {
         const newRow: OPDItem = {
