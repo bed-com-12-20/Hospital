@@ -15,24 +15,43 @@ import image2 from './images/image2.png'
 import image3 from './images/image3.webp'
 import pharma from './images/pharma.jpeg'
 import recep from './images/recep.jpeg'
-import lab from './images/lab.jpeg'
-import mom from './images/mom.jpeg'
-import theatre from './images/theatre.webp'
-import ray from './images/ray.webp'
 import opd from './images/opd.jpeg'
-import dental from './images/dental.webp'
-import talk from './images/talk.webp'
 import './globals.css'
 import { TypeAnimation } from "react-type-animation";
-import appo from './images/appo.jpeg'
 import ambulance from './images/ambulance.webp'
-import team from './images/team.jpeg'
 import heart from './images/heart.png'
+import old from './images/old.webp'
+import make from './images/make.png'
+import map from './images/map.jpeg'
+import hospital from './images/hospital.webp'
+import female from './images/female.jpeg'
+import female2 from './images/female2.webp'
+import doctor from './images/doctor1.webp'
+import doctor2 from './images/doctor2.webp'
+import welcome from './images/welcome.jpeg'
+import welcome2 from './images/welcome2.jpeg'
+
 
 
 
 export default function Home() {
-  const Images = [image, image2, image1,image3];
+
+
+  const [seeMoreExpand, setSeeMoreExpand] = useState({
+    display: 'none',
+    height: '0px'
+  });
+
+  const handleExpand = () => {
+    setSeeMoreExpand({
+     display: 'flex',
+     height: 'fit-content'
+    }) 
+  }
+
+   // slider for images and the card
+
+ const Images = [image, image2, image1,image3];
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const slideNext = () => {
@@ -50,18 +69,11 @@ export default function Home() {
     autoplay: true,
     autoplaySpeed: 3000
   };
-
-  const setting ={
-    dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
-  }
  
-  
   return (
    <div>
+    
+    {/* head container logo, phone contacts, etc*/}
     <div className="head" >
       <header className="header-container">
         <div className="header-content">
@@ -112,7 +124,7 @@ export default function Home() {
     </div>   
     </div>
 
-
+     {/* navigation bar */}
     <div className="navigation">
     <nav className="header"
     >
@@ -157,24 +169,40 @@ export default function Home() {
         </nav>      
     </div>
 
-
-    <div className="slider">
+     {/* sliding images */}
+     <section id="welcome-section">
+       
+       <h1 className="hospital-name"><span className="span">|</span>Welcome Liwonde Private <br/>Hospital</h1>
+       <div >
+        <button className="first-button">Book Appointment <span className="arrow">&#8594;</span></button>
+       </div>
+       
+      
+     {/* <div className="slider">
     <Slider {...settings} className="slide">
       
         {Images.map((image, index) => (
-          <div key={index} >
+          <div key={index}
+              className={`slide-item ${index === currentIndex ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${image})` }}
+              
+          >
+           
             <Image className="slide-img"
               src={image}
               alt={`Slider Image ${index + 1}`}
-              
               width={1680}
-              height={600}  
+              height={600} 
+             
             />
+            <h1>Live Life</h1>
           </div>
         ))}
+        
       </Slider>
-      <h1>Welcome To Liwonde Private Hospital</h1>
-      <div className="anime">
+      </div> */}
+     </section>
+     <div className="anime">
         <TypeAnimation 
           sequence={[
             'A Great Place to Recieve Care',
@@ -187,276 +215,437 @@ export default function Home() {
           style={{fontSize: '2em'}}
           repeat={Infinity}
         />
+       </div>
+     <section id="begin">
+      <div className="working-hours">
+        <h3 className="hours">Working Hours</h3>
+        <p>Liwonde private hospital is open to its Services
+          
+        </p>
+      </div>
+      <div className="contact-us">
+        <h3 className="hours">Contact Us</h3>
+      </div>
+      <div className="locations">
+        <h3 className="hours">Location</h3>
+      </div>
 
-     <div className="card-wrapper">
-     <Slider {...setting} > 
-    
-    <div className="card">
-      <Image
-        src={recep}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">Reception</h1>
-      <div className="desc">
-        <p>Reception is the entry point of all the
-          services.The reception is managed by team of well 
-          trained receptionist who manages our clients. The reception links
-          clients to doctor, pharmacist and any other staff
-        </p>
-      </div>
-    </div>
-    <div className="card">
-      <Image
-        src={pharma}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">Pharmacy</h1>
-      <div className="desc">
-        <p>Phamarcy is responsible for storing medicine, selling
-          medicine, Provide pharmacetical support to clients. it is
-          managed by well trained pharmacists
-        </p>
-      </div>
-    </div>
-    <div className="card">
-      <Image
-        src={theatre}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">Theatre</h1>
-      <div className="desc">
-        <p>The operating theatre has a team of well trained surgeons, 
-          doctors and nurses who apply medical expertise to help patients
-        </p>
-      </div>
-    </div>
-    <div className="card">
-      <Image
-        src={mom}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">Martenity</h1>
-      <div className="desc">
-        <p>Recieve well services at the liwonde private hospital
-          .Hospital has morden Martenity room with well trained 
-          team of mid wives
-        </p>
-      </div>
-    </div>
-    <div className="card">
-      <Image
-        src={lab}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">Lab</h1>
-      <div className="desc">
-        <p>Liwonde private hospital provide the following services,
-          full blood count,body fluid diagonosis, Malaria diagonosis
-          and many more
-        </p>
-      </div>
-    </div>
-    <div className="card">
-      <Image
-        src={ray}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">X-RAY</h1>
-      <div className="desc">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> 
-          Vitae reprehenderit est accusamus tempore hic, perspiciatis culpa <br /> 
-          similique ipsum itaque aspernatur dolorum maxime harum nihil aliquam <br /> 
-          tempora consequuntur magni maiores unde.</p>
-      </div>
-    </div>
-    <div className="card">
-      <Image
-        src={opd}
-        alt="avata"
-        width={300}
-        height={200}
-        className="image"
-      />
-      <h1 className="name1">OPD</h1>
-      <div className="desc">
-        <p>This is the doctors office each and ever client is warmly Welcome
-          to this office and every client is helped accordingly. get any medical
-          help from this office
-        </p>
-      </div>
-    </div>
-  
-</Slider>
-      </div>      
+     </section>
    
-  
-
-
-      </div>
-      <div>
-       
-      </div>
-    </div>
-    <div className="mission">
-    <div className="mission-list">
-    <h1 className="part">A passion for putting patients first</h1>
-    <h3 className="vision">VISION</h3>
-      <p className="vis">To be a centre of excellence in the provision of high quality
-         heath services in Malawi
-      </p>
-      <h3 className="vision1">MISSION STATEMENT</h3>
-      <p className="vis">We are fully committed to deliver effective, preventive,
-         promotive, currative and rehabilitative health services to
-         all citizens
-      </p>
-      <h3 className="vision1">CORE VALUES</h3>
-      <ul>
-        <li  className="vis1">Commitment</li>
-        <li className="vis1">Respect</li>
-        <li className="vis1">Hardwork</li>
-        <li className="vis1">Integrity</li>
-      </ul> 
-  </div>
-  <div className="mission-picture">
-     <Image
-      src={talk}
-      alt="talking"
-      width={600}
-      height={445}
-      style={{borderRadius:'10px'}}
-      className="copy"
-     />
-  </div> 
-    </div>
-    <div className="quick">
-      <h4 className="quick1">Quick Services</h4>
-      <h6 className="quick1">Get fast and reliable quick services
-        from Liwonde private hospital
-      </h6>
-      <section className="section">
-      <div className="card">
-        <Image
-          src={appo}
-          alt="avata"
-          width={300}
-          height={200}
-          className="image"
-        />
-        <h1 className="name1">Quick Appointment</h1>
-        <div className="desc">
-        <p>Pentients  and clients can quickly request 
-            medical in a single click of button and then
-            follow easy steps instruction</p>
-            <a href="#" className="ambu">
-                  <button className="ambulance" type="submit">Book appointment</button>
-                 </a>
+      {/* type animation and heading */}
+      
+      
+      
+    {/* service card */}
+    <section id="service-section">
+        <div>
+        <h3 className="service-offered"> Services Offered</h3>
         </div>
-      </div>
-      <div className="card">
-        <Image
-          src={ambulance}
-          alt="avata"
-          width={300}
-          height={200}
-          className="image"
-        />
-        <h1 className="name1">Call Ambulace</h1>
-        <div className="desc">
-                  <p>
-                    Request ambulance services here click the button
-                    below  
-                  </p>
-                  <a href="Ambulance" className="ambu">
-                    <button className="ambulance" type="submit">Call Ambulance</button>
-                  </a>
-        </div> 
-      </div>
-      <div className="card">
-        <Image
-          src={team}
-          alt="avata"
-          width={300}
-          height={200}
-          className="image"
-        />
-        <h1 className="name1">Connect With the Team</h1>
-        <div className="desc">
-              <p>
-                Get latest update and news from the 
-                various departments of the hospital and
-                sign up for medical check ups 
-                </p>
-                <a href="Signup" className="ambu">
-                  <button className="ambulance" type="submit">SignUp</button>
-                 </a>
+        <div id="access2">
+          <div className="appointment1">
+            <Image
+            src={recep}
+            alt=""
+            width={348}
+            height={200}
+            />
+            <h3 className="reception-head">RECEPTION</h3>
+            <p className="reception-state">
+            Reception is the entry point of all the
+            services.The reception is managed by team of well 
+            trained receptionist who manages our clients. The reception links
+            clients to doctor, pharmacist and any other staff
+            </p>           
+          </div>
+          <div className="appointment1">
+            <Image
+            src={pharma}
+            alt=""
+            width={348}
+            height={200}
+            />
+            <h3 className="reception-head">PHARMARCY</h3>
+            <p className="reception-state">
+               Phamarcy is responsible for storing medicine, selling
+              medicine, Provide pharmacetical support to clients. it is
+              managed by well trained pharmacists
+            </p>
+            
+          </div>
+          <div className="appointment1">
+            <Image
+            src={opd}
+            alt=""
+            width={348}
+            height={200}
+            />
+            <h3 className="reception-head">OPD</h3>
+            <p className="reception-state">
+            This is the doctors office each and ever client is warmly Welcome
+            to this office and every client is helped accordingly. get any medical
+            help from this office
+            </p> 
+          </div> 
+          
         </div>
-      </div>
-      </section>
-    </div>
-    <h4 className="quick1">Trust Our Team Of Medical Specialists</h4>
-    <section className="section">
+                <button className="more-button"
+                        onClick={
+                          handleExpand
+                        }
+                        >More Services
+                  
+                </button>
+               
+                 
+    </section>
+
+    <div style={seeMoreExpand}
     
-    <div className="card">
+    
+   
+    >
+
+<section id="service-section">
+        <div>
+        <h3 className="service-offered"> Services Offered</h3>
+        </div>
+        <div id="access2">
+          <div className="appointment1">
+            <Image
+            src={recep}
+            alt=""
+            width={348}
+            height={200}
+            />
+            <h3 className="reception-head">RECEPTION</h3>
+            <p className="reception-state">
+            Reception is the entry point of all the
+            services.The reception is managed by team of well 
+            trained receptionist who manages our clients. The reception links
+            clients to doctor, pharmacist and any other staff
+            </p>           
+          </div>
+          <div className="appointment1">
+            <Image
+            src={pharma}
+            alt=""
+            width={348}
+            height={200}
+            />
+            <h3 className="reception-head">PHARMARCY</h3>
+            <p className="reception-state">
+               Phamarcy is responsible for storing medicine, selling
+              medicine, Provide pharmacetical support to clients. it is
+              managed by well trained pharmacists
+            </p>
+            
+          </div>
+          <div className="appointment1">
+            <Image
+            src={opd}
+            alt=""
+            width={348}
+            height={200}
+            />
+            <h3 className="reception-head">OPD</h3>
+            <p className="reception-state">
+            This is the doctors office each and ever client is warmly Welcome
+            to this office and every client is helped accordingly. get any medical
+            help from this office
+            </p> 
+          </div> 
+          
+        </div>
+                
+               
+                 
+    </section>
+    </div>
+    
+      
+    {/* mission and Vision section */}
+    <section id="mission-section">
+      <div className="footer-coll">
+        <h4 >Mission Statement</h4>
+        <p >we are fully committed to deliver effective, 
+          <br />preventive,promotive, currative and 
+          <br />rehabilitative health services to
+            all citizens</p>
+            <h4>Core Policies</h4>
+            <ul>
+            <li  >Commitment</li>
+            <li >Respect</li>
+            <li >Hardwork</li>
+            <li >Integrity</li>
+            </ul>
+           
+      </div>
+      <div className="footer-colll">
+        <h4 >Vision Statement</h4>
+        <p>To be a centre of excellence in<br /> the provision
+         of high quality heath <br /> services in Malawi</p>
+         <h4>Core Policies</h4>
+         <ul className="policy">
+            <li  >Commitment</li>
+            <li >Respect</li>
+            <li >Hardwork</li>
+            <li >Integrity</li>
+            </ul>
+      </div>
+      <div className="footer-colll">
         <Image
-          src={appo}
-          alt="avata"
-          width={300}
-          height={200}
-          className="image"
+        className="old"
+        src={old}
+        alt=""
+        width={450}
+        height={300}
         />
-        <h1 className="name1">Mike Wezi</h1>
-        <div className="desc">
-        <p>Nurse With 10 years Experience</p>
+      </div>
+  
+    </section>
+    {/* quick service section */}
+    <section id="quick-service">
+        <div>
+        <h3 className="Quick-services">Quick Services</h3>
+        </div>
+     
+        <div id="access">
+          <div className="appointment">
+            <Image
+            src={make}
+            alt=""
+            width={258}
+            height={200}
+            />
+            <h3 className="book">Book Appointment</h3>
+            <p className="make">Make an appointment with the liwonde
+              private hospital. Click the button 
+              and follow instructions
+            </p>
+            <a href="#" className="book-appointment">
+              <button className="booking">Book Appointment</button>
+            </a>
+          </div>
+          <div className="appointment">
+          <Image
+            src={ambulance}
+            alt=""
+            width={258}
+            height={200}
+            />
+            <h3 className="book">Call Ambulance</h3>
+            <p className="make">Request fast and reliable ambulance
+            services from liwonde private hospital. click the button to 
+            view more details
+            </p>
+            <a href="Ambulance" className="book-appointment">
+              <button className="booking">Call Ambulance</button>
+            </a>
+          </div>
+           
+          <div className="appointment">
+          <Image
+            src={map}
+            alt=""
+            width={258}
+            height={200}
+            />
+            <h3 className="book">Maps and Directions</h3>
+            <p className="make1">Liwonde private hospital is located
+                 along M3 Road
+                near, puma filling station
+            </p>
+            <a href="Map" className="book-appointment">
+              <button className="booking">View Map</button>
+            </a>
+          </div>
+          <div className="appointment">
+          <Image
+            src={map}
+            alt=""
+            width={258}
+            height={200}
+            />
+            <h3 className="book">News and Updates</h3>
+          </div>
+          
+        </div>
+        
+    </section>
+         {/* brief history */}
+        <section id="Brief-history">
+          <div className="footer-colo">
+            <h4 >Brief History of LPH</h4>
+            <p>Liwonde Private Hospital is a private health facility <br/>
+              based in Malawi, registered with medical council of Malawi<br/>
+              under the act cap 46: 02 and registration number 47668<br/>
+              .It was opened in 1999 and it is located in Machinga <br/>
+              District, Liwonde Township along Balaka-Zomba road in the<br/>
+              Southern region of Malawi
+            </p>   
+      </div> 
+      <div className="footer-colo">
+        <Image
+        src={hospital}
+        alt=""
+        width={500}
+        height={400}
+        className="brief-image"
+        />  
+      </div> 
+    </section>
+    {/* connect section */}
+    <section id="team">    
+      <div className="connect">
+        <Image
+        src={icon}
+        alt=""
+        width={100}
+        height={100}
+        className="connect-image"
+        />
+        <div className="connect-slide">
+        <TypeAnimation 
+          sequence={[
+            'A Patient First Strategy',
+            1000,
+            'We Treat, God Heals',
+            1000,
+            'you are All Welcome'
+          ]}
+          speed={10}
+          style={{fontSize: '2em'}}
+          repeat={Infinity}
+        /> 
+        </div>
+        <p className="comma"> "</p>
+
+        <p className="italic"><i>We strive provide best medical support <br/>
+              to each and every in Malawi. we work so tireslessly
+              to provide maximum medical expertise. we are so friendly to 
+              every patient , to make sure you have great medical
+              experience.
+        </i></p>
+        <p className="comma1"> "</p>
+              
+      </div> 
+       <div>
+       {/* <p className="strength">Our Strength is you</p> */}
+       </div>
+   
+      
+          {/* <a href="#">
+            <button className="connect-button">Connect</button>
+          </a> */}
+      
+    </section>
+    {/* find doctor */}
+    
+    <section id="find-doctor">
+      
+      <h1 className="doctor">Find A Doctor</h1>
+      
+        <p className="contact">We have experts specializing in a wide range of medical practices. <br/>
+           Our experts at Liwonde Private hospital are here to provide you with <br/>
+           care you need
+        </p>
+      
+      <a href="#">
+        <button className="contact-doctor">Contact Doctor<span className="arrow">&#8594;</span>
+        </button>
+      </a>
+         
+    </section>
+    <section id="doctors-section">
+        <div>
+        <h3 className="Quick-services">Medical Staff Team</h3>
+        </div>
+     
+        <div id="staff">
+          <div className="staff-team">
+            <Image
+            src={female}
+            alt=""
+            width={200}
+            height={200}
+             style={{
+                 borderRadius:'200px',
+                 marginTop:'10px',
+                 marginRight:'10px'
+             }}
+             className="staff-image"
+            />
+            <h3 className="staff-names">Wezi Maseko</h3>
+            <p className="staff-role">Make an appointment with the liwonde
+              private hospital. Click the button 
+              and follow instructions
+            </p>
+            
+          </div>
+          <div className="staff-team">
+          <Image
+            src={doctor}
+            alt=""
+            width={208}
+            height={200}
+            style={{
+              borderRadius:'200px',
+              marginTop:'10px',
+              marginRight:'10px'
+          }}
+          className="staff-image"
+            />
+            <h3 className="staff-names">Limbikani Kwambiri</h3>
+            <p className="staff-role">Request fast and reliable ambulance
+            services from liwonde private hospital. click the button to 
+            view more details
+            </p>
+            
+          </div>
+           
+          <div className="staff-team">
+          <Image
+            src={doctor2}
+            alt=""
+            width={208}
+            height={200}
+            style={{
+              borderRadius:'200px',
+              marginTop:'10px',
+              marginRight:'10px'
+          }}
+          className="staff-image"
+            />
+            <h3 className="staff-names">Tafadzwa Gambiza</h3>
+            <p className="staff-role">Liwonde private hospital is located
+                 along M3 Road
+                near, puma filling station
+            </p>
+            
+          </div>
+          <div className="staff-team">
+          <Image
+            src={female2}
+            alt=""
+            width={208}
+            height={200}
+            style={{
+              borderRadius:'200px',
+              marginTop:'10px',
+              marginRight:'10px'
+          }}
+          className="staff-image"
+            />
+            <h3 className="staff-names">Trinity Chimntengo</h3>
+            <p className="staff-role">Liwonde private hospital is located
+                 along M3 Road
+                near, puma filling station
+            </p>
+          </div>
             
         </div>
-      </div>
-      <div className="card">
-        <Image
-          src={appo}
-          alt="avata"
-          width={300}
-          height={200}
-          className="image"
-        />
-        <h1 className="name1">Gonjetso Chenjeran</h1>
-        <div className="desc">
-          <p>Surgeon With 16 years Experience</p>
-            
-        </div>
-      </div>
-      <div className="card">
-        <Image
-          src={appo}
-          alt="avata"
-          width={300}
-          height={200}
-          className="image"
-        />
-        <h1 className="name1">Charles Banda</h1>
-        <div className="desc">
-         <p>Dentist with 7  years Experience</p>
-            
-        </div>
-      </div>
-   </section>
+        
+    </section>
     <div className="img">
     <Image
                   className="reception"
@@ -467,11 +656,22 @@ export default function Home() {
                   style={{
                     padding: '10px',
                     borderRadius: '10px',
-                    animation: 'slideRight 50s linear infinite',
+                    // animation: 'slideRight 50s linear infinite',
                   }}
                 />
     </div>
     <h1>We Treat, God Heals</h1>
+    <section id="social-media">
+      
+      <h1 className="doctor">Stay Connected</h1>
+      
+        <p className="contact">follow Liwonde private hospital on social
+        media platforms <br/> and get latest, news and updates
+        </p>
+      
+     
+         
+    </section>
     <div className="footer">
                     <div className="container">
                         <div className="row">
@@ -517,7 +717,7 @@ export default function Home() {
                                 </ul>
                             </div>
                             <div className="footer-col">
-                                <h4>Map</h4>
+                                <h4>Map of the Hospital</h4>
                                 <iframe
                                     title="Google Map"
                                     width="300"
