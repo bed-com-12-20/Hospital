@@ -1,0 +1,96 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #quick-service{
+    width: 1150px;
+    height: 500px;
+    background-color: rgb(86, 154, 154);
+    border-color: #000;
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex; 
+    margin-top: 60px;
+    flex-direction: column;
+  }
+  .Quick-services{
+    color: white;
+    margin-top: 10px;
+  }
+  #access{
+    width: 1125px;
+    height: 435px;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+  }
+  .appointment{
+    width: 260px;
+    height: 400px;
+    border: 1px solid darkgray;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .staff-team{
+    width: 260px;
+    height: 400px;
+    border: 1px solid darkgray;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(67, 143, 67);
+  }
+  .book{
+    color: rgb(86, 154, 154) ;
+  }
+  .make{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 110%;
+    color: darkgray;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color:rgb(115, 179, 115);
+  }
+  .make1{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size:20px;
+    color:rgb(115, 179, 115);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+  }
+  .book-appointment{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .booking{
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(86, 154, 154);
+    color: white;
+  }
+  .booking:hover{
+    cursor: pointer;
+    background-color: blue;
+    color:  white;
+    transform: scale(0.95) ;
+    transition: all 1s ease-in-out;
+  }

@@ -1,0 +1,35 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  h1{
+    text-align: center;
+    font-weight: 100px;
+    color: green;
+    
+  }
+  #social-media{
+    width: 1400px;
+    height: 250px;
+    background-color: rgb(115, 179, 115);
+    border-color: #000;
+    display: flex;
+    flex-direction: column;
+    border-color: none;
+    margin-top: 10px;
+  }
+  .staff-names{
+    color: white;
+    margin-top: 10px;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  }
+  
+  
