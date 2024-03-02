@@ -24,6 +24,9 @@ body {
     background-color: darkgreen;
     margin-top: 0px;
 }
+div ul li{
+    list-style: none;
+}
 
 #table {
     margin-left: 500px; /* Adjusted margin to create space beside the sidebar */

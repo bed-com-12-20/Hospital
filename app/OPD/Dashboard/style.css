@@ -83,6 +83,10 @@ div ul li:hover a {
     outline: none;
     
 }
+div ul li{
+    list-style: none;
+}
+
 .button-container {
     display: flex;
 }

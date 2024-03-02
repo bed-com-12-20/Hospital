@@ -146,9 +146,7 @@
     background-color: blue;
     transition: all 1s ease-out;
   }
-@media screen  
-and (min-device-width: 375px)
-and (max-device-width: 667px){
+@media (max-width: 500px){
   .head{
     display: flex;
     padding: 2px;

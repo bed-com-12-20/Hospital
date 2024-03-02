@@ -26,7 +26,7 @@ body {
 }
 
 #table {
-    margin-left: 700px; /* Adjusted margin to create space beside the sidebar */
+    margin-left: 500px; /* Adjusted margin to create space beside the sidebar */
     width: fit-content;
     height: fit-content;
     display: flex;
@@ -47,6 +47,9 @@ div header {
     line-height: 70px;
     background-color: green;
     user-select: none;
+}
+div ul li{
+    list-style: none;
 }
 
 div ul a {

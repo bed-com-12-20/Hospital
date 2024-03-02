@@ -1,7 +1,8 @@
 
 body {
-    background-color: aquamarine;
+    background-image: url('https://en.idei.club/uploads/posts/2023-06/1686715780_en-idei-club-p-medical-abstract-background-dizain-instagr-19.jpg');
     margin: 0;
+    background-size: cover;
     padding: 0;
     display: flex;
     flex-direction: row; /* Ensure a horizontal layout */
@@ -16,63 +17,39 @@ body {
     margin-top: 0px;
 }
 #table {
-    margin-left: 400px; /* Adjusted margin to create space beside the sidebar */
+    margin-left: 200px; /* Adjusted margin to create space beside the sidebar */
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column; /* Stacking elements vertically */
     align-items: center;
     text-align: center;
+    margin-top: 30px;
 }
 #pharma-head {
-    color: white;
+    color: black;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
-div header {
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    line-height: 70px;
-    background-color: green;
-    user-select: none;
-}
-
-div ul a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    line-height: 65px;
-    font-size: 20px;
-    color: white;
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-top: 1px solid rgba(225, 225, 225, 0.1);
-    border-bottom: 1px solid black;
-    transition: 0.4s;
-    margin-right: 16px;
-    text-decoration: none;
-}
-
-div ul li:hover a {
-    padding-left: 50px;
-}
 .table-box{
     margin: 0px auto;
 }
 .table-row{
     display: table;
-    width: 700px;
+    width: 1000px;
     margin: 10px;
     font-family: sans-serif;
     background: transparent;
     padding: 1px 0;
-    color: darkgray;
+    color: black;
     font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
 }
 .table-cell{
     display: table-cell;
-    width: 30px;
+    width: 120px;
     text-align: center;
     padding: 4px 0;
     border-right: 1px solid green;
@@ -101,7 +78,7 @@ div ul li:hover a {
     height: 40px;
     color: green;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .button:hover{
     background-color: blue;
@@ -118,8 +95,8 @@ div ul li:hover a {
     height: 40px;
     color: green;
     font-size: 16px;
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 5px;
+    margin-left: 4px;
 }
 .button1:hover{
     background-color: blue;
@@ -129,7 +106,7 @@ div ul li:hover a {
 }
 .delete{
     outline: none;
-    width: 50px;
+    width: 100px;
     height: 25px;
     background-color: red;
     color: white;
@@ -143,7 +120,7 @@ div ul li:hover a {
 }
 .delete1{
     outline: none;
-    width: 50px;
+    width: 100px;
     height: 25px;
     background-color: darkgreen;
     color: white;

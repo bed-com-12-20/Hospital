@@ -38,6 +38,7 @@ body {
 
 #pharma-head {
     color: white;
+    
 }
 
 div header {
@@ -75,7 +76,7 @@ div ul li:hover a {
     display: table;
     width: 700px;
     margin: 10px;
-    font-family: sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     background: transparent;
     padding: 1px 0;
     color: darkgray;

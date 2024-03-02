@@ -35,7 +35,7 @@ export default function ServicesCard(){
       </div>
       <div id="access2">
         <div className="appointment1">
-          <Image src={recep} alt="" width={348} height={200} />
+          <Image  className="service-image"  src={recep} alt="" width={348} height={200} />
           <h3 className="reception-head">RECEPTION</h3>
           <p className="reception-state">
             Reception is the entry point of all the services.The reception is
@@ -45,7 +45,7 @@ export default function ServicesCard(){
           </p>
         </div>
         <div className="appointment1">
-          <Image src={pharma} alt="" width={348} height={200} />
+          <Image className="service-image"  src={pharma} alt="" width={348} height={200} />
           <h3 className="reception-head">PHARMARCY</h3>
           <p className="reception-state">
             Phamarcy is responsible for storing medicine, selling medicine,
@@ -54,7 +54,7 @@ export default function ServicesCard(){
           </p>
         </div>
         <div className="appointment1">
-          <Image src={opd} alt="" width={348} height={200} />
+          <Image className="service-image" src={opd} alt="" width={348} height={200} />
           <h3 className="reception-head">OPD</h3>
           <p className="reception-state">
             This is the doctors office each and ever client is warmly Welcome

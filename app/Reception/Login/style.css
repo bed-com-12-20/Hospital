@@ -1,5 +1,6 @@
 body{
-  background-color: aquamarine;
+  background-image: url('https://en.idei.club/uploads/posts/2023-06/1686715780_en-idei-club-p-medical-abstract-background-dizain-instagr-19.jpg');
+  background-size: cover;
 }
 .logo-container {
   display: flex;

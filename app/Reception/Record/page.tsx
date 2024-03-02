@@ -59,19 +59,25 @@ export default function Reception() {
                             <p>ID</p>
                         </div>
                         <div className="table-cell">
-                            <p>FirstName</p>
+                            <p>First Name</p>
                         </div>
                         <div className="table-cell">
-                            <p>LastName</p>
+                            <p>Last Name</p>
                         </div>
                         <div className="table-cell">
-                            <p>PhoneNumber</p>
+                            <p>Phone Number</p>
                         </div>
                         <div className="table-cell">
-                            <p>PaymentMethod</p>
+                            <p>Payment Method</p>
                         </div>
                         <div className="table-cell">
                             <p>Date</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Action</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Action</p>
                         </div>
                     </div>
                 </div>

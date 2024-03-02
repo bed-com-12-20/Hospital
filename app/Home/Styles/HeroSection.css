@@ -90,9 +90,7 @@
   }
   /* media queriey for iphone */
   
-  @media screen 
-  and (min-device-width:375px) 
-  and (max-device-width:667px)
+  @media  (max-width:500px)
   {
     #welcome-section{
       width: 375px;
@@ -101,10 +99,11 @@
     .hospital-name{
       font-size: 100%;
       padding-top: 100px;
+      margin-right: 30px;
     }
     .first-button{
       margin-top: 10px;
-      margin-left: 150px;
+      margin-left: 130px;
       width: 100px;
       font-size: 50%;
       height: 20px;

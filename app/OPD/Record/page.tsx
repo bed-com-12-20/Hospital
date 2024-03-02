@@ -76,6 +76,12 @@ export default function OPD() {
                         <div className="table-cell">
                             <p>Date</p>
                         </div>
+                        <div className="table-cell">
+                            <p>Action</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Action</p>
+                        </div>
                     </div>
                 </div>
                 {OPD.map((row, index) => (

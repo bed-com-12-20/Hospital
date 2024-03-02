@@ -48,6 +48,10 @@ div header {
     background-color: green;
     user-select: none;
 }
+div ul li{
+    list-style: none;
+}
+
 
 div ul a {
     display: block;

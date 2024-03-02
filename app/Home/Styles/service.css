@@ -42,7 +42,7 @@
     height: 435px;
     background-color: transparent;
     margin-top: 10px;
-     margin-left: 10px;
+    margin-left: 10px;
    
     display: flex;
   }
@@ -69,6 +69,7 @@
     
   }
   .reception-head{
+    text-align: center;
     margin-top: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   
@@ -91,17 +92,48 @@
     transition: all 0.5s ease-out;
     cursor: pointer;
   }
-  @media screen and (min-width:375px) and (max-width:667px){
+  @media  (max-width:500px){
     #service-section{
-      width: 375px;
-      height: 150px;
-    }
-    .service-offered{
-      font-size: 60%;
+      width: 390px;
+      height: 270px;
       margin-top: 20px;
     }
-    #acce{
+    #access2{
+      
+      margin-left: 2px;
+      width: 380px;
+      height: 200px;
+  
+    }
+    .service-offered{
+      font-size: 70%;
+      margin-top: 10px;
+    }
+    .appointment1{
+      margin-left: 2px;
+      width: 122px;
+      height: 180px;
+      margin-right: 1px;
+    }
+    .reception-state{
+      font-size: 50%;
+      margin-top: 3px;
+    }
+    .reception-head{
+      font-size: 50%;
+      margin-top: 0px;
+    }
+    .service-image{
+      width: 120px;
+      height: 50px;
 
+    }
+    .more-button{
+    
+      margin-top: 20px;
+     
+      font-size: 60%;
+      
     }
     
   }
