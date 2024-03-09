@@ -10,7 +10,7 @@ body {
          rgba(29, 28, 2, 0.8),
          rgba(29, 28, 2, 0.8)
         
-    ), url('../../images/pharma.jpeg') ;
+    ), url('../../images/opd.jpeg') ;
     background-size: cover;
    
     
@@ -83,6 +83,10 @@ div ul li:hover a {
     outline: none;
     
 }
+div ul li{
+    list-style: none;
+}
+
 .button-container {
     display: flex;
 }
@@ -118,6 +122,44 @@ div ul li:hover a {
     cursor: pointer;
     transition: all 400ms linear;
 }
+@media(max-width:500px){
+    body{
+        background-size: cover;
+        background-repeat: no-repeat; 
+        height: 667px;
+    }
+    #dash{
+       display: none;
+    }
+    div header{
+        font-size: 100%;
+    }
+    div ul a {
+      font-size: 80%;
+      font-weight: 300;
+    }
+    #table{
+        width: 375px;
+        margin-left: 0px;
+    }
+    #searchbar{
+        width: 250px;
+        font-size: 100%;
+        padding-left: 10px;
+    }
+    .button{
+        margin-right: 10px;
+        font-size: 80%;
+      
+    }
+    .button2{
+        margin-left: 50px;
+        font-size: 80%;
+    }
+}
+
+
+
 
 
 

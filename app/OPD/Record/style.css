@@ -35,6 +35,7 @@ body {
 .table-box{
     /* margin-right: 500px; */
 }
+
 .table-row{
     display: table;
     width: 1000px;
@@ -80,7 +81,7 @@ body {
     color: green;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid green;
 }
 .button:hover{
     background-color: blue;
@@ -99,7 +100,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     margin-left: 3px;
-    border: 1px solid black;
+    border: 1px solid green;
 }
 .button1:hover{
     background-color: blue;
@@ -133,4 +134,55 @@ body {
     color: darkgreen;
     background-color: white;
     cursor: pointer;
+}
+
+@media(max-width:500px){
+    #table{
+        width: 375px;
+        margin-left: 20px;
+       
+    }
+    .table-row{
+        font-size: 60%;
+        color: black;
+        width: 350px;
+    }
+    .table-cell{
+        font-size: 60%;
+        color: black;
+        width: 380px; 
+    }
+    #table-row{
+        font-size: 60%;
+        color: black;
+        width: 350px; 
+      
+    }
+    #type{
+        height: 10px;
+        width: 50px;
+    }
+    #label{
+        width: 30px;
+        height: 20px;
+    }
+    .delete{
+        font-size: 60%;
+        border-radius: 5px;
+        width: 30px;
+        height: 20px;
+    }
+    .delete1{
+        font-size: 60%;
+        border-radius: 5px;
+        width: 30px;
+        height: 20px;  
+    }
+    .button, .button1{
+        width: 90px;
+        border: 1px solid green;
+
+    }
+    
+   
 }

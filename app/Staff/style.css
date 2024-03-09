@@ -23,6 +23,7 @@ body{
 .image{
     border-radius: 100px;
     margin-top: 30px;
+    margin-left: 50px;
 }
 h1{
     color: white;
@@ -54,4 +55,30 @@ h1{
 }
 .card:hover {
     transform: scale(0.95); 
+}
+@media(max-width:500px){
+    .card{
+        width: 200px;
+        height: 200px;
+        margin-top: 10px;
+       
+    }
+    .card:hover{
+        transition: none;
+    }
+    .image{
+        width: 90px;
+        height: 86px;
+        margin-left: 40px;
+        margin-top: 0px;
+    }
+    .title{
+        font-size: 100%;
+        font-weight: 400;
+    }
+    .btn{
+        margin-top: 10px;
+        width: 100%;
+    }
+
 }

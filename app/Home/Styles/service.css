@@ -12,7 +12,7 @@
   
   }  
   #service-section{
-    background-color: rgb(115, 179, 115);
+    background-color: green;
     width: 1400px;
     height: 700px;
     border-color: #000;
@@ -99,10 +99,9 @@
       margin-top: 20px;
     }
     #access2{
-      
       margin-left: 2px;
       width: 380px;
-      height: 200px;
+      height: 220px;
   
     }
     .service-offered{
@@ -112,28 +111,32 @@
     .appointment1{
       margin-left: 2px;
       width: 122px;
-      height: 180px;
+      height: 187px;
       margin-right: 1px;
     }
     .reception-state{
       font-size: 50%;
-      margin-top: 3px;
+      margin-top: 0px;
     }
     .reception-head{
-      font-size: 50%;
+      font-size: 70%;
       margin-top: 0px;
+      font-weight: 300;
     }
     .service-image{
       width: 120px;
       height: 50px;
-
     }
     .more-button{
-    
-      margin-top: 20px;
-     
-      font-size: 60%;
-      
+     margin-left: 150px;
+     margin-top: 10px;
+     font-size: 40%;
+     width: 80px;
+     height: 30px;
+     padding-left: 15px;
+     padding-top: 6px;
+     border: 0.5px solid white;
+     margin-bottom: 5px;
     }
     
   }

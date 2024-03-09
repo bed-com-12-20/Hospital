@@ -59,7 +59,7 @@
    
   }
   .first-button{
-    margin-top: 30px;
+    margin-top: 0px;
     margin-left: 600px;
     width: 200px;
     height: 60px;
@@ -109,3 +109,11 @@
       height: 20px;
     }
   }
+  /* @media(min-width:550px){
+    #welcome-section{
+      width: 430px;
+    }
+    .first-button{
+      margin-left: 150px;
+    }
+  } */

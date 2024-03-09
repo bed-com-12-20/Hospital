@@ -41,17 +41,9 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-  .staff-team{
-    width: 260px;
-    height: 400px;
-    border: 1px solid darkgray;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    background-color: rgb(67, 143, 67);
-  }
   .book{
     color: rgb(86, 154, 154) ;
+    text-align: center;
   }
   .make{
     margin-left: 10px;
@@ -93,4 +85,48 @@
     color:  white;
     transform: scale(0.95) ;
     transition: all 1s ease-in-out;
+  }
+  @media(max-width:500px){
+    .Quick-services{
+      margin-top: 5px;
+      font-size: 100%;
+      text-align: center;
+      color: green;
+      font-weight: 400;
+     
+    }
+    #quick-service{
+      margin-left: 0px;
+      margin-top: 10PX;
+      display: flex;
+      width: 390px;  
+      height: 1000px;
+    
+    }
+    #access{
+      display: block;
+      width: 330px;
+      height: 930px;
+      margin-left: 20px;
+      
+    }
+    .image{
+      height: 120px;
+    }
+    .book{
+      font-size: 70%;
+    }
+    .make, .make1{
+     font-size: 55%;
+    }
+    .appointment{
+      height: 220px;
+      margin-left: 30px;
+    }
+    .booking{
+      font-size: 50%;
+      width: 90px;
+      margin-left: 90px;
+      height: 20px;
+    }
   }

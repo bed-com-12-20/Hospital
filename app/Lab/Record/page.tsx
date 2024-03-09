@@ -43,15 +43,6 @@ export default function Lab() {
 
     return (
         <div>
-            <div id="dash">
-                <header>Lab Doctor</header>
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Records</a></li>
-                    <li><a href="Sale">Sales</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </div>
             <div id="table">
                 <Image
                     src={icon}

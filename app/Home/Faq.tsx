@@ -3,7 +3,6 @@ import './Styles/faq.css'
 
 export default function FAQ(){
     return (<><section id="asked-question">
-    <h1 className="asked-head">Our Strenth is you</h1>
     <div className="question-card">
       <h2 className="faq">Frequently Asked Question(FAQ)</h2>
       <ul className="services">

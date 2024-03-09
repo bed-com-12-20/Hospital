@@ -126,11 +126,7 @@ function Navbar() {
                 </ul>
               </div>
             </li>
-            <li className="clicks">
-              <a className="link" href="#">
-                Request Appointment
-              </a>
-            </li>
+        
             <li className="clicks">
               <a className="link" href="">
                 Doctors
@@ -182,7 +178,7 @@ function Navbar() {
             </li>
           </ul>
           <div className="button">
-            <a className="bt1" href="#">
+            <a className="bt1" href="Appointment">
               <button className="button " type="submit">
                 Book Appointment
               </button>

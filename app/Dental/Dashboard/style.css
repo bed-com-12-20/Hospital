@@ -26,19 +26,18 @@ body {
 }
 
 #table {
-    margin-left: 600px; /* Adjusted margin to create space beside the sidebar */
+    margin-left: 500px; /* Adjusted margin to create space beside the sidebar */
     width: fit-content;
     height: fit-content;
     display: flex;
     flex-direction: column; /* Stacking elements vertically */
     align-items: center;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 #pharma-head {
     color: white;
-    
 }
 
 div header {
@@ -69,42 +68,7 @@ div ul a {
 div ul li:hover a {
     padding-left: 50px;
 }
-.table-box{
-    margin: 0px auto;
-}
-.table-row{
-    display: table;
-    width: 700px;
-    margin: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-    background: transparent;
-    padding: 1px 0;
-    color: darkgray;
-    font-size: 13px;
-    box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
-}
-.table-cell{
-    display: table-cell;
-    width: 30px;
-    text-align: center;
-    padding: 4px 0;
-    border-right: 1px solid green;
-    vertical-align: middle;
-    line-height: 100%;
-}
-#label{
-    background: transparent;
-    border: none;  
-    width: 113px;
-    height: 100%;
-    padding: 0px;
-    color: white;
-    text-align: center;   
-}
-#type{
-  background: transparent;
-  border: none;  
-}
+
 
 #searchbar{
     height: 50px;
@@ -119,6 +83,10 @@ div ul li:hover a {
     outline: none;
     
 }
+div ul li{
+    list-style: none;
+}
+
 .button-container {
     display: flex;
 }
@@ -132,7 +100,7 @@ div ul li:hover a {
     color: white;
     font-size: 16px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 90px;
     margin-top: 60px;
 }
 
@@ -154,6 +122,46 @@ div ul li:hover a {
     cursor: pointer;
     transition: all 400ms linear;
 }
+@media(max-width:500px){
+    body{
+        background-size: cover;
+        background-repeat: no-repeat; 
+        height: 667px;
+    }
+    #dash{
+       display: none;
+    }
+    div header{
+        font-size: 100%;
+    }
+    div ul a {
+      font-size: 80%;
+      font-weight: 300;
+    }
+    #table{
+        width: 375px;
+        margin-left: 0px;
+    }
+    #searchbar{
+        width: 250px;
+        font-size: 100%;
+        padding-left: 10px;
+    }
+    .button{
+        margin-right: 10px;
+        font-size: 80%;
+      
+    }
+    .button2{
+        margin-left: 50px;
+        font-size: 80%;
+        
+      
+    }
+}
+
+
+
 
 
 

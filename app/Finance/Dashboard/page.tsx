@@ -31,9 +31,9 @@ export default function Finance(){
                     />
           </div>
             <div id="searchbar">
-                <input type="text"  id="searchbar" placeholder="search for drugs..."
+              <span> <Search/></span>  <input type="text"  id="searchbar"placeholder="search for drugs..."
             />
-             <Search/>
+            
 
             </div>
             <div className="button-container">

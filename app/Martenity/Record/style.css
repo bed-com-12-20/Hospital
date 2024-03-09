@@ -1,6 +1,6 @@
 
 body {
-    background-color: aquamarine;
+    background-image: url('https://en.idei.club/uploads/posts/2023-06/1686715780_en-idei-club-p-medical-abstract-background-dizain-instagr-19.jpg');
     margin: 0;
     padding: 0;
     display: flex;
@@ -33,27 +33,30 @@ body {
 
 
 .table-box{
-    margin: 0px auto;
+    /* margin-right: 500px; */
 }
+
 .table-row{
     display: table;
     width: 1000px;
     margin: 10px;
-    font-family: sans-serif;
     background: transparent;
     padding: 1px 0;
     color: black;
-    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-size: 100%;
     box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+    /* margin-right: 300px; */
 }
 .table-cell{
     display: table-cell;
-    width: 90px;
+    width: 120px;
     text-align: center;
     padding: 4px 0;
     border-right: 1px solid green;
     vertical-align: middle;
     line-height: 100%;
+    color: #000;
 }
 #label{
     background: transparent;
@@ -78,6 +81,7 @@ body {
     color: green;
     font-size: 16px;
     border-radius: 5px;
+    border: 1px solid green;
 }
 .button:hover{
     background-color: blue;
@@ -96,6 +100,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     margin-left: 3px;
+    border: 1px solid green;
 }
 .button1:hover{
     background-color: blue;
@@ -105,11 +110,11 @@ body {
 }
 .delete{
     outline: none;
-    width: 90px;
+    width: 100px;
     height: 25px;
     background-color: red;
     color: white;
-    border-radius: 10px;
+    border-radius: 4px;
     cursor: pointer;
 }
 .delete:hover{
@@ -119,14 +124,65 @@ body {
 }
 .delete1{
     outline: none;
-    width: 90px;
+    width: 100px;
     height: 25px;
     background-color: darkgreen;
     color: white;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 .delete1:hover{
     color: darkgreen;
     background-color: white;
     cursor: pointer;
+}
+
+@media(max-width:500px){
+    #table{
+        width: 375px;
+        margin-left: 20px;
+       
+    }
+    .table-row{
+        font-size: 60%;
+        color: black;
+        width: 350px;
+    }
+    .table-cell{
+        font-size: 60%;
+        color: black;
+        width: 380px; 
+    }
+    #table-row{
+        font-size: 60%;
+        color: black;
+        width: 350px; 
+      
+    }
+    #type{
+        height: 10px;
+        width: 50px;
+    }
+    #label{
+        width: 30px;
+        height: 20px;
+    }
+    .delete{
+        font-size: 60%;
+        border-radius: 5px;
+        width: 30px;
+        height: 20px;
+    }
+    .delete1{
+        font-size: 60%;
+        border-radius: 5px;
+        width: 30px;
+        height: 20px;  
+    }
+    .button, .button1{
+        width: 90px;
+        border: 1px solid green;
+
+    }
+    
+   
 }

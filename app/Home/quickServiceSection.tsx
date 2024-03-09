@@ -4,6 +4,7 @@ import make from "../images/make.png";
 import './Styles/quickservice.css'
 import map from "../images/map.jpeg";
 
+
 export default function QuickServiceSection(){
     return(<><section id="quick-service">
     <div>
@@ -11,8 +12,10 @@ export default function QuickServiceSection(){
     </div>
 
     <div id="access">
+      
       <div className="appointment">
-        <Image src={make} alt="" width={258} height={200} />
+        <Image  className='image'
+        src={make} alt="" width={258} height={200}  />
         <h3 className="book">Book Appointment</h3>
         <p className="make">
           Make an appointment with the liwonde private hospital. Click the
@@ -23,7 +26,7 @@ export default function QuickServiceSection(){
         </a>
       </div>
       <div className="appointment">
-        <Image src={ambulance} alt="" width={258} height={200} />
+        <Image className='image'  src={ambulance} alt="" width={258} height={200} />
         <h3 className="book">Call Ambulance</h3>
         <p className="make">
           Request fast and reliable ambulance services from liwonde private
@@ -35,7 +38,7 @@ export default function QuickServiceSection(){
       </div>
 
       <div className="appointment">
-        <Image src={map} alt="" width={258} height={200} />
+        <Image className='image'  src={map} alt="" width={258} height={200} />
         <h3 className="book">Maps and Directions</h3>
         <p className="make1">
           Liwonde private hospital is located along M3 Road near, puma
@@ -46,7 +49,7 @@ export default function QuickServiceSection(){
         </a>
       </div>
       <div className="appointment">
-        <Image src={map} alt="" width={258} height={200} />
+        <Image  className='image' src={map} alt="" width={258} height={200} />
         <h3 className="book">News and Updates</h3>
       </div>
     </div>

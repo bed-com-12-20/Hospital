@@ -1,6 +1,6 @@
 
 import Herosection from "./Home/Herosection";
-import Navbar from "@/componets/navbar";
+import Navbar from "@/componets/navbar"; 
 import Section1 from "./Home/section1";
 import ServicesCard from "./Home/servicesCard";
 import MissionSection from "./Home/Mission";
@@ -12,6 +12,7 @@ import FAQ from "./Home/Faq";
 import DoctorsSection from "./Home/doctorSection";
 import BottomSection from "./Home/BottomSection";
 import Footer from "@/componets/footer";
+// import Navbar from "@/componets/navbkar";
 export default function page() {
   return (
     <>

@@ -78,59 +78,64 @@ export default function Finance() {
                         </div>
                     </div>
                 </div>
+               
+                   
                 {finance.map((row, index) => (
-                    <div className="table-row" key={index}>
-                        <div className="table-cell">
-                            <input
-                                type="number"
-                                id="label"
-                                placeholder="e.g 1"
-                                value={row.ID}
-                                onChange={(event) => updateRow(index, { ID: parseInt(event.target.value) })}
-                            />
-                        </div>
-                        <div className="table-cell">
-                            <input
-                                type="text"
-                                id="label"
-                                placeholder=" e.g damascus"
-                                value={row.firstName}
-                                onChange={(event) => updateRow(index, { firstName: event.target.value })}
-                            />
-                        </div>
-                        <div className="table-cell">
-                            <input
-                                type="text"
-                                id="label"
-                                placeholder="multiplug"
-                                value={row.LastName}
-                                onChange={(event) => updateRow(index, { LastName: event.target.value })}
-                            />
-                        </div>
-                        <div className="table-cell">
-                            <select name="" id="type" required>
-                                <option value="">Cash</option>
-                                <option value="">Airtel Money</option>
-                                <option value="">Mpamba</option>
-                                <option value="">Bank</option>
-                            </select>
-                        </div>
-                        <div className="table-cell">
-                            <input
-                                type="date"
-                                id="label"
-                                value={row.Date}
-                                onChange={(event) => updateRow(index, { Date: event.target.value })}
-                            />
-                        </div>
-                        <div className="table-cell">
-                            <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
-                        </div>
-                        <div className="table-cell">
-                            <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
-                        </div>
+                
+                   
+                <div className="table-row" 
+                    key={index}>
+                    <div className="table-cell">
+                        <input
+                            type="number"
+                            id="label"
+                            placeholder="e.g 1"
+                            value={row.ID}
+                            onChange={(event) => updateRow(index, { ID: parseInt(event.target.value) })}
+                        />
                     </div>
-                ))}
+                    <div className="table-cell">
+                        <input
+                            type="text"
+                            id="label"
+                            placeholder=" e.g damascus"
+                            value={row.firstName}
+                            onChange={(event) => updateRow(index, { firstName: event.target.value })}
+                        />
+                    </div>
+                    <div className="table-cell">
+                        <input
+                            type="text"
+                            id="label"
+                            placeholder="multiplug"
+                            value={row.LastName}
+                            onChange={(event) => updateRow(index, { LastName: event.target.value })}
+                        />
+                    </div>
+                    <div className="table-cell">
+                        <select name="" id="type" required>
+                            <option value="">Cash</option>
+                            <option value="">Airtel Money</option>
+                            <option value="">Mpamba</option>
+                            <option value="">Bank</option>
+                        </select>
+                    </div>
+                    <div className="table-cell">
+                        <input
+                            type="date"
+                            id="label"      
+                        />
+                    </div>
+                    
+                    <div className="table-cell">
+                        <button className="delete1" onClick={() => updateRow(index, row)}>Update</button>
+                    </div>
+                    <div className="table-cell">
+                        <button className="delete" onClick={() => deleteRow(index)}>Delete</button>
+                    </div>
+                </div>
+            ))}
+                
                 <button onClick={addRow} className="button">Add Row</button>
                 <button className="button1">Save</button>
             </div>

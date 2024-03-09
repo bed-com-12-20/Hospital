@@ -56,4 +56,27 @@
     margin-left: 650px;
     border-radius: 5px;
   }
+  @media(max-width:500px){
+    #Brief-history{
+      display: inline-block;
+      width: 430px;
+    }
+    .footer-colo h4{
+      font-size: 100%;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+    .footer-colo p{
+      margin-left: 20px;
+      font-size: 60%;
+    }
+    .brief-image{
+      margin-top: 10px;
+      width: 300px;
+      height: 200px;
+      margin-left: 20px;
+    }
+    
+  }
  

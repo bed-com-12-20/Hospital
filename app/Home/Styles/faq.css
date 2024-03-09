@@ -58,4 +58,8 @@
     transition: all 5s ease-out;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
- 
+ @media(max-width:500px){
+   #asked-question{
+   display: none;
+   }
+ }

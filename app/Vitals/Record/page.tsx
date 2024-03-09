@@ -45,15 +45,7 @@ export default function Vitals() {
 
     return (
         <div>
-            <div id="dash">
-                <header>Vitals</header>
-                <ul>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Records</a></li>
-                    <li><a href="Sale">Sales</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-            </div>
+            
             <div id="table">
                 <Image
                     src={icon}

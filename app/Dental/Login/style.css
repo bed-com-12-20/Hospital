@@ -1,5 +1,6 @@
 body{
-  background-color: aquamarine;
+  background-size: cover;
+  background-image: url('https://en.idei.club/uploads/posts/2023-06/1686715780_en-idei-club-p-medical-abstract-background-dizain-instagr-19.jpg');
 }
 .logo-container {
   display: flex;
@@ -73,4 +74,33 @@ input {
   color: white;
   cursor: pointer;
   transition: all 400ms linear;
+}
+@media(max-width:500px){
+  .center{
+    width: 80px;
+    height: 80px;
+  }
+  h1{
+    font-size: 100%;
+    font-weight: 300;
+  }
+  .name{
+    font-size: 100%;
+  }
+  .form{
+    width: 300px;
+    border: 1px solid lightgreen;
+    margin-top: 90px;
+
+  }
+  .button1{
+    width: 70px;
+  }
+  #name{
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid lightgreen;
+    
+
+  }
 }

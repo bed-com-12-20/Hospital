@@ -7,7 +7,7 @@ export default function Herosection() {
       {/* sliding images */}
       <section id="welcome-section">
         <h1 className="hospital-name">
-          <span className="span">|</span>Welcome Liwonde Private <br />
+          <span className="span">|</span>Welcome To Liwonde  Private <br />
           Hospital
         </h1>
         <div>

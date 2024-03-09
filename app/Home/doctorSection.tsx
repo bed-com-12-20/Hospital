@@ -53,7 +53,7 @@ export default function DoctorsSection(){
         </p>
       </div>
 
-      <div className="staff-team">
+      <div className="staff-team1">
         <Image
           src={doctor2}
           alt=""
@@ -72,8 +72,9 @@ export default function DoctorsSection(){
           filling station
         </p>
       </div>
-      <div className="staff-team">
+      <div className="staff-team1">
         <Image
+          
           src={female2}
           alt=""
           width={208}

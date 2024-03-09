@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer">
         <div className="container">
           <div className="row">
-            <div className="footer-col">
+            <div className="footer-coloumn">
               <Image
                 className="icon1"
                 src={icon}
@@ -18,46 +18,46 @@ export default function Footer() {
                 style={{ marginRight: "10px" }}
               />
             </div>
-            <div className="footer-col">
+            <div className="footer-column">
               <h4>Important Links</h4>
               <ul>
                 <li>
-                  <a href="#" id="ttt">
+                  <a href="#" id="footer-link">
                     Book Appointment
                   </a>
                 </li>
                 <li>
-                  <a href="#" id="ttt">
+                  <a href="#" id="footer-link">
                     Team of Developers
                   </a>
                 </li>
                 <li>
-                  <a href="#" id="ttt">
+                  <a href="#" id="footer-link">
                     Location
                   </a>
                 </li>
                 <li>
-                  <a href="#" id="ttt">
+                  <a href="#" id="footer-link">
                     About Us
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="footer-col">
+            <div className="footer-column">
               <h4>Contact Us</h4>
               <ul>
                 <li>
-                  <p id="ttt1">Call: 0998052417</p>
+                  <p id="footer-list">Call: 0998052417</p>
                 </li>
                 <li>
-                  <p id="ttt1">Email: LiwondePvthospital@gmail.com</p>
+                  <p id="footer-list">Email: LiwondePvthospital@gmail.com</p>
                 </li>
                 <li>
-                  <p id="ttt1">Physical Address</p>
+                  <p id="footer-list">Physical Address</p>
                 </li>
               </ul>
             </div>
-            <div className="footer-col">
+            <div className="footer-column">
               <h4>Map of the Hospital</h4>
               <iframe
                 title="Google Map"

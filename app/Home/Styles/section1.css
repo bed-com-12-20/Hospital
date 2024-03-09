@@ -88,7 +88,7 @@
   }
   @media screen and (min-width: 375px) and (max-width: 667px) {
     #begin {
-        width: 370px;
+        width: 375px;
         height: 150px;
       
     }
@@ -117,4 +117,9 @@
     font-size: 50%;
    }
 }
+/* @media(min-width:500px){
+  #begin{
+    width:432px
+  }
+} */
   

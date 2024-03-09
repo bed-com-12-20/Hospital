@@ -11,9 +11,6 @@
     /* background-color: rgb(86, 154, 154); */
   
   }
-     
-    
-   
     #mission-section{
       width: 1150px;
       height: 500px;
@@ -97,4 +94,40 @@
   .old{
     margin-top: 60px;
     margin-right: 10px;
+  }
+  @media (max-width:500px){
+  .body{
+    background-image: url('https://en.idei.club/uploads/posts/2023-06/1686715780_en-idei-club-p-medical-abstract-background-dizain-instagr-19.jpg');
+  }
+   #mission-section{
+    display: inline-block;
+    margin-left: 0px;
+    width: 390px;
+    height: 600px;
+   }
+   .footer-coll h4, .footer-colll h4{
+    font-size: 80%;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+   }
+   .footer-coll h4::before{
+    width: 60px;
+    margin-top: 0px;
+  }
+  .footer-coll p, .footer-coll ul, .footer-colll p, .footer-colll ul{
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 60%;
+  }
+  .old{
+    margin-top: 25px;
+    height: 200px;
+    width: 350px;
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+
+
   }
