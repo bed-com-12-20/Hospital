@@ -1,45 +1,28 @@
-import React from "react";
-import './style.css'
-import icon from '../../images/icon.png'
-import Image from "next/image";
+"use client";
 
-export default function Login(){
-    return(
-        <div>
-            <div className="form">
-                <div className="form-wrapper">
-                    <div className="header1">
-                        <div className="logo-container">
-                        <Image className="center"
-                            src={icon}
-                            alt="talking"
-                            width={100}
-                            height={100}
-                            style={{borderRadius:'10px'}}
-                            />
-                        </div>
-                        <h1>Staff Login</h1>
-                        <label className="name">Email:</label>
-                        <input 
-                        type="text" 
-                        id="name"
-                        placeholder="e.g Sam Zarila@gmail.com"
-                        />
-                        <label className="name">Password</label>
-                        <input 
-                        type="password" 
-                        id="name"
-                        placeholder="*******"
-                        />
-                        <a href="Dashboard">
-                        <button className="button1" type="submit">Login</button> 
-                        </a>
-                        
-                    </div>
+import { useRouter } from "next/navigation";
+import LoginForm from "./LoginForm";
 
-                </div>
-                
-            </div>
-        </div>
-    )
+export default function Login() {
+  const router = useRouter();
+  const HandleLoginSuccess = () => {
+    console.log("Login Successfully");
+  };
+
+  const redirectToAdmin = () => {
+    router.push("/pages/dashboard");
+  };
+  const redirectToDepartment = (departmentId: string) => {
+    router.push(`/department/${departmentId}`);
+  };
+
+  return (
+    <div>
+      <LoginForm
+        onLoginSucess={HandleLoginSuccess}
+        redirectToAdmin={redirectToAdmin}
+        redirectToDepartment={redirectToDepartment}
+      />
+    </div>
+  );
 }
