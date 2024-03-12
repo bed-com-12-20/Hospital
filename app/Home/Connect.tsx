@@ -1,13 +1,13 @@
 'use client'
-import { TypeAnimation } from "react-type-animation";
+import { TypeAnimation } from 'react-type-animation';
 import icon from "../images/icon.png";
 import './Styles/connect.css'
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from 'next/image';
 export default function ConnectSection(){
     return (<>
         {/* connect section */}
-        <section id="team">
-          <div className="connect">
+        <section id='team'>
+          <div className='connect'>
             <Image
               src={icon}
               alt=""
@@ -29,7 +29,7 @@ export default function ConnectSection(){
                 repeat={Infinity}
               />
             </div>
-            <p className="comma"> "</p>
+           
   
             <p className="italic">
               <i>
@@ -39,7 +39,7 @@ export default function ConnectSection(){
                 to make sure you have great medical experience.
               </i>
             </p>
-            <p className="comma1"> "</p>
+           
           </div>
         </section></>)
 }
