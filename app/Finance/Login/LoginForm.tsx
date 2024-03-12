@@ -3,7 +3,7 @@ import "./style.css";
 import icon from "../../images/icon.png";
 import Image from "next/image";
 
-const API_URL = "https://lph-api.onrender.com/LPHStaff/login";
+const API_URL = "https://lph-api.onrender.com/Staff/login";
 
 interface LoginFormProps {
   onLoginSucess: () => void;
@@ -57,7 +57,7 @@ export default function LoginForm({
     }
   };
   const handleLoginButton = () => {
-    console.log("Button Clicked!");
+    console.log("Button Clicked!",message);
   };
 
   return (
