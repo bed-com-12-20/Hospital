@@ -21,7 +21,7 @@ export default function QuickServiceSection(){
           Make an appointment with the liwonde private hospital. Click the
           button and follow instructions
         </p>
-        <a href="#" className="book-appointment">
+        <a href="Appointment" className="book-appointment">
           <button className="booking">Book Appointment</button>
         </a>
       </div>

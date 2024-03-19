@@ -34,7 +34,7 @@ export default function ServicesCard(){
         <h3 className="service-offered"> Services Offered</h3>
       </div>
       <div id="access2">
-        <div className="appointment1">
+        <div className="appointment">
           <Image  className="service-image"  src={recep} alt="" width={348} height={200} />
           <h3 className="reception-head">RECEPTION</h3>
           <p className="reception-state">
@@ -53,7 +53,7 @@ export default function ServicesCard(){
             trained pharmacists
           </p>
         </div>
-        <div className="appointment1">
+        <div className="appointment2">
           <Image className="service-image" src={opd} alt="" width={348} height={200} />
           <h3 className="reception-head">OPD</h3>
           <p className="reception-state">
@@ -62,6 +62,7 @@ export default function ServicesCard(){
             medical help from this office
           </p>
         </div>
+        
       </div>
       <button
         className="more-button"
@@ -73,9 +74,9 @@ export default function ServicesCard(){
     </section>
     <div style={seeMoreExpand}>
       <section id="service-section">
-        <div></div>
+        
         <div id="access2">
-          <div className="appointment1">
+         <div className="appointment1">
             <Image src={recep} alt="" width={348} height={200} />
             <h3 className="reception-head">RECEPTION</h3>
             <p className="reception-state">
@@ -84,7 +85,7 @@ export default function ServicesCard(){
               clients. The reception links clients to doctor, pharmacist and
               any other staff
             </p>
-          </div>
+          </div> 
           <div className="appointment1">
             <Image src={pharma} alt="" width={348} height={200} />
             <h3 className="reception-head">PHARMARCY</h3>
@@ -94,7 +95,16 @@ export default function ServicesCard(){
               trained pharmacists
             </p>
           </div>
-          <div className="appointment1">
+          <div className="appointment2">
+            <Image src={opd} alt="" width={348} height={200} />
+            <h3 className="reception-head">OPD</h3>
+            <p className="reception-state">
+              This is the doctors office each and ever client is warmly
+              Welcome to this office and every client is helped accordingly.
+              get any medical help from this office
+            </p>
+          </div>
+          <div className="appointmen">
             <Image src={opd} alt="" width={348} height={200} />
             <h3 className="reception-head">OPD</h3>
             <p className="reception-state">

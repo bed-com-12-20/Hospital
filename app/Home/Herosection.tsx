@@ -11,9 +11,12 @@ export default function Herosection() {
           Hospital
         </h1>
         <div>
+          <a href="Appointment">
           <button className="first-button">
             Book Appointment <span className="arrow">&#8594;</span>
           </button>
+          </a>
+         
         </div>
       </section>
     </>

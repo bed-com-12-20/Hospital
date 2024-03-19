@@ -8,17 +8,17 @@
   body {
     margin: 0;
     padding: 0;
-    /* background-color: rgb(86, 154, 154); */
-  
+ 
+ 
   }  
   #service-section{
     background-color: green;
-    width: 1400px;
+    width: 100%;
     height: 700px;
     border-color: #000;
     display: flex; 
     margin-top: 60px;
-    /* justify-content: center; */
+  
     flex-direction: column;
 
   }
@@ -38,13 +38,23 @@
     margin-top: 15px;
   }
   #access2{
-    width: 1125px;
+    width: 1500px;
     height: 435px;
     background-color: transparent;
     margin-top: 10px;
     margin-left: 10px;
-   
+    border: 1px solid white;
     display: flex;
+  }
+  .appointment2{
+    width: 350px;
+    height: 500px;
+    background-color: rgb(67, 143, 67);
+    border: 1px solid darkgray;
+    margin-top: 10px;
+    margin-left: 70px;
+    /* margin-right: 10px; */
+    box-shadow: 0 12px 13px rgb(0, 0, 0, 0.16),0 12px 13px rgb(0, 0, 0, 0.16),0 12px 13px rgb(0, 0, 0, 0.16);
   }
   .appointment1{
     width: 350px;
@@ -52,7 +62,7 @@
     background-color: rgb(67, 143, 67);
     border: 1px solid darkgray;
     margin-top: 10px;
-    margin-left: 70px;
+    margin-left: 170px;
     margin-right: 10px;
     box-shadow: 0 12px 13px rgb(0, 0, 0, 0.16),0 12px 13px rgb(0, 0, 0, 0.16),0 12px 13px rgb(0, 0, 0, 0.16);
     

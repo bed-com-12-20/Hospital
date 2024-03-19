@@ -1,16 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-* {
+  * {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; */
-}
+
 
 .box {
   position: relative;
@@ -143,12 +138,25 @@ h2 {
   height: 600px;
   border: 1px solid green;
   margin-top: 20px;
-  background: linear-gradient(20deg, transparent, green, #6fabaf);
+  background-image: url('../images/dna1.jpeg');
+  
   margin-left: 10px;
   border-top-right-radius: 100px;
 }
 .Logo {
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 300px;
 }
+.book-head{
+  justify-content: center;
+  align-items: center;
+  margin-left: 70px;
+  margin-top: 20px;
+  color: green;
+}
+.imag{
+  margin-top: 60px;
+  margin-left: 20px;
+
+}  

@@ -16,7 +16,7 @@ body {
     margin-top: 0px;
 }
 #table {
-    margin-left: 200px; /* Adjusted margin to create space beside the sidebar */
+    margin-left: 150px; /* Adjusted margin to create space beside the sidebar */
     width: fit-content;
     height: fit-content;
     display: flex;

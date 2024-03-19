@@ -4,8 +4,8 @@ import emailjs from "@emailjs/browser";
 import "./Appointment.css";
 import icon from "../images/icon.png";
 import Image from "next/image";
-import Navbar from "@/componets/navbar";
-import { useScroll } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import old from '../images/old.webp'
 
 const EmailForm = () => {
   const [name, setName] = useState("");
@@ -44,7 +44,38 @@ const EmailForm = () => {
   return (
     <div>
       <section id="box">
-        <Image className="Logo" alt="" src={icon} height={230} width={230} />
+
+        <Image className="Logo" alt="" src={icon} height={150} width={150} />
+        <div>
+        <TypeAnimation className="book-head"
+                sequence={[
+                  "welcome To Booking Section",
+                  1000,
+                  " Fill the Form On The Right",
+                  1000,
+                  "Check Your Email, For Respons",
+                ]}
+                speed={10}
+                style={{ fontSize: "2em" }}
+                repeat={Infinity}
+              />
+        </div>
+        <div className="imag">
+           <Image
+              alt=""
+              src={old}
+              width={400}
+              height={600}
+           />
+        </div>
+       <div>
+        <ul>
+          <li>The Form on the right fill the details</li>
+          <li>The Form on the right fill the details</li>
+          <li>The Form on the right fill the details</li>
+        </ul>
+       </div>
+       
       </section>
       <div className="box">
         <form action="" className="email-form" onSubmit={handleSubmit}>

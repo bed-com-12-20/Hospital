@@ -9,6 +9,8 @@ interface FinanceItem {
     ID: number;
     firstName: string;
     LastName: string;
+    Treatment:string;
+    Amount:string;
     Paymethod: string;
     TestOrder: string;
     Date: string;
@@ -16,7 +18,7 @@ interface FinanceItem {
 
 export default function Finance() {
     const [finance, setFinance] = useState<FinanceItem[]>([
-        { ID: 1, firstName: '', LastName: '', Paymethod: '', TestOrder: '', Date: '' }
+        { ID: 1, firstName: '', LastName: '', Treatment:'',Amount:'', Paymethod: '', TestOrder: '', Date: '' }
     ]);
 
     const addRow = () => {
@@ -24,6 +26,8 @@ export default function Finance() {
             ID: finance.length + 1,
             firstName: '',
             LastName: '',
+            Treatment:'',
+            Amount:'',
             Paymethod: '',
             TestOrder: '',
             Date: ''
@@ -65,6 +69,12 @@ export default function Finance() {
                             <p>LastName</p>
                         </div>
                         <div className="table-cell">
+                            <p>Treatment</p>
+                        </div>
+                        <div className="table-cell">
+                            <p>Amount</p>
+                        </div>
+                        <div className="table-cell">
                             <p>Payment Method</p>
                         </div>
                         <div className="table-cell">
@@ -91,7 +101,7 @@ export default function Finance() {
                             id="label"
                             placeholder="e.g 1"
                             value={row.ID}
-                            onChange={(event) => updateRow(index, { ID: parseInt(event.target.value) })}
+                            // onChange={(event) => updateRow(index, { ID: parseInt(event.target.value) })}
                         />
                     </div>
                     <div className="table-cell">
@@ -100,7 +110,7 @@ export default function Finance() {
                             id="label"
                             placeholder=" e.g damascus"
                             value={row.firstName}
-                            onChange={(event) => updateRow(index, { firstName: event.target.value })}
+                            // onChange={(event) => updateRow(index, { firstName: event.target.value })}
                         />
                     </div>
                     <div className="table-cell">
@@ -109,7 +119,25 @@ export default function Finance() {
                             id="label"
                             placeholder="multiplug"
                             value={row.LastName}
-                            onChange={(event) => updateRow(index, { LastName: event.target.value })}
+                            // onChange={(event) => updateRow(index, { LastName: event.target.value })}
+                        />
+                    </div>
+                    <div className="table-cell">
+                        <input
+                            type="text"
+                            id="label"
+                            placeholder="treatment"
+                            value={row.Treatment}
+                            // onChange={(event) => updateRow(index, { Treatment: event.target.value })}
+                        />
+                    </div>
+                    <div className="table-cell">
+                        <input
+                            type="number"
+                            id="label"
+                            placeholder="Amount"
+                            value={row.Amount}
+                            // onChange={(event) => updateRow(index, { Amount: event.target.value })}
                         />
                     </div>
                     <div className="table-cell">

@@ -10,7 +10,7 @@ export default function Login() {
   };
 
   const redirectToAdmin = () => {
-    router.push("/pages/dashboard");
+    router.push("/Finance/Dashboard");
   };
   const redirectToDepartment = (departmentId: string) => {
     router.push(`/department/${departmentId}`);

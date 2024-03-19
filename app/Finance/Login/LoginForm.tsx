@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./style.css";
 import icon from "../../images/icon.png";
 import Image from "next/image";
+import { CSSProperties } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
-const API_URL = "https://lph-api.onrender.com/Staff/login";
+const API_URL = "https://lph-backend.onrender.com/Staff/login";
 
 interface LoginFormProps {
   onLoginSucess: () => void;
@@ -27,13 +29,16 @@ export default function LoginForm({
 
     try {
       console.log("submitting form");
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch(
+        "https://lph-backend.onrender.com/Staff/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
       if (response.ok) {
         console.log("Login successiful");
         const api = await response.json();
@@ -57,7 +62,7 @@ export default function LoginForm({
     }
   };
   const handleLoginButton = () => {
-    console.log("Button Clicked!",message);
+    console.log("Button Clicked!", message);
   };
 
   return (
