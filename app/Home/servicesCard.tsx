@@ -1,122 +1,302 @@
 "use client";
+//import { Button, Typography } from "@material-tailwind/react";
 import "./Styles/service.css";
 import React, { useState, useEffect, useRef } from "react";
-
+import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
-import pharma from "../images/pharma.jpeg";
-import recep from "../images/recep.jpeg";
-import opd from "../images/opd.jpeg";
-export default function ServicesCard(){
+import health from "../images/heath.jpeg";
 
-    const [seeMoreExpand, setSeeMoreExpand] = useState({
-        display: "none",
-        height: "0px",
-      });
-    
-      const [hideButton, setHideButton] = useState({
-        display: "flex",
-      });
-    
-      const handleExpand = () => {
-        setSeeMoreExpand({
-          display: "flex",
-          height: "fit-content",
-        });
-    
-        setHideButton({
-          display: "none",
-        });
-      };
-    
-    return(<> {/* service card */}
-    <section id="service-section">
-      <div>
-        <h3 className="service-offered"> Services Offered</h3>
-      </div>
-      <div id="access2">
-        <div className="appointment">
-          <Image  className="service-image"  src={recep} alt="" width={348} height={200} />
-          <h3 className="reception-head">RECEPTION</h3>
-          <p className="reception-state">
-            Reception is the entry point of all the services.The reception is
-            managed by team of well trained receptionist who manages our
-            clients. The reception links clients to doctor, pharmacist and any
-            other staff
-          </p>
-        </div>
-        <div className="appointment1">
-          <Image className="service-image"  src={pharma} alt="" width={348} height={200} />
-          <h3 className="reception-head">PHARMARCY</h3>
-          <p className="reception-state">
-            Phamarcy is responsible for storing medicine, selling medicine,
-            Provide pharmacetical support to clients. it is managed by well
-            trained pharmacists
-          </p>
-        </div>
-        <div className="appointment2">
-          <Image className="service-image" src={opd} alt="" width={348} height={200} />
-          <h3 className="reception-head">OPD</h3>
-          <p className="reception-state">
-            This is the doctors office each and ever client is warmly Welcome
-            to this office and every client is helped accordingly. get any
-            medical help from this office
-          </p>
-        </div>
-        
-      </div>
-      <button
-        className="more-button"
-        onClick={handleExpand}
-        style={hideButton}
-      >
-        More Services
-      </button>
-    </section>
-    <div style={seeMoreExpand}>
-      <section id="service-section">
-        
-        <div id="access2">
-         <div className="appointment1">
-            <Image src={recep} alt="" width={348} height={200} />
-            <h3 className="reception-head">RECEPTION</h3>
-            <p className="reception-state">
-              Reception is the entry point of all the services.The reception
-              is managed by team of well trained receptionist who manages our
-              clients. The reception links clients to doctor, pharmacist and
-              any other staff
+export default function ServicesCard() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+      slideControls.start("visible");
+    }
+  }, [isInView]);
+
+  const [seeMoreExpand, setSeeMoreExpand] = useState({
+    display: "none",
+    height: "0px",
+  });
+
+  const [hideButton, setHideButton] = useState({
+    display: "flex",
+  });
+
+  const handleExpand = () => {
+    setSeeMoreExpand({
+      display: "flex",
+      height: "fit-content",
+    });
+
+    setHideButton({
+      display: "none",
+    });
+  };
+
+  return (
+    <>
+      {/* service card */}
+
+      <section id="service-section" className="">
+        <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+          >
+            {/* <Image src={health} alt="" width={100} height={100} className="service-image" /> */}
+            <h1 className="service-offered">  <span className="drug-icon">|</span> SERVICES OFFERED</h1>
+            <p className="explore">
+              Explore our comprehensive range of medical services designed to
+              meet your healthcare needs.
             </p>
-          </div> 
-          <div className="appointment1">
-            <Image src={pharma} alt="" width={348} height={200} />
-            <h3 className="reception-head">PHARMARCY</h3>
-            <p className="reception-state">
-              Phamarcy is responsible for storing medicine, selling medicine,
-              Provide pharmacetical support to clients. it is managed by well
-              trained pharmacists
-            </p>
+
+            <div className="cards">
+              <div className="service-card">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Pharmacy Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+              <div className="service-card1">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Reception Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+              <div className="service-card2">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Laboratory Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+              <div className="service-card3">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Martenity Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="more-button">
+              <button onClick={handleExpand} style={hideButton}>
+                See More
+              </button>
+            </div>
+          </motion.div>
+          {/* <motion.div
+          variants={{
+            hidden: { left:0 },
+            visible: { left: '100%'},
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{
+            duration: 0.5, ease:'easeIn'
+            
+          }}
+          style={{
+             position:'absolute',
+             top: 4,
+             bottom:4,
+             left:0,
+             right:0,
+             background: "var(--brand)",
+             zIndex:20,
+
+          }}
+        >
+          <div className="cards">
+            <div className="service-card">
+              <h3 className="service">
+                {" "}
+                <span className="drug-icon">|</span>Pharmacy Service
+              </h3>
+              <div className="pharmacy">
+                <p>
+                  {" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Alias, dolore incidunt veritatis cumque ea ipsum a ullam esse
+                  fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                  laboriosam quos similique.
+                </p>
+              </div>
+            </div>
+            <div className="service-card">
+              <h3 className="service">
+                {" "}
+                <span className="drug-icon">|</span>Reception Service
+              </h3>
+              <div className="pharmacy">
+                <p>
+                  {" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Alias, dolore incidunt veritatis cumque ea ipsum a ullam esse
+                  fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                  laboriosam quos similique.
+                </p>
+              </div>
+            </div>
+            <div className="service-card">
+              <h3 className="service">
+                {" "}
+                <span className="drug-icon">|</span>Laboratory Service
+              </h3>
+              <div className="pharmacy">
+                <p>
+                  {" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Alias, dolore incidunt veritatis cumque ea ipsum a ullam esse
+                  fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                  laboriosam quos similique.
+                </p>
+              </div>
+            </div>
+            <div className="service-card">
+              <h3 className="service">
+                {" "}
+                <span className="drug-icon">|</span>Martenity Service
+              </h3>
+              <div className="pharmacy">
+                <p>
+                  {" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Alias, dolore incidunt veritatis cumque ea ipsum a ullam esse
+                  fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                  laboriosam quos similique.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="appointment2">
-            <Image src={opd} alt="" width={348} height={200} />
-            <h3 className="reception-head">OPD</h3>
-            <p className="reception-state">
-              This is the doctors office each and ever client is warmly
-              Welcome to this office and every client is helped accordingly.
-              get any medical help from this office
-            </p>
-          </div>
-          <div className="appointmen">
-            <Image src={opd} alt="" width={348} height={200} />
-            <h3 className="reception-head">OPD</h3>
-            <p className="reception-state">
-              This is the doctors office each and ever client is warmly
-              Welcome to this office and every client is helped accordingly.
-              get any medical help from this office
-            </p>
-          </div>
+        </motion.div> */}
         </div>
-        <button className="more-button" onClick={handleExpand}>
-          Less Services
-        </button>
       </section>
-    </div></>)
+      <div style={seeMoreExpand}>
+        <section id="service-section">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 0.5,
+              delay: 0.25,
+            }}
+          >
+            <div className="cards">
+              <div className="service-card">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Pharmacy Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+              <div className="service-card">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Reception Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+              <div className="service-card">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Laboratory Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+              <div className="service-card">
+                <h3 className="service">
+                  {" "}
+                  <span className="drug-icon">|</span>Martenity Service
+                </h3>
+                <div className="pharmacy">
+                  <p>
+                    {" "}
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
+                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
+                    laboriosam quos similique.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>{" "}
+        </section>
+      </div>
+    </>
+  );
 }

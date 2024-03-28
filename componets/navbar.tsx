@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <>
       {" "}
-      <div className="head">
+      {/* <div className="head">
         <header className="header-container">
           <div className="header-content">
             <Image
@@ -64,7 +64,7 @@ function Navbar() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* navigation bar */}
       <div className="navigation">
         <nav className="header">

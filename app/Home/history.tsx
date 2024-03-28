@@ -1,11 +1,39 @@
+'use client'
+
 import Image, { StaticImageData } from "next/image";
 import './Styles/history.css'
 import liwonde from "../images/liwonde.jpeg";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 export default function BriefHistory(){
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
     return(<>
         {/* brief history */}
-        <section id="Brief-history">
+        <div  ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+        <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+          >
+
+ <section id="Brief-history">
           <div className="footer-colo">
             <h4>Brief History of LPH</h4>
             <p>
@@ -29,5 +57,11 @@ export default function BriefHistory(){
               className="brief-image"
             />
           </div>
-        </section></>)
+        </section>
+          </motion.div>
+            
+            
+
+        </div>
+        </>)
 }

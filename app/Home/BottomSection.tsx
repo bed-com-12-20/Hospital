@@ -1,3 +1,5 @@
+'use client'
+
 import Image, { StaticImageData } from "next/image";
 import heart from "../images/heart.png";
 import facebook from '../images/Rounded_Facebook.webp'
@@ -6,7 +8,21 @@ import whatsapp from '../images/whatsaap.webp'
 import linkedin from '../images/linkedIn.webp'
 import instagram from '../images/instagram.webp'
 import './Styles/bottomSection.css'
+import { motion, useInView, useAnimation } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+
+
 export default function BottomSection(){
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+  
     return (<>      
         <div className="img">
           <Image
@@ -22,8 +38,20 @@ export default function BottomSection(){
             }}
           />
         </div>
-        <h1>We Treat, God Heals</h1>
-        <section id="social-media">
+        <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+          ><h1>We Treat, God Heals</h1>
+             <section id="social-media">
           <h1 className="doctor">Stay Connected</h1>
   
           <p className="contact">
@@ -79,6 +107,7 @@ export default function BottomSection(){
               />
             </a>
           </div>
-        </section>
+        </section></motion.div></div>
+       
   </>)
 }

@@ -6,7 +6,7 @@ import ServicesCard from "./Home/servicesCard";
 import MissionSection from "./Home/Mission";
 import QuickServiceSection from "./Home/quickServiceSection";
 import BriefHistory from "./Home/history";
-import ConnectSection from "./Home/Connect";
+// import ConnectSection from "./Home/Connect";
 import FindDoctorSection from "./Home/findDoctor";
 import FAQ from "./Home/Faq";
 import DoctorsSection from "./Home/doctorSection";
@@ -23,7 +23,7 @@ export default function page() {
       <MissionSection/>
       <QuickServiceSection/>
       <BriefHistory/>
-      <ConnectSection/>
+      {/* <ConnectSection/> */}
       <FindDoctorSection/>
       <FAQ/>
       <DoctorsSection/>

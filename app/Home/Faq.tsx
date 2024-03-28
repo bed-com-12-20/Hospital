@@ -1,56 +1,59 @@
+'use client'
+
 import './Styles/faq.css'
+
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
+
 
 
 export default function FAQ(){
-    return (<><section id="asked-question">
-    <div className="question-card">
-      <h2 className="faq">Frequently Asked Question(FAQ)</h2>
-      <ul className="services">
-        <li className="clicks">
-          <a className="que">how do you pay at liwonde private hospital?</a>
-          <div className="dropdown-menu">
-            {/* <ul className="list"> */}
-            <li className="ref">
-              {" "}
-              <div className="faq-card"></div>
-            </li>
-            {/* </ul> */}
-          </div>
-        </li>
-      </ul>
-      <ul className="services">
-        <li className="clicks">
-          <a className="que">where to pay at liwonde private hospital?</a>
-          <div className="dropdown-menu">
-            {/* <ul className="list"> */}
-            <li className="ref">
-              {" "}
-              <div className="faq-card"></div>
-            </li>
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+    return (<>
+      <div  ref={ref} style={{ position: "relative", overflow: "hidden" }}>
+        <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+            }}
+          >
 
-            {/* </ul> */}
-          </div>
-        </li>
-      </ul>
-      <ul className="services">
-        <li className="clicks">
-          <a className="que">where is liwonde private hospital located?</a>
-          <div className="dropdown-menu">
-            {/* <ul className="list"> */}
-            <li className="ref">
-              {" "}
-              <div className="faq-card"></div>
-            </li>
+<section id='asked-section'>
+  <div>
+  <h1 className='faq'>Freqeuntly Asked Questions</h1>
+   <h3 className='questions'>Get all the satistifactory answers about all the Questions that 
+    you have in mind
+   </h3>
+  </div>
+  <div id='cards'>
+      <div id='faq-cards'>
+          <p>How do you pay at Liwonde Medical clinic?</p>
+      </div>
+      <div id='faq-cards'>
+        
+      </div>
+      <div id='faq-cards'>
+        
+      </div>
 
-            {/* </ul> */}
-          </div>
-        </li>
-      </ul>
-      <h3 className="help-line">Help line</h3>
-      <ul className="help-numbers">
-        <li>0999925436</li>
-        <li>088878675</li>
-      </ul>
-    </div>
-  </section></>)
+  </div>
+  
+</section>
+</motion.div>
+            </div>
+   </>)
 }
