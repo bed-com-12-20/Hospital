@@ -18,7 +18,7 @@
 }
 #faq-cards{
   width: 350px;
-  height: 200px;
+  height: 250px;
   background-color: transparent;
   margin-top: 30px;
   margin-left: 50px;
@@ -30,4 +30,18 @@
 #cards{
   display: flex;
   flex-direction: row;
+}
+.payment{
+  text-align: center;
+  color: green;
+  font-weight: 800;
+}
+.money{
+  margin-left: 140px;
+  margin-top: 20px;
+}
+.answer{
+  text-align: center;
+  margin-top: 10px;
+  color: gray;
 }

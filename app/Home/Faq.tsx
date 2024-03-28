@@ -1,9 +1,13 @@
 'use client'
 
 import './Styles/faq.css'
+import money from '../images/money.jpeg'
+import heath from '../images/heath2.png'
+import place from '../images/place.png'
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import Image from 'next/image';
 
 
 
@@ -41,13 +45,27 @@ export default function FAQ(){
   </div>
   <div id='cards'>
       <div id='faq-cards'>
-          <p>How do you pay at Liwonde Medical clinic?</p>
+       <Image src={money} alt='' width={70} height={70} className='money'/>
+          <p className='payment'>How do you pay at Liwonde Medical clinic?</p>
+          <p className='answer'>liwonde medical clinic  offers wide range 
+             of payment methods including cash, digital payments such as Mpamba,
+             Airtel Money, Banks and organisation
+          </p>
       </div>
       <div id='faq-cards'>
-        
+      <Image src={heath} alt='' width={90} height={90} className='money'/>
+          <p className='payment'>Where to access services of liwonde medical clinic?</p>
+          <p className='answer'> You can access services of the liwonde medical clinic
+             by directly visiting us in liwonde township of by booking appointment
+             via the links provided throughout the website
+          </p>
       </div>
       <div id='faq-cards'>
-        
+      <Image src={place} alt='' width={70} height={70} className='money'/>
+          <p className='payment'>Where is  Liwonde Medical clinic located?</p>
+          <p className='answer'> follow the map in the quick service section
+             to get the precise location of the liwonde medical clinic
+          </p>
       </div>
 
   </div>
