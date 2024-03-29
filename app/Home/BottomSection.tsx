@@ -14,7 +14,7 @@ import React, { useState, useEffect, useRef } from "react";
 const stats = [
   { id: 1, name: 'satisfied patients', value: '15,000+' },
   { id: 2, name: 'Succes rate', value: '98%' },
-  { id: 3, name: 'Years In Services', value: '25,000+' },
+  { id: 3, name: 'Years In Services', value: '25+' },
 ]
 
 

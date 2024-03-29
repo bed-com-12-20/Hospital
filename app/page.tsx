@@ -13,11 +13,13 @@ import DoctorsSection from "./Home/doctorSection";
 import BottomSection from "./Home/BottomSection";
 import Footer from "@/componets/footer";
 // import Navbar from "@/componets/navbkar";
+import Hero from "./Home/Hero";
 export default function page() {
   return (
     <>
       <Navbar />
-      <Herosection />
+     {/* <Hero/> */}
+     <Herosection/>
       <Section1/>
       <ServicesCard/>
       <MissionSection/>

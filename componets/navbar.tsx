@@ -1,16 +1,16 @@
-"use client";
+ "use client";
 import './nav.css'
 import icon from'../app/images/icon.png'
 import phone from '../app/images/phone.png'
 import location from '../app/images/location.png'
 import time from '../app/images/time.png'
-import Image from "next/image";
+
 
 function Navbar() {
   return (
     <>
       {" "}
-      {/* <div className="head">
+       {/* <div className="head">
         <header className="header-container">
           <div className="header-content">
             <Image
@@ -64,7 +64,7 @@ function Navbar() {
             </p>
           </div>
         </div>
-      </div> */}
+      </div>  */}
       {/* navigation bar */}
       <div className="navigation">
         <nav className="header">
@@ -185,8 +185,11 @@ function Navbar() {
             </a>
           </div>
         </nav>
-      </div>
+      </div> 
+
     </>
+  
   );
 }
 export default Navbar;
+
