@@ -6,13 +6,13 @@ import ServicesCard from "./Home/servicesCard";
 import MissionSection from "./Home/Mission";
 import QuickServiceSection from "./Home/quickServiceSection";
 import BriefHistory from "./Home/history";
-// import ConnectSection from "./Home/Connect";
+import ConnectSection from "./Home/Connect";
 import FindDoctorSection from "./Home/findDoctor";
 import FAQ from "./Home/Faq";
 import DoctorsSection from "./Home/doctorSection";
 import BottomSection from "./Home/BottomSection";
 import Footer from "@/componets/footer";
-// import Navbar from "@/componets/navbkar";
+//import Navbar from "@/componets/navbkar";
 import Hero from "./Home/Hero";
 export default function page() {
   return (
@@ -25,8 +25,8 @@ export default function page() {
       <MissionSection/>
       <QuickServiceSection/>
       <BriefHistory/>
-      {/* <ConnectSection/> */}
-      <FindDoctorSection/>
+       <ConnectSection/>  
+      {/* <FindDoctorSection/> */}
       <FAQ/>
       <DoctorsSection/>
       <BottomSection/>
