@@ -31,7 +31,8 @@ export default function Herosection() {
             transition={{
               duration: 1,
               delay: 0.5,
-            }}
+            }} 
+            className=""
           >
             <h1 className="hospital-name">
               <span className="span">|</span>Welcome To Liwonde Private <br />

@@ -72,10 +72,9 @@ export default function ServicesCard() {
                 <div className="pharmacy">
                   <p>
                     {" "}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
-                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
-                    laboriosam quos similique.
+                    Phamarcy is responsible for storing medicine, selling medicine,
+                    Provide pharmacetical support to clients. it is managed by well
+                    trained pharmacists
                   </p>
                 </div>
               </div>
@@ -87,25 +86,24 @@ export default function ServicesCard() {
                 <div className="pharmacy">
                   <p>
                     {" "}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
-                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
-                    laboriosam quos similique.
+                    Reception is the entry point of all the services.The reception is
+                    managed by team of well trained receptionist who manages our
+                    clients. The reception links clients to doctor, pharmacist and any
+                    other staff
                   </p>
                 </div>
               </div>
               <div className="service-card2">
                 <h3 className="service">
                   {" "}
-                  <span className="drug-icon">|</span>Laboratory Service
+                  <span className="drug-icon">|</span>OPD
                 </h3>
                 <div className="pharmacy">
                   <p>
                     {" "}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Alias, dolore incidunt veritatis cumque ea ipsum a ullam
-                    esse fugiat ex, quaerat sunt obcaecati totam nobis at earum
-                    laboriosam quos similique.
+                    This is the doctors office each and ever client is warmly Welcome
+                    to this office and every client is helped accordingly. get any
+                    medical help from this office
                   </p>
                 </div>
               </div>

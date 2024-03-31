@@ -4,6 +4,10 @@ import "./Styles/section1.css";
 import { motion, useInView, useAnimation } from "framer-motion";
 import React, { useState, useEffect, useRef } from "react";
 import liwonde from '../images/liwonde.jpeg'
+import Ambulance from "../images/amb.jpeg";
+import welcome from '../images/welcome.jpeg'
+import theatre from '../images/theatre.webp'
+
 import Image from "next/image";
 import icon from '../images/icon.png'
 const features = [
@@ -33,6 +37,7 @@ export default function Section1() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+  const slideControls=useAnimation()
 
   useEffect(() => {
     if (isInView) {
@@ -54,6 +59,7 @@ export default function Section1() {
             delay: 0.5,
           }}
         >
+          
           <div id="anime">
             <TypeAnimation
               sequence={[
@@ -68,11 +74,12 @@ export default function Section1() {
               repeat={Infinity}
             />
           </div>
+          
           <div className="bg-white">
             <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
               <div>
                 
-                <h2 className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">
+               <div className="items-center justfy-center "> <h2 className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">
                   Important Guide 
                 </h2>
                 
@@ -81,7 +88,7 @@ export default function Section1() {
                   guidance towards the Service, important details and some
                   insights of the functions clinic
                 </p>
-
+</div>
                 <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
                   {features.map((feature) => (
                     <div
@@ -101,9 +108,9 @@ export default function Section1() {
               <div className=" mt-20 grid grid-cols-2 grid-rows-1 gap-4 sm:gap-6 lg:gap-8">
 
                  <Image src={liwonde} alt="" className=""/>
-                 <Image src={liwonde} alt="" className=""/>
-                 <Image src={liwonde} alt="" className=""/>
-                 <Image src={liwonde} alt="" className=""/>
+                 <Image src={Ambulance} alt="" className=""/>
+                 <Image src={theatre} alt="" className=""/>
+                 <Image src={welcome} alt="" className=""/>
               </div>
             </div>
           </div>

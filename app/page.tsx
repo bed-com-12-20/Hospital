@@ -18,7 +18,7 @@ export default function page() {
   return (
     <>
       <Navbar />
-     {/* <Hero/> */}
+     {/* <Hero/>  */}
      <Herosection/>
       <Section1/>
       <ServicesCard/>

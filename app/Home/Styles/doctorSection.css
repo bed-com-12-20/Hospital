@@ -12,22 +12,7 @@
   
   }  
   #doctors-section{
-    width: 1150px;
-    height: 500px;
-    /* background-color: rgb(86, 154, 154); */
-    border-color: #000;
-    margin-left: 70px;
-    margin-right: 70px;
-    display: flex; 
-    margin-top: 60px;
-    /* justify-content: center; */
-    flex-direction: column;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-    
-      ), url('../../images//team1.webp');
+    background-color: green;
   
   }
   .staff-team{

@@ -2,11 +2,6 @@
 
 import Image, { StaticImageData } from "next/image";
 import heart from "../images/heart.png";
-import facebook from '../images/Rounded_Facebook.webp'
-import Twitter from '../images/Twitter.webp'
-import whatsapp from '../images/whatsaap.webp'
-import linkedin from '../images/linkedIn.webp'
-import instagram from '../images/instagram.webp'
 import './Styles/bottomSection.css'
 import { motion, useInView, useAnimation } from "framer-motion";
 import React, { useState, useEffect, useRef } from "react";
