@@ -33,12 +33,14 @@ const EmailForm = () => {
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Email sent successfully!", response);
+        alert("Email sent successfully")
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((error) => {
         console.error("Error sending email:", error);
+        alert("Email not ,please check your connection")
       });
   };
   return (

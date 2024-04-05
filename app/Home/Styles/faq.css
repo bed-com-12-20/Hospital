@@ -1,15 +1,17 @@
 #asked-section{
   margin-top: 30px;
+   background-color: green; 
   
 }
 .faq{
+  color: white;
   font-weight: 400;
   font-size: 200%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 
   'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .questions{
-  color: gray;
+  color: yellow;
   font-weight: 300;
   text-align: center;
   font-size: 150%;
@@ -26,10 +28,12 @@
   border-radius: 15px;
   margin-top: 50px;
   margin-bottom: 20px;
+  background-color: white;
 }
 #cards{
   display: flex;
   flex-direction: row;
+ 
 }
 .payment{
   text-align: center;

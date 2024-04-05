@@ -54,7 +54,6 @@ body {
     transform: translateX(0);
   }
 }
-
 .service-card {
   width: 400px;
   height: 300px;
@@ -203,4 +202,9 @@ body {
     border: 0.5px solid;
     margin-bottom: 5px;
   }
+}
+@media (min-width: 1500px){
+   #service-section{
+    
+   }
 }

@@ -4,7 +4,7 @@ import './Styles/faq.css'
 import money from '../images/money.jpeg'
 import heath from '../images/heath2.png'
 import place from '../images/place.png'
-
+import { TypeAnimation } from 'react-type-animation'
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from 'next/image';
@@ -38,7 +38,20 @@ export default function FAQ(){
 
 <section id='asked-section'>
   <div>
-  <h1 className='faq'>Freqeuntly Asked Questions</h1>
+  <h1 className='faq'>
+    <TypeAnimation
+      sequence={[
+        "Freqeuntly Asked Questions",
+        100,
+        "This Section Answers all your Questions",
+        100,
+        "If You have Any More Question, Please Contact us",
+      ]}
+       speed={1}
+       style={{ fontSize: "1em"}}
+       repeat={Infinity}
+    />
+    </h1>
    <h3 className='questions'>Get all the satistifactory answers about all the Questions that 
     you have in mind
    </h3>
