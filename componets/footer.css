@@ -82,8 +82,7 @@ body {
     margin-bottom: 10px;
   }
   #footer-link:hover{
-    color: blue;
-    padding-left: 3px;
+    color: yellow;
     font-size: 18px;
     text-decoration: underline;  
   }
@@ -92,6 +91,12 @@ body {
     margin-top: 10px;
     text-align: center;
     font-size: 20px;
+  }
+  .my-icon1{
+    margin-right: 0.5rem;
+    color: yellow;
+    margin-top: 5px;
+    margin-left: 0.5rem;
   }
 @media(max-width:500px){
    .footer-column h4{

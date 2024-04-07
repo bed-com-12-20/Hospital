@@ -131,3 +131,9 @@
 
 
   }
+  @media(min-width: 1500px){
+     #mission-section{
+       margin-top: 30px;
+       margin-left: 350px;
+     }
+  }

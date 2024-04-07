@@ -57,6 +57,17 @@ export default function BriefHistory(){
               className="brief-image"
             />
           </div>
+          <div className="footer-colo">
+            <Image
+              src={liwonde}
+              alt=""
+              width={500}
+              height={400}
+              className="brief-image"
+            />
+          </div>
+          
+          
         </section>
           </motion.div>
             

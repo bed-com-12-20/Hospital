@@ -5,6 +5,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 import health from "../images/heath.jpeg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBell, faMedkit} from '@fortawesome/free-solid-svg-icons'
 
 export default function ServicesCard() {
   const ref = useRef(null);
@@ -67,7 +69,7 @@ export default function ServicesCard() {
               <div className="service-card">
                 <h3 className="service">
                   {" "}
-                  <span className="drug-icon">|</span>Pharmacy Service
+                  <FontAwesomeIcon icon={faMedkit} className="my-icon1"/> Pharmacy Service
                 </h3>
                 <div className="pharmacy">
                   <p>

@@ -93,6 +93,7 @@
       text-align: center;
       color: green;
       font-weight: 400;
+      text-align: center;
      
     }
     #quick-service{
@@ -130,3 +131,9 @@
       height: 20px;
     }
   }
+  @media(min-width: 1500px){
+    #quick-service{
+      margin-top: 30px;
+      margin-left: 350px;
+    }
+ }

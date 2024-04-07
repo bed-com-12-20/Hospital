@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from "next/image";
+import {faEnvelopeOpen, faPhone, faLocation, faInfoCircle, faNoteSticky, faUserFriends} from '@fortawesome/free-solid-svg-icons'
 import './footer.css'
 
 import icon from "../app/images/icon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Footer() {
   return (
     <>
@@ -22,23 +24,23 @@ export default function Footer() {
               <h4>Important Links</h4>
               <ul>
                 <li>
-                  <a href="#" id="footer-link">
-                    Book Appointment
+                  <a href="Appontment" id="footer-link">
+                   <FontAwesomeIcon icon={faNoteSticky} className="my-icon1"/>Book Appointment
+                  </a>
+                </li>
+                <li>
+                  <a href="/Team" id="footer-link">
+                  <FontAwesomeIcon icon={faUserFriends} className="my-icon1"/>Team of Developers
+                  </a>
+                </li>
+                <li>
+                  <a href="/Map" id="footer-link">
+                  <FontAwesomeIcon icon={faLocation} className="my-icon1"/> Location
                   </a>
                 </li>
                 <li>
                   <a href="#" id="footer-link">
-                    Team of Developers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" id="footer-link">
-                    Location
-                  </a>
-                </li>
-                <li>
-                  <a href="#" id="footer-link">
-                    About Us
+                  <FontAwesomeIcon icon={faInfoCircle} className="my-icon1"/> About Us
                   </a>
                 </li>
               </ul>

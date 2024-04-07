@@ -37,7 +37,9 @@ export default function BottomSection() {
             duration: 1,
             delay: 0.5,
           }}
-        ><div className="bg-green mt-40">
+        >
+          <section id="stats">
+          <div className="bg-green mt-40">
                <h1 className="mt-30 text-1xl  text-center font-normal tracking-tight text-green-900 sm:text-4xl mt-50">
             Liwonde Medical Clinic Statistics
           </h1>
@@ -67,6 +69,9 @@ export default function BottomSection() {
           </div>
         </div>
         
+          </section>
+          
+         
           <div className="img">
             <Image
               className="reception"

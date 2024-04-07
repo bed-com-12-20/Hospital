@@ -7,6 +7,8 @@ import liwonde from '../images/liwonde.jpeg'
 import Ambulance from "../images/amb.jpeg";
 import welcome from '../images/welcome.jpeg'
 import theatre from '../images/theatre.webp'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedkit, faPhone, faTimesCircle,faBookMedical } from "@fortawesome/free-solid-svg-icons";
 
 import Image from "next/image";
 import icon from '../images/icon.png'
@@ -80,7 +82,7 @@ export default function Section1() {
               <div>
                 
                <div className="items-center justfy-center "> <h2 className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">
-                  Important Guide 
+                  <FontAwesomeIcon icon={faBookMedical} className="my-icon1"/>Important Guide 
                 </h2>
                 
                 <p className="mt-4 text-gray-500">
