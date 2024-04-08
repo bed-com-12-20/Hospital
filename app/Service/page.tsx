@@ -1,74 +1,218 @@
-'use client'
+"use client";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Style.css";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-import "./style.css";
-import Header from "@/componets/navbar";
+const ProductImages = () => {
+  //slideshow
+  const [slidesToShow, setSlidesToShow] = useState(3);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-
-import { motion, useInView, useAnimation } from "framer-motion";
-import React, { useState, useEffect, useRef } from "react";
-
-export default function Herosection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
-  const slideControls = useAnimation();
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView]);
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setSlidesToShow(1);
+      } else {
+        setSlidesToShow(4);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: "0",
+  };
+
   return (
-    <>
-      <Header/>
-      {/* sliding images */}
-      <section id="welcome-section">
-        <div ref={ref} style={{ position: "relative", overflow: "hidden" }}>
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{
-              duration: 1,
-              delay: 0.5,
-            }} 
-            className=""
-          >
-            <h1 className="hospital-name">
-                Explore wide range of services <br />
-                offered at liwonde Medical clinic
-            </h1>
-            
-          </motion.div>
+    <div className="images-body">
+      <div className="inside-images">
+        <div className="headings in-images">
+          <p className="text-4xl text-lg font-bold text-center">
+            Our Key Services
+          </p>
+          <p className="text-2xl mt-3 text-yellow-300 text-center">
+            Explore our comprehensive range of medical services designed to meet
+            your healthcare needs.
+          </p>
         </div>
-      </section>
-      <div className="our-services">
-      <h3 className='questions'>Our Key Services
-   </h3>
-      <div id='cards'>
-      <div id='faq-cards'>
 
-          <p className='payment'>Pharmacy</p>
-          <p className='answer'>
-          </p>
+        <Slider {...settings}>
+          <div id="service-card">
+            <h3 className="service"> Pharmacy Service</h3>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Pharmacy
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="">
+            <h3 className="service"> Pharmacy Service</h3>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src=""
+              />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text style={{ marginTop: "" }}>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Reception
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="service-card">
+            <h3 className="service"> Pharmacy Service</h3>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/6c/cf/af/6ccfaf23baf3f421e4a667c4b8c78d56.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore X-ray
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="service-card">
+            <h3 className="service"> Pharmacy Service</h3>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/39/b9/8c/39b98c8df7f434509e0b9bfa23be2182.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Laboratory
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="service-card">
+            <h3 className="service"> Pharmacy Service</h3>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Martenity
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="service-card">
+            <h3 className="service"> Pharmacy Service</h3>
+            <Card
+              style={{
+                width: "18rem",
+                height: "20rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore ART
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+        </Slider>
       </div>
-      <div id='faq-cards'>
-
-          <p className='payment'>ART</p>
-          <p className='answer'> 
-          </p>
-      </div>
-      <div id='faq-cards'>
-
-          <p className='payment'>OPD</p>
-          <p className='answer'> 
-          </p>
-      </div>
-
-  </div>      
-     </div>
-    </>
+    </div>
   );
-}
+};
+
+export default ProductImages;

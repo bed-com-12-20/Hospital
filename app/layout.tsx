@@ -1,13 +1,13 @@
 import React from "react";
-import { Roboto } from "next/font/google";
+// import { Roboto } from "next/font/google";
 import { Metadata } from "next";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
-  display: "swap",
-});
+// const roboto = Roboto({
+//   subsets: ["latin"],
+//   weight: ["300", "400", "500", "700", "900"],
+//   display: "swap",
+// });
 
 const metadata: Metadata = {
   title: "Liwonde Private Medical Hospital",
@@ -59,7 +59,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           {JSON.stringify(structuredData)}
         </script>
       </head>
-      <body className={roboto.className}>{children}
+      <body >{children}
       </body>
     </html>
   );

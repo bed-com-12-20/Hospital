@@ -59,8 +59,14 @@ const posts = [
   
   export default function ConnectSection() {
     return (
-      <div className="bg-green py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className=''>
+            <div className="py-24 sm:py-32">
+        <div className="bg-green  mx-auto max-w-7xl px-6 lg:px-8"
+          style={{
+            // backgroundColor:'green'
+          }}
+        
+        >
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-bold tracking-tight text-green-900 sm:text-4xl">Testmonies</h2>
             <p className="  text-2xl mt-2 text-lg leading-8 text-gray-600">
@@ -107,6 +113,8 @@ const posts = [
           </div>
         </div>
       </div>
+      </div>
+    
     )
   }
   
