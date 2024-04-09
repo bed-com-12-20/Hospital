@@ -5,18 +5,19 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Styles/service.css";
+import Card from "react-bootstrap/Card";
 
 const ProductImages = () => {
   //slideshow
   const [slidesToShow, setSlidesToShow] = useState(3);
-  const [currentSlide, setCurrentSlide] = useState(0);
+
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setSlidesToShow(1);
       } else {
-        setSlidesToShow(3);
+        setSlidesToShow(4);
       }
     };
 
@@ -53,75 +54,156 @@ const ProductImages = () => {
             your healthcare needs.
           </p>
         </div>
-
         <Slider {...settings}>
           <div id="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
-            <div className="pharmacy">
-              <p>
-                {" "}
-                Phamarcy is responsible for storing medicine, selling medicine,
-                Provide pharmacetical support to clients. it is managed by well
-                trained pharmacists
-              </p>
-            </div>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg" />
+              <Card.Body>
+                <Card.Title>Pharmacy Service</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="Buy"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Pharmacy
+                </a>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="">
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img
+                variant="top"
+                src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg"
+              />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text style={{ marginTop: "" }}>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Reception
+                </a>
+              </Card.Body>
+            </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
-            <div className="pharmacy">
-              <p>
-                {" "}
-                Phamarcy is responsible for storing medicine, selling medicine,
-                Provide pharmacetical support to clients. it is managed by well
-                trained pharmacists
-              </p>
-            </div>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/6c/cf/af/6ccfaf23baf3f421e4a667c4b8c78d56.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore X-ray
+                </a>
+              </Card.Body>
+            </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
-            <div className="pharmacy">
-              <p>
-                {" "}
-                Phamarcy is responsible for storing medicine, selling medicine,
-                Provide pharmacetical support to clients. it is managed by well
-                trained pharmacists
-              </p>
-            </div>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/39/b9/8c/39b98c8df7f434509e0b9bfa23be2182.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Laboratory
+                </a>
+              </Card.Body>
+            </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
-            <div className="pharmacy">
-              <p>
-                {" "}
-                Phamarcy is responsible for storing medicine, selling medicine,
-                Provide pharmacetical support to clients. it is managed by well
-                trained pharmacists
-              </p>
-            </div>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore Martenity
+                </a>
+              </Card.Body>
+            </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
-            <div className="pharmacy">
-              <p>
-                {" "}
-                Phamarcy is responsible for storing medicine, selling medicine,
-                Provide pharmacetical support to clients. it is managed by well
-                trained pharmacists
-              </p>
-            </div>
-          </div>
-          <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
-            <div className="pharmacy">
-              <p>
-                {" "}
-                Phamarcy is responsible for storing medicine, selling medicine,
-                Provide pharmacetical support to clients. it is managed by well
-                trained pharmacists
-              </p>
-            </div>
+            <Card
+              style={{
+                width: "18rem",
+                height: "22rem",
+                backgroundColor: "green",
+              }}
+            >
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+                <a
+                  href="#"
+                  className="inline-block rounded-md border border-transparent bg-green-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
+                >
+                  Explore ART
+                </a>
+              </Card.Body>
+            </Card>
           </div>
         </Slider>
+       
       </div>
     </div>
   );

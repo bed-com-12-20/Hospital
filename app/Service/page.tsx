@@ -4,14 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Style.css";
-import Button from "react-bootstrap/Button";
+import Header from "@/componets/navbar";
 import Card from "react-bootstrap/Card";
 
-const ProductImages = () => {
-  //slideshow
-  const [slidesToShow, setSlidesToShow] = useState(3);
-  const [currentSlide, setCurrentSlide] = useState(0);
 
+const ProductImages = () => {
+  const [slidesToShow, setSlidesToShow] = useState(3);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -41,8 +39,11 @@ const ProductImages = () => {
     centerMode: true,
     centerPadding: "0",
   };
-
   return (
+    <>
+    <Header/>
+    <div id="service-sector">
+    </div>
     <div className="images-body">
       <div className="inside-images">
         <div className="headings in-images">
@@ -57,7 +58,6 @@ const ProductImages = () => {
 
         <Slider {...settings}>
           <div id="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
             <Card
               style={{
                 width: "18rem",
@@ -82,7 +82,6 @@ const ProductImages = () => {
             </Card>
           </div>
           <div className="">
-            <h3 className="service"> Pharmacy Service</h3>
             <Card
               style={{
                 width: "18rem",
@@ -92,7 +91,7 @@ const ProductImages = () => {
             >
               <Card.Img
                 variant="top"
-                src=""
+                src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg"
               />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
@@ -110,7 +109,6 @@ const ProductImages = () => {
             </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
             <Card
               style={{
                 width: "18rem",
@@ -135,7 +133,6 @@ const ProductImages = () => {
             </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
             <Card
               style={{
                 width: "18rem",
@@ -160,7 +157,6 @@ const ProductImages = () => {
             </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
             <Card
               style={{
                 width: "18rem",
@@ -168,7 +164,7 @@ const ProductImages = () => {
                 backgroundColor: "green",
               }}
             >
-              <Card.Img variant="top" src="" />
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg" />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -185,15 +181,14 @@ const ProductImages = () => {
             </Card>
           </div>
           <div className="service-card">
-            <h3 className="service"> Pharmacy Service</h3>
             <Card
               style={{
                 width: "18rem",
-                height: "20rem",
+                height: "22rem",
                 backgroundColor: "green",
               }}
             >
-              <Card.Img variant="top" src="" />
+              <Card.Img variant="top" src="https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg" />
               <Card.Body>
                 <Card.Title>Card Title</Card.Title>
                 <Card.Text>
@@ -212,6 +207,8 @@ const ProductImages = () => {
         </Slider>
       </div>
     </div>
+    </>
+     
   );
 };
 
