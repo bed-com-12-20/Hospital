@@ -1,59 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  h1{
-    text-align: center;
-    font-weight: 100px;
-    color: green;
-    
-  }
-  #social-media{
-    width: 1400px;
-    height: 250px;
-    background-color: green;
-    border-color: #000;
-    display: flex;
-    flex-direction: column;
-    border-color: none;
-    margin-top: 10px;
-  }
-  .staff-names{
-    color: white;
-    margin-top: 10px;
-    font-weight: 100;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-  }
-  .social-icon{
-    display: flex;
-    /* flex-direction: column; */
-    margin-left: 70px;
-    margin-top: 20px;
-  }
-  .twitter{
-    margin-left: 40px;
-  }
-  @media(max-width:500px){
-    #social-media{
-      width: 390px;
-      height: 180px;
-    }
-    .reception, .img{
-      width: 390px;
-    }
-    .social-icon{
-      margin-left: 20px;
-    }
-    .twitter{
-      margin-left: 20px  ;
-    }
-  }
-  
-  
+#stats{
+  overflow: visible;
+  background-image: url(https://i.pinimg.com/564x/5d/e1/21/5de121de4448118e3c874714cebffa03.jpg);
+}
+#statistics{
+    background: linear-gradient(to right, rgba(50, 145, 10, 0.3), rgba(89, 183, 48)); 
+}

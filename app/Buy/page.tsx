@@ -1,6 +1,7 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Header from '@/componets/navbar'
 import Footer from '@/componets/footer'
+import ScrollToTopButton from '../Scroll/scroll'
 
 const includedFeatures = [
   'Cash',
@@ -13,6 +14,18 @@ export default function Example() {
   return (
     <>
      <Header/>
+     <div className='bg-green-400 w-full h-400 justify-center  py-24 sm:py-32' style={{backgroundImage:'url(https://i.pinimg.com/564x/bd/bc/0b/bdbc0bda70405b998e163ad879a429f1.jpg)',
+       backgroundRepeat:'no-repeat',
+       backgroundSize:'cover'
+    }}>
+      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+      <div className='mx-auto max-w-2xl sm:text-center'>
+      <h1 className='mt-60 text-3xl font-bold tracking-tight text-green-900 sm:text-4xl' >Liwonde Private Pharmacy service</h1>
+      </div>
+        
+      </div>
+     
+     </div>
      <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
@@ -67,7 +80,9 @@ export default function Example() {
           </div>
         </div>
       </div>
+
     </div>
+    <ScrollToTopButton/>
     <Footer/>
     </>
    

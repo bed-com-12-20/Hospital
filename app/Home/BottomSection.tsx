@@ -3,8 +3,10 @@
 import Image, { StaticImageData } from "next/image";
 import heart from "../images/heart.png";
 import "./Styles/bottomSection.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { motion, useInView, useAnimation } from "framer-motion";
-import React, { useState, useEffect, useRef } from "react";
+import React, {  useEffect, useRef } from "react";
 
 const stats = [
   { id: 1, name: "satisfied patients", value: "15,000+" },
@@ -39,11 +41,11 @@ export default function BottomSection() {
           }}
         >
           <section id="stats">
-          <div className="bg-green mt-40">
-               <h1 className="mt-30 text-1xl  text-center font-normal tracking-tight text-green-900 sm:text-4xl mt-50">
+          <div id="statistics">
+               <h1 className="mt-30 text-1xl  text-center font-normal tracking-tight text-white-900 sm:text-4xl mt-50">
             Liwonde Medical Clinic Statistics
           </h1>
-          <h3 className="mt-4 text-xl  text-center text-gray-500">
+          <h3 className="mt-4 text-xl  text-center text-white-500">
             {" "}
             Discover the impressive Statistics that showcase our <br />
             commitment to exllence and dedicattion to our patients
@@ -86,7 +88,10 @@ export default function BottomSection() {
               }}
             />
           </div>
+         
         </motion.div>
+        <div>
+        </div>
       </div>
     </>
   );
